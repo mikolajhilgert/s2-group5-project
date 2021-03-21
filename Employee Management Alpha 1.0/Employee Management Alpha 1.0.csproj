@@ -159,6 +159,9 @@
     <EmbeddedResource Include="DepartmentAssignment.resx">
       <DependentUpon>DepartmentAssignment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeChangeStatus.resx">
+      <DependentUpon>EmployeeChangeStatus.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,6 +178,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RemoveEmployee.resx">
+      <DependentUpon>RemoveEmployee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ShiftAssignment.resx">
       <DependentUpon>ShiftAssignment.cs</DependentUpon>
     </EmbeddedResource>

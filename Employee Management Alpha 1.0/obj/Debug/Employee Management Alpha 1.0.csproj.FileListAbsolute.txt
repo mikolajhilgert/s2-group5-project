@@ -475,3 +475,5 @@ C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\obj\Debu
 C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.UpdateDepartment.resources
 C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.ViewShedule.resources
 C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.ViewStatistics.resources
+C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.RemoveEmployee.resources
+C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.EmployeeChangeStatus.resources

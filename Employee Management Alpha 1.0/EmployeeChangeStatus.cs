@@ -59,7 +59,17 @@ namespace Employee_Management_Alpha_1._0
 
         private void lbViewEmployees_Click(object sender, EventArgs e)
         {
-            if (!(lbViewEmployees.SelectedIndex.Equals(null)))
+
+        }
+
+        private void EmployeeChangeStatus_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbViewEmployees_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lbViewEmployees.SelectedIndex > 0 && lbViewEmployees.SelectedItem != null)
             {
                 string ID = lbViewEmployees.SelectedItem.ToString();
                 Match match = Regex.Match(ID, pattern);
@@ -69,11 +79,6 @@ namespace Employee_Management_Alpha_1._0
 
                 }
             }
-        }
-
-        private void EmployeeChangeStatus_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
