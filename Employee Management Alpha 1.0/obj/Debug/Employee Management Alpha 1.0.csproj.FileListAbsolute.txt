@@ -1,0 +1,476 @@
+C:\Users\Balomalom\source\repos\Employee Management Alpha 1.0\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.exe.config
+C:\Users\Balomalom\source\repos\Employee Management Alpha 1.0\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.exe
+C:\Users\Balomalom\source\repos\Employee Management Alpha 1.0\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.pdb
+C:\Users\Balomalom\source\repos\Employee Management Alpha 1.0\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Form1.resources
+C:\Users\Balomalom\source\repos\Employee Management Alpha 1.0\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Properties.Resources.resources
+C:\Users\Balomalom\source\repos\Employee Management Alpha 1.0\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.GenerateResource.cache
+C:\Users\Balomalom\source\repos\Employee Management Alpha 1.0\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.CoreCompileInputs.cache
+C:\Users\Balomalom\source\repos\Employee Management Alpha 1.0\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.exe
+C:\Users\Balomalom\source\repos\Employee Management Alpha 1.0\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.pdb
+C:\Users\Balomalom\source\repos\Employee Management Alpha 1.0\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Form2.resources
+C:\Users\Balomalom\source\repos\Employee Management Alpha 1.0\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csprojAssemblyReference.cache
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke4\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.exe.config
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke4\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.exe
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke4\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.pdb
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke4\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csprojAssemblyReference.cache
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke4\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Form1.resources
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke4\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Form2.resources
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke4\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Properties.Resources.resources
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke4\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.GenerateResource.cache
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke4\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.CoreCompileInputs.cache
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke4\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.exe
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke4\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.pdb
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke4\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Stock_information.resources
+D:\Users\Stork v1.0\Desktop\New folder\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.exe.config
+D:\Users\Stork v1.0\Desktop\New folder\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.exe
+D:\Users\Stork v1.0\Desktop\New folder\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.pdb
+D:\Users\Stork v1.0\Desktop\New folder\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csprojAssemblyReference.cache
+D:\Users\Stork v1.0\Desktop\New folder\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Form1.resources
+D:\Users\Stork v1.0\Desktop\New folder\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Form2.resources
+D:\Users\Stork v1.0\Desktop\New folder\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Properties.Resources.resources
+D:\Users\Stork v1.0\Desktop\New folder\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Stock_information.resources
+D:\Users\Stork v1.0\Desktop\New folder\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.GenerateResource.cache
+D:\Users\Stork v1.0\Desktop\New folder\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.CoreCompileInputs.cache
+D:\Users\Stork v1.0\Desktop\New folder\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.exe
+D:\Users\Stork v1.0\Desktop\New folder\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.pdb
+C:\Users\Geraldo\Documents\!fonty\Monke\prj-cb02-6-team-monke-Stock_Management_1.0\prj-cb02-6-team-monke-Stock_Management_1.0\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.exe.config
+C:\Users\Geraldo\Documents\!fonty\Monke\prj-cb02-6-team-monke-Stock_Management_1.0\prj-cb02-6-team-monke-Stock_Management_1.0\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.exe
+C:\Users\Geraldo\Documents\!fonty\Monke\prj-cb02-6-team-monke-Stock_Management_1.0\prj-cb02-6-team-monke-Stock_Management_1.0\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.pdb
+C:\Users\Geraldo\Documents\!fonty\Monke\prj-cb02-6-team-monke-Stock_Management_1.0\prj-cb02-6-team-monke-Stock_Management_1.0\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csprojAssemblyReference.cache
+C:\Users\Geraldo\Documents\!fonty\Monke\prj-cb02-6-team-monke-Stock_Management_1.0\prj-cb02-6-team-monke-Stock_Management_1.0\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Form1.resources
+C:\Users\Geraldo\Documents\!fonty\Monke\prj-cb02-6-team-monke-Stock_Management_1.0\prj-cb02-6-team-monke-Stock_Management_1.0\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Properties.Resources.resources
+C:\Users\Geraldo\Documents\!fonty\Monke\prj-cb02-6-team-monke-Stock_Management_1.0\prj-cb02-6-team-monke-Stock_Management_1.0\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Stock_information.resources
+C:\Users\Geraldo\Documents\!fonty\Monke\prj-cb02-6-team-monke-Stock_Management_1.0\prj-cb02-6-team-monke-Stock_Management_1.0\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.GenerateResource.cache
+C:\Users\Geraldo\Documents\!fonty\Monke\prj-cb02-6-team-monke-Stock_Management_1.0\prj-cb02-6-team-monke-Stock_Management_1.0\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.CoreCompileInputs.cache
+C:\Users\Geraldo\Documents\!fonty\Monke\prj-cb02-6-team-monke-Stock_Management_1.0\prj-cb02-6-team-monke-Stock_Management_1.0\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.exe
+C:\Users\Geraldo\Documents\!fonty\Monke\prj-cb02-6-team-monke-Stock_Management_1.0\prj-cb02-6-team-monke-Stock_Management_1.0\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.pdb
+C:\Users\Geraldo\Documents\!fonty\Monke\prj-cb02-6-team-monke-Stock_Management_1.0\prj-cb02-6-team-monke-Stock_Management_1.0\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AddEmployees.resources
+C:\Users\Geraldo\Documents\!fonty\Monke\prj-cb02-6-team-monke-Stock_Management_1.0\prj-cb02-6-team-monke-Stock_Management_1.0\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.LoginForm.resources
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.exe.config
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.exe
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.pdb
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Form1.resources
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Form2.resources
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.LoginForm.resources
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Properties.Resources.resources
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Stock_information.resources
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.GenerateResource.cache
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.CoreCompileInputs.cache
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.exe
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.pdb
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csprojAssemblyReference.cache
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AddEmployee.resources
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.RemoveEmployee.resources
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\bin\Debug\MySql.Data.dll
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\bin\Debug\Google.Protobuf.dll
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\bin\Debug\Zstandard.Net.dll
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\bin\Debug\Renci.SshNet.dll
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\bin\Debug\System.Buffers.dll
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\bin\Debug\System.Memory.dll
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\bin\Debug\MySql.Data.xml
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.exe.config
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.CopyComplete
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AddDepartment.resources
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AllEmployees.resources
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.exe.config
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.exe
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.pdb
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\MySql.Data.dll
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\Google.Protobuf.dll
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\Zstandard.Net.dll
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\Renci.SshNet.dll
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\System.Buffers.dll
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\System.Memory.dll
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\MySql.Data.xml
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AddDepartment.resources
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AddEmployee.resources
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AllEmployees.resources
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Form1.resources
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Form2.resources
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.LoginForm.resources
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Properties.Resources.resources
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.RemoveEmployee.resources
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Stock_information.resources
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.GenerateResource.cache
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.CopyComplete
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.exe
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.pdb
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.EmployeeChangeStatus.resources
+C:\Users\Stork v1.0\Source\Repos\PROJECTPERFECT\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.exe.config
+C:\Users\Stork v1.0\Source\Repos\PROJECTPERFECT\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.exe
+C:\Users\Stork v1.0\Source\Repos\PROJECTPERFECT\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.pdb
+C:\Users\Stork v1.0\Source\Repos\PROJECTPERFECT\Employee Management Alpha 1.0\bin\Debug\Google.Protobuf.dll
+C:\Users\Stork v1.0\Source\Repos\PROJECTPERFECT\Employee Management Alpha 1.0\bin\Debug\Zstandard.Net.dll
+C:\Users\Stork v1.0\Source\Repos\PROJECTPERFECT\Employee Management Alpha 1.0\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Stork v1.0\Source\Repos\PROJECTPERFECT\Employee Management Alpha 1.0\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Stork v1.0\Source\Repos\PROJECTPERFECT\Employee Management Alpha 1.0\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Stork v1.0\Source\Repos\PROJECTPERFECT\Employee Management Alpha 1.0\bin\Debug\Renci.SshNet.dll
+C:\Users\Stork v1.0\Source\Repos\PROJECTPERFECT\Employee Management Alpha 1.0\bin\Debug\System.Buffers.dll
+C:\Users\Stork v1.0\Source\Repos\PROJECTPERFECT\Employee Management Alpha 1.0\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Stork v1.0\Source\Repos\PROJECTPERFECT\Employee Management Alpha 1.0\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Stork v1.0\Source\Repos\PROJECTPERFECT\Employee Management Alpha 1.0\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Stork v1.0\Source\Repos\PROJECTPERFECT\Employee Management Alpha 1.0\bin\Debug\MySql.Data.xml
+C:\Users\Stork v1.0\Source\Repos\PROJECTPERFECT\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AddDepartment.resources
+C:\Users\Stork v1.0\Source\Repos\PROJECTPERFECT\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AddEmployee.resources
+C:\Users\Stork v1.0\Source\Repos\PROJECTPERFECT\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AllEmployees.resources
+C:\Users\Stork v1.0\Source\Repos\PROJECTPERFECT\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.EmployeeChangeStatus.resources
+C:\Users\Stork v1.0\Source\Repos\PROJECTPERFECT\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Form1.resources
+C:\Users\Stork v1.0\Source\Repos\PROJECTPERFECT\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Form2.resources
+C:\Users\Stork v1.0\Source\Repos\PROJECTPERFECT\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.LoginForm.resources
+C:\Users\Stork v1.0\Source\Repos\PROJECTPERFECT\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Properties.Resources.resources
+C:\Users\Stork v1.0\Source\Repos\PROJECTPERFECT\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.RemoveEmployee.resources
+C:\Users\Stork v1.0\Source\Repos\PROJECTPERFECT\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Stock_information.resources
+C:\Users\Stork v1.0\Source\Repos\PROJECTPERFECT\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.GenerateResource.cache
+C:\Users\Stork v1.0\Source\Repos\PROJECTPERFECT\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.CoreCompileInputs.cache
+C:\Users\Stork v1.0\Source\Repos\PROJECTPERFECT\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.CopyComplete
+C:\Users\Stork v1.0\Source\Repos\PROJECTPERFECT\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.exe
+C:\Users\Stork v1.0\Source\Repos\PROJECTPERFECT\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.pdb
+C:\Users\Stork v1.0\Source\Repos\PROJECTPERFECT\Employee Management Alpha 1.0\bin\Debug\MySql.Data.dll
+C:\Users\Stork v1.0\Source\Repos\PROJECTPERFECT\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AddStock.resources
+C:\Users\Stork v1.0\Source\Repos\PROJECTPERFECT\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.RemoveStock.resources
+C:\Users\Stork v1.0\Source\Repos\PROJECTPERFECT\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.UpdateInformation.resources
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csprojAssemblyReference.cache
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AddDepartment.resources
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AddEmployee.resources
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AddStock.resources
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AllEmployees.resources
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.EmployeeChangeStatus.resources
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Form1.resources
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Form2.resources
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.LoginForm.resources
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Properties.Resources.resources
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.RemoveEmployee.resources
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.RemoveStock.resources
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Stock_information.resources
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.UpdateInformation.resources
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.GenerateResource.cache
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.CoreCompileInputs.cache
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.exe
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.pdb
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.exe.config
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.exe
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.pdb
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\Google.Protobuf.dll
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\Zstandard.Net.dll
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\Renci.SshNet.dll
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\System.Buffers.dll
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\MySql.Data.xml
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.CopyComplete
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.DepartmentInfo.resources
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.RemoveDepartment.resources
+C:\Users\Stork v1.0\Source\Repos\PROJECTPERFECT\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csprojAssemblyReference.cache
+C:\Users\Stork v1.0\Source\Repos\PROJECTPERFECT\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.DepartmentInfo.resources
+C:\Users\Stork v1.0\Source\Repos\PROJECTPERFECT\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.RemoveDepartment.resources
+C:\Users\Stork v1.0\Source\Repos\PROJECTPERFECT\Employee Management Alpha 1.0\bin\Debug\System.Memory.dll
+C:\Users\Stork v1.0\Source\Repos\PROJECTPERFECT\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.exe.config
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AddStock.resources
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.DepartmentInfo.resources
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.EmployeeChangeStatus.resources
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.RemoveDepartment.resources
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.RemoveStock.resources
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.UpdateInformation.resources
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AddStock.resources
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.DepartmentInfo.resources
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.RemoveDepartment.resources
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.RemoveStock.resources
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.UpdateInformation.resources
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.CoreCompileInputs.cache
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AddShift.resources
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AddShift.resources
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\System.Memory.dll
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AddShift.resources
+C:\Users\Stork v1.0\Source\Repos\PROJECTPERFECT\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AddShift.resources
+C:\Users\Stork v1.0\Source\Repos\PROJECTPERFECT\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.BuyStock.resources
+C:\Users\Stork v1.0\Source\Repos\PROJECTPERFECT\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.StockRequest.resources
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.BuyStock.resources
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.StockRequest.resources
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.ScheduleListForm.resources
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Scheduler.resources
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.BuyStock.resources
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.ScheduleListForm.resources
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Scheduler.resources
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.StockRequest.resources
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csprojAssemblyReference.cache
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AddDepartment.resources
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AddEmployee.resources
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\ClockinApp.DepoRequests.resources
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.DepoStocks.resources
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AddShift.resources
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AddStock.resources
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AllEmployees.resources
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.BuyStock.resources
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.DepartmentInfo.resources
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.EmployeeChangeStatus.resources
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Form1.resources
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Form2.resources
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.LoginForm.resources
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Properties.Resources.resources
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.RemoveDepartment.resources
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.RemoveEmployee.resources
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.RemoveStock.resources
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.ScheduleListForm.resources
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Scheduler.resources
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.StockRequest.resources
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Stock_information.resources
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.UpdateInformation.resources
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.GenerateResource.cache
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.CoreCompileInputs.cache
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.exe
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.pdb
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.RequestsDepo.resources
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.exe.config
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.exe
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.pdb
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\MySql.Data.dll
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\Google.Protobuf.dll
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\Zstandard.Net.dll
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\Renci.SshNet.dll
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\System.Buffers.dll
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\System.Memory.dll
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\bin\Debug\MySql.Data.xml
+C:\Users\Stork v1.0\Source\Repos\a\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.CopyComplete
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Depo.resources
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.DepoRequest.resources
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\ClockinApp.DepoRequests.resources
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.DepoStock.resources
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.DepoStocks.resources
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.RequestsDepo.resources
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.BuyStock.resources
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.ScheduleListForm.resources
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Scheduler.resources
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.StockRequest.resources
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Depo.resources
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.DepoRequest.resources
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\ClockinApp.DepoRequests.resources
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.DepoStock.resources
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.DepoStocks.resources
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.RequestsDepo.resources
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csprojAssemblyReference.cache
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csprojAssemblyReference.cache
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AddDepartment.resources
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AddEmployee.resources
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Depo.resources
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.DepoRequest.resources
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\obj\Debug\ClockinApp.DepoRequests.resources
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.DepoStock.resources
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.DepoStocks.resources
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.RequestsDepo.resources
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AddShift.resources
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AddStock.resources
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AllEmployees.resources
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.BuyStock.resources
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.DepartmentInfo.resources
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.EmployeeChangeStatus.resources
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Form1.resources
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Form2.resources
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.LoginForm.resources
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Properties.Resources.resources
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.RemoveDepartment.resources
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.RemoveEmployee.resources
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.RemoveStock.resources
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.ScheduleListForm.resources
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Scheduler.resources
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.StockRequest.resources
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Stock_information.resources
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.UpdateInformation.resources
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.GenerateResource.cache
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.CoreCompileInputs.cache
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.exe
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.pdb
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.exe.config
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.exe
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.pdb
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\bin\Debug\MySql.Data.dll
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\bin\Debug\Google.Protobuf.dll
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\bin\Debug\Zstandard.Net.dll
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\bin\Debug\Renci.SshNet.dll
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\bin\Debug\System.Buffers.dll
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\bin\Debug\System.Memory.dll
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\bin\Debug\MySql.Data.xml
+C:\Users\Stork v1.0\Source\Repos\MonkE-Group-6\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.CopyComplete
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Depo.resources
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.DepoRequest.resources
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\obj\Debug\ClockinApp.DepoRequests.resources
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.DepoStock.resources
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.DepoStocks.resources
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.RequestsDepo.resources
+C:\Users\Geraldo\Documents\!fonty\Monke\Third\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.StatisticsView.resources
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.exe.config
+C:\Users\Balomalom\Desktop\Új mappa (2)\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.StatisticsView.resources
+C:\Users\alekn\source\repos\prj-cb02-6-team-monke\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.StatisticsView.resources
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.exe.config
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.exe
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.pdb
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\bin\Debug\MySql.Data.dll
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\bin\Debug\Google.Protobuf.dll
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\bin\Debug\Zstandard.Net.dll
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\bin\Debug\Renci.SshNet.dll
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\bin\Debug\System.Buffers.dll
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\bin\Debug\System.Memory.dll
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\bin\Debug\MySql.Data.xml
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csprojAssemblyReference.cache
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AddDepartment.resources
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AddEmployee.resources
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Depo.resources
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.DepoRequest.resources
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\obj\Debug\ClockinApp.DepoRequests.resources
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.DepoStock.resources
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.DepoStocks.resources
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.RequestsDepo.resources
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AddShift.resources
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AddStock.resources
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AllEmployees.resources
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.BuyStock.resources
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.DepartmentInfo.resources
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.EmployeeChangeStatus.resources
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Form1.resources
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Form2.resources
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.LoginForm.resources
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Properties.Resources.resources
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.RemoveDepartment.resources
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.RemoveEmployee.resources
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.RemoveStock.resources
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.ScheduleListForm.resources
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Scheduler.resources
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.StatisticsView.resources
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.StockRequest.resources
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Stock_information.resources
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.UpdateInformation.resources
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.GenerateResource.cache
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.CoreCompileInputs.cache
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.CopyComplete
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.exe
+C:\Users\Stork v1.0\Source\Repos\prj-cb02-6-team-monke2111111\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.pdb
+C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.exe.config
+C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AddEmployee.resources
+C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Form1.resources
+C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.LoginForm.resources
+C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Properties.Resources.resources
+C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.GenerateResource.cache
+C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.CoreCompileInputs.cache
+C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.exe
+C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.pdb
+C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.exe.config
+C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.exe
+C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.pdb
+C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\bin\Debug\MySql.Data.dll
+C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\bin\Debug\Google.Protobuf.dll
+C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\bin\Debug\Zstandard.Net.dll
+C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\bin\Debug\Renci.SshNet.dll
+C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\bin\Debug\System.Buffers.dll
+C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\bin\Debug\System.Memory.dll
+C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\bin\Debug\MySql.Data.xml
+C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.CopyComplete
+C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csprojAssemblyReference.cache
+C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.exe.config
+C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.exe
+C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.pdb
+C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\Google.Protobuf.dll
+C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\Zstandard.Net.dll
+C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\Renci.SshNet.dll
+C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\System.Buffers.dll
+C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\System.Memory.dll
+C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\MySql.Data.xml
+C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csprojAssemblyReference.cache
+C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.exe.config
+C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AddEmployee.resources
+C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Form1.resources
+C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.LoginForm.resources
+C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Properties.Resources.resources
+C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.GenerateResource.cache
+C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.CoreCompileInputs.cache
+C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.CopyComplete
+C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.exe
+C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.pdb
+C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.ShiftAssignment.resources
+C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.ViewShedule.resources
+C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.exe.config
+C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.exe
+C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.pdb
+C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\Google.Protobuf.dll
+C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\Zstandard.Net.dll
+C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\Renci.SshNet.dll
+C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\System.Buffers.dll
+C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\System.Memory.dll
+C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\MySql.Data.xml
+C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csprojAssemblyReference.cache
+C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.exe.config
+C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AddDepartment.resources
+C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AddEmployee.resources
+C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AllEmployees.resources
+C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Form1.resources
+C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.LoginForm.resources
+C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Properties.Resources.resources
+C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.ShiftAssignment.resources
+C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.ViewShedule.resources
+C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.GenerateResource.cache
+C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.CoreCompileInputs.cache
+C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.CopyComplete
+C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.exe
+C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.pdb
+C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.DepartmentAssignment.resources
+C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.UpdateDepartment.resources
+C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AddDepartment.resources
+C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AllEmployees.resources
+C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.DepartmentAssignment.resources
+C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.ShiftAssignment.resources
+C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.ViewStatistics.resources
+C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.UpdateDepartment.resources
+C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.ViewShedule.resources

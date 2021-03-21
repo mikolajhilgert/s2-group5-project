@@ -1,0 +1,2 @@
+C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\obj\Release\Employee Management Alpha 1.0.csprojAssemblyReference.cache
+C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\obj\Release\Employee Management Alpha 1.0.exe.config
