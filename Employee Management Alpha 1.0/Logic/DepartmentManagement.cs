@@ -307,7 +307,7 @@ namespace Employee_Management_Alpha_1._0
 
             return employees;
         }
-        public static void ChangeActiveStatus(Department d)
+        public static void ChangeStatus(Department d)
         {
             string sql_connection = "server=studmysql01.fhict.local;database=dbi456096;uid=dbi456096;password=logixtic;";
             string sql_insert = $@"UPDATE department SET Status = @Status WHERE ID = @ID;";

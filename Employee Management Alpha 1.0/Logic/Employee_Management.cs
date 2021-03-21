@@ -224,7 +224,7 @@ namespace Employee_Management_Alpha_1._0
                 if (connection.State == ConnectionState.Open)
                 {
                     //MessageBox.Show("Data entered succesfully.");
-                    MySqlCommand cmd = new MySqlCommand($"UPDATE `employee` SET `FirstName` = '{first_name}', `LastName` = '{last_name}', `BSN` = '{bsn}', `Position` = '{postion}', `WorkingHours` = '{Convert.ToInt32(workinghours)}', `PhoneNr` = '{phoneNr}', `Address` = '{address}', `Email` = '{email}', `EmergencyC` = '{emergencyC}', `EmergencyR` = '{emergencyR}', `EmergencyNr`= '{emergencyNr}', `Certifications`= '{certifications}', `Languages` = '{languages}', `ContractType`= '{contract}', `ContractDuration` = '{duration}, `Salary` = '{salary}' WHERE `ID` = {id};", connection);
+                    MySqlCommand cmd = new MySqlCommand($"UPDATE `employee` SET `FirstName` = '{first_name}', `LastName` = '{last_name}', `BSN` = '{bsn}', `Position` = '{postion}', `WorkingHours` = '{Convert.ToInt32(workinghours)}', `PhoneNr` = '{phoneNr}', `Address` = '{address}', `Email` = '{email}', `EmergencyC` = '{emergencyC}', `EmergencyR` = '{emergencyR}', `EmergencyNr`= '{emergencyNr}', `Certifications`= '{certifications}', `Languages` = '{languages}', `ContractType`= '{contract}', `ContractDuration` = '{duration}, `Salary` = `{salary}` WHERE `ID` = {id};", connection);
                     cmd.Parameters.AddWithValue("@FirstName", first_name);
                     cmd.Parameters.AddWithValue("@LastName", last_name);
                     cmd.Parameters.AddWithValue("@DOB", date_of_birth);

@@ -44,6 +44,7 @@
             this.tbName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
+            this.btnStatus = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbDepartments
@@ -138,10 +139,10 @@
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.btnUpdate.ForeColor = System.Drawing.Color.Silver;
-            this.btnUpdate.Location = new System.Drawing.Point(130, 275);
+            this.btnUpdate.Location = new System.Drawing.Point(59, 280);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(147, 44);
+            this.btnUpdate.Size = new System.Drawing.Size(136, 44);
             this.btnUpdate.TabIndex = 67;
             this.btnUpdate.Text = "Update Department";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -209,12 +210,29 @@
             this.lblID.TabIndex = 71;
             this.lblID.Text = "Department ID:   ";
             // 
+            // btnStatus
+            // 
+            this.btnStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.btnStatus.FlatAppearance.BorderSize = 0;
+            this.btnStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.btnStatus.ForeColor = System.Drawing.Color.Silver;
+            this.btnStatus.Location = new System.Drawing.Point(212, 280);
+            this.btnStatus.Margin = new System.Windows.Forms.Padding(2);
+            this.btnStatus.Name = "btnStatus";
+            this.btnStatus.Size = new System.Drawing.Size(136, 44);
+            this.btnStatus.TabIndex = 72;
+            this.btnStatus.Text = "Toggle \r\nActive Status";
+            this.btnStatus.UseVisualStyleBackColor = false;
+            this.btnStatus.Click += new System.EventHandler(this.btnStatus_Click);
+            // 
             // UpdateDepartment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(83)))));
             this.ClientSize = new System.Drawing.Size(616, 396);
+            this.Controls.Add(this.btnStatus);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.lbDepartments);
             this.Controls.Add(this.tbLanguage);
@@ -256,5 +274,6 @@
         private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.Button btnStatus;
     }
 }
