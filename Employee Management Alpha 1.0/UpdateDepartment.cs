@@ -67,6 +67,24 @@ namespace Employee_Management_Alpha_1._0
             UpdateListbox();
         }
 
+        private void btnStatus_Click(object sender, EventArgs e)
+        {
+            if (lbDepartments.SelectedIndex >= 0 && lbDepartments.SelectedItem != null)
+            {
+                string inputFromListBox = lbDepartments.SelectedItem.ToString();
+                Match match = Regex.Match(inputFromListBox, @"([^\s]+)");
+
+                foreach (var d in DepartmentManagement.GetAllDepartments())
+                {
+                    if (d.Id == Convert.ToInt32(match.Value))
+                        DepartmentManagement.ChangeStatus(d);
+                }
+            }
+            else
+                MessageBox.Show("Invalid employee selected");
+            UpdateListbox();
+        }
+
         private void lbDepartments_SelectedIndexChanged(object sender, EventArgs e)
         {
             Department department = new Department();
@@ -87,5 +105,6 @@ namespace Employee_Management_Alpha_1._0
         {
             this.Close();
         }
+
     }
 }

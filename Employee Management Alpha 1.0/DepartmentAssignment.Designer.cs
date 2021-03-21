@@ -99,7 +99,7 @@
             // 
             // cmbDepartments
             // 
-            this.cmbDepartments.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbDepartments.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbDepartments.FormattingEnabled = true;
             this.cmbDepartments.Location = new System.Drawing.Point(198, 35);
             this.cmbDepartments.Name = "cmbDepartments";
