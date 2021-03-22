@@ -41,8 +41,8 @@ namespace Employee_Management_Alpha_1._0
             {
                 for (int i = 0; i < employeeManagement.GetAllEmployees().Count(); i++)
                 {
-
-                    lbEmployees.Items.Add(employeeManagement.GetAllEmployees()[i].GetEmployeeInfo());
+                    if (!(employeeManagement.GetAllEmployees()[i].first_name == "Admin"))
+                        lbEmployees.Items.Add(employeeManagement.GetAllEmployees()[i].GetEmployeeInfo());
 
                 }
             }

@@ -35,7 +35,7 @@ namespace Employee_Management_Alpha_1._0
                 }
             }
         }
-        private void UpdateFields(Department d)
+        private void UpdateTextboxes(Department d)
         {
             lblID.Text = $"Department ID: {d.Id}";
             tbName.Text = d.Name;
@@ -45,7 +45,15 @@ namespace Employee_Management_Alpha_1._0
             tbEmail.Text = d.Email;
             tbLanguage.Text = d.Language;
         }
-
+        private void ClearTextboxes()
+        {
+            this.tbAddress.Clear();
+            this.tbEmail.Clear();
+            this.tbHead.Clear();
+            this.tbLanguage.Clear();
+            this.tbName.Clear();
+            this.tbPhone.Clear();
+        }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
@@ -76,8 +84,38 @@ namespace Employee_Management_Alpha_1._0
 
                 foreach (var d in DepartmentManagement.GetAllDepartments())
                 {
-                    if (d.Id == Convert.ToInt32(match.Value))
-                        DepartmentManagement.ChangeStatus(d);
+                    {
+                        if (d.Id == Convert.ToInt32(match.Value))
+                        {
+                            DepartmentManagement.ChangeStatus(d);
+                            break;
+                        }
+                            
+                    }
+                }
+            }
+            else
+                MessageBox.Show("Invalid employee selected");
+            UpdateListbox();
+        }
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (lbDepartments.SelectedIndex >= 0 && lbDepartments.SelectedItem != null)
+            {
+                string inputFromListBox = lbDepartments.SelectedItem.ToString();
+                Match match = Regex.Match(inputFromListBox, @"([^\s]+)");
+
+                foreach (var d in DepartmentManagement.GetAllDepartments())
+                {
+                    {
+                        if (d.Id == Convert.ToInt32(match.Value))
+                        {
+                            DepartmentManagement.DeleteDepartment(d.Id);
+                            ClearTextboxes();
+                            break;
+                        }
+
+                    }
                 }
             }
             else
@@ -95,7 +133,7 @@ namespace Employee_Management_Alpha_1._0
 
                 int id = Convert.ToInt32(match.Value);
                 department = DepartmentManagement.GetDepartmentByID(id);
-                UpdateFields(department);
+                UpdateTextboxes(department);
             }
             else
                 MessageBox.Show("Invalid employee selected");
