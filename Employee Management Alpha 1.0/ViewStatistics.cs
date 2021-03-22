@@ -32,9 +32,13 @@ namespace Employee_Management_Alpha_1._0
                 Match match = Regex.Match(empList.SelectedItem.ToString(), pattern);
                 if (match.Success)
                 {
-                    //MessageBox.Show(match.Value);
+                    //all shifts assigned to single employee
                     int numbers = statistics.GetEmpShiftStats(Convert.ToInt32(match.Value));
                     labelTotalShift.Text = $"This employee has been scheduled a total of {numbers} shifts.";
+
+                    //total hours worked
+                    int hours;
+
                 }
 
             }catch(NullReferenceException)

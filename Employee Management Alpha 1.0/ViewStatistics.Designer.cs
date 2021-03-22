@@ -32,6 +32,7 @@ namespace Employee_Management_Alpha_1._0
             this.empList = new System.Windows.Forms.ListBox();
             this.labelTotalShift = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.labelTotalHours = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // empList
@@ -64,6 +65,17 @@ namespace Employee_Management_Alpha_1._0
             this.label1.TabIndex = 2;
             this.label1.Text = "Select an employee below to view their statistics:";
             // 
+            // labelTotalHours
+            // 
+            this.labelTotalHours.AutoSize = true;
+            this.labelTotalHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTotalHours.ForeColor = System.Drawing.Color.White;
+            this.labelTotalHours.Location = new System.Drawing.Point(232, 124);
+            this.labelTotalHours.Name = "labelTotalHours";
+            this.labelTotalHours.Size = new System.Drawing.Size(304, 18);
+            this.labelTotalHours.TabIndex = 1;
+            this.labelTotalHours.Text = "This employee has worked a total of 0 hours.";
+            // 
             // ViewStatistics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -71,6 +83,7 @@ namespace Employee_Management_Alpha_1._0
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(83)))));
             this.ClientSize = new System.Drawing.Size(616, 396);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelTotalHours);
             this.Controls.Add(this.labelTotalShift);
             this.Controls.Add(this.empList);
             this.Name = "ViewStatistics";
@@ -85,5 +98,6 @@ namespace Employee_Management_Alpha_1._0
         private System.Windows.Forms.ListBox empList;
         private System.Windows.Forms.Label labelTotalShift;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelTotalHours;
     }
 }

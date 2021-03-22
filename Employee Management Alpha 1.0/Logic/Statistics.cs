@@ -25,6 +25,13 @@ namespace Employee_Management_Alpha_1._0
             conn.Close();
             return count;
         }
+
+        public int GetEmpTimePerShift(int empID)
+        {
+            int count = 0;
+            string sql;
+            return count;
+        }
         public List<Employee> GetAllActiveEmployees()
         {
             List<Employee> employees = new List<Employee>();

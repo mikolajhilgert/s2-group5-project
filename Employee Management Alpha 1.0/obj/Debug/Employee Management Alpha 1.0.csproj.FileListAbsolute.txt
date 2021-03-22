@@ -477,3 +477,38 @@ C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\obj\Debu
 C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.ViewStatistics.resources
 C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.RemoveEmployee.resources
 C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.EmployeeChangeStatus.resources
+C:\Users\James Bond\Source\Repos\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.exe.config
+C:\Users\James Bond\Source\Repos\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.exe
+C:\Users\James Bond\Source\Repos\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.pdb
+C:\Users\James Bond\Source\Repos\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\Google.Protobuf.dll
+C:\Users\James Bond\Source\Repos\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\Zstandard.Net.dll
+C:\Users\James Bond\Source\Repos\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\James Bond\Source\Repos\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\James Bond\Source\Repos\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\James Bond\Source\Repos\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\Renci.SshNet.dll
+C:\Users\James Bond\Source\Repos\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\System.Buffers.dll
+C:\Users\James Bond\Source\Repos\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\James Bond\Source\Repos\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\James Bond\Source\Repos\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\System.Memory.dll
+C:\Users\James Bond\Source\Repos\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\James Bond\Source\Repos\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\MySql.Data.xml
+C:\Users\James Bond\Source\Repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csprojAssemblyReference.cache
+C:\Users\James Bond\Source\Repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.exe.config
+C:\Users\James Bond\Source\Repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AddDepartment.resources
+C:\Users\James Bond\Source\Repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AddEmployee.resources
+C:\Users\James Bond\Source\Repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AllEmployees.resources
+C:\Users\James Bond\Source\Repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.DepartmentAssignment.resources
+C:\Users\James Bond\Source\Repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.EmployeeChangeStatus.resources
+C:\Users\James Bond\Source\Repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Form1.resources
+C:\Users\James Bond\Source\Repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.LoginForm.resources
+C:\Users\James Bond\Source\Repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Properties.Resources.resources
+C:\Users\James Bond\Source\Repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.RemoveEmployee.resources
+C:\Users\James Bond\Source\Repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.ShiftAssignment.resources
+C:\Users\James Bond\Source\Repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.ViewStatistics.resources
+C:\Users\James Bond\Source\Repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.UpdateDepartment.resources
+C:\Users\James Bond\Source\Repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.ViewShedule.resources
+C:\Users\James Bond\Source\Repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.GenerateResource.cache
+C:\Users\James Bond\Source\Repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.CoreCompileInputs.cache
+C:\Users\James Bond\Source\Repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.CopyComplete
+C:\Users\James Bond\Source\Repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.exe
+C:\Users\James Bond\Source\Repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.pdb
