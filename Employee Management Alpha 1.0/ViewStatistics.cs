@@ -21,6 +21,8 @@ namespace Employee_Management_Alpha_1._0
         {
             InitializeComponent();
             this.statistics = new Statistics();
+            labelActiveE.Text = "There is " + statistics.GetActiveEmployees().ToString() + " active employees";
+            
             RefreshActiveEmps();
         }
 
@@ -37,7 +39,8 @@ namespace Employee_Management_Alpha_1._0
                     labelTotalShift.Text = $"This employee has been scheduled a total of {numbers} shifts.";
 
                     //total hours worked
-                    int hours;
+                    int hours = statistics.GetEmpTotalTime(Convert.ToInt32(match.Value));
+                    labelTotalHours.Text = $"This employee has worked for {hours} hours after today.";
 
                 }
 

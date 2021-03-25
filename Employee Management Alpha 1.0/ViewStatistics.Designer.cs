@@ -33,6 +33,7 @@ namespace Employee_Management_Alpha_1._0
             this.labelTotalShift = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.labelTotalHours = new System.Windows.Forms.Label();
+            this.labelActiveE = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // empList
@@ -72,9 +73,19 @@ namespace Employee_Management_Alpha_1._0
             this.labelTotalHours.ForeColor = System.Drawing.Color.White;
             this.labelTotalHours.Location = new System.Drawing.Point(232, 124);
             this.labelTotalHours.Name = "labelTotalHours";
-            this.labelTotalHours.Size = new System.Drawing.Size(304, 18);
+            this.labelTotalHours.Size = new System.Drawing.Size(373, 18);
             this.labelTotalHours.TabIndex = 1;
-            this.labelTotalHours.Text = "This employee has worked a total of 0 hours.";
+            this.labelTotalHours.Text = "This employee has worked a total of 0 hours after today";
+            // 
+            // labelActiveE
+            // 
+            this.labelActiveE.AutoSize = true;
+            this.labelActiveE.ForeColor = System.Drawing.Color.Red;
+            this.labelActiveE.Location = new System.Drawing.Point(13, 26);
+            this.labelActiveE.Name = "labelActiveE";
+            this.labelActiveE.Size = new System.Drawing.Size(157, 13);
+            this.labelActiveE.TabIndex = 3;
+            this.labelActiveE.Text = "There is {null} active employees";
             // 
             // ViewStatistics
             // 
@@ -82,6 +93,7 @@ namespace Employee_Management_Alpha_1._0
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(83)))));
             this.ClientSize = new System.Drawing.Size(616, 396);
+            this.Controls.Add(this.labelActiveE);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelTotalHours);
             this.Controls.Add(this.labelTotalShift);
@@ -99,5 +111,6 @@ namespace Employee_Management_Alpha_1._0
         private System.Windows.Forms.Label labelTotalShift;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelTotalHours;
+        private System.Windows.Forms.Label labelActiveE;
     }
 }
