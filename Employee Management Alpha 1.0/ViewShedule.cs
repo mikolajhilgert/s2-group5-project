@@ -175,7 +175,7 @@ namespace Employee_Management_Alpha_1._0
             //pnlMornMonday.BackColor = Color.DarkSeaGreen;
             Cursor.Current = Cursors.WaitCursor;
             ShiftAssignment sa = new ShiftAssignment(year,cWeek,1, 1);
-            sa.Show();
+            sa.ShowDialog();
         }
 
         private void pnlAftMonday_Click(object sender, EventArgs e)
