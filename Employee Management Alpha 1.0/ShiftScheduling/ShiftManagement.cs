@@ -296,5 +296,39 @@ namespace Employee_Management_Alpha_1._0
 
             conn.Close();
         }
+
+        public bool HasShiftsRemaining(int empID)
+        {
+            int count = 0;
+            int contract = 0;
+            string sql = $@"SELECT count(morning) FROM `shifts` WHERE `EmpID` = '{empID}' AND `morning` = '1' AND `cWeek` = {cWeek} UNION ALL SELECT count(afternoon) FROM `shifts` WHERE `EmpID` = '{empID}' AND `afternoon` = '1' AND `cWeek` = {cWeek} UNION ALL SELECT count(evening) FROM `shifts` WHERE `EmpID` = '{empID}' AND `evening` = '1' AND `cWeek` = {cWeek};";
+            string sql2 = $@"SELECT e.ContractType WHERE `EmpID` = '{empID}';";
+
+            MySqlCommand cmd = new MySqlCommand(sql, this.conn);
+           
+            conn.Open();
+            MySqlDataReader dr = cmd.ExecuteReader();
+            
+            while (dr.Read())
+            {
+                count = count + Convert.ToInt32(dr[0]);
+            }
+            conn.Close();
+
+
+            MySqlCommand cmd2 = new MySqlCommand(sql2, this.conn);
+            conn.Open();
+            MySqlDataReader dr2 = cmd2.ExecuteReader();
+            while (dr2.Read())
+            {
+                contract = Convert.ToInt32(dr[0]);
+            }
+            conn.Close();
+            if (contract - (8 * count) > 0)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }
