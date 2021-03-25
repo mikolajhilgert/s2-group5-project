@@ -73,9 +73,9 @@ namespace Employee_Management_Alpha_1._0
             this.labelTotalHours.ForeColor = System.Drawing.Color.White;
             this.labelTotalHours.Location = new System.Drawing.Point(232, 124);
             this.labelTotalHours.Name = "labelTotalHours";
-            this.labelTotalHours.Size = new System.Drawing.Size(405, 18);
+            this.labelTotalHours.Size = new System.Drawing.Size(370, 18);
             this.labelTotalHours.TabIndex = 1;
-            this.labelTotalHours.Text = "This employee has worked a total of 0 hours, including today";
+            this.labelTotalHours.Text = "This employee has worked for 0 hours, including today.";
             // 
             // labelActiveE
             // 

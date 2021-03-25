@@ -31,7 +31,7 @@ namespace Employee_Management_Alpha_1._0
             labelTotalShift.Text = "";
             labelTotalHours.Text = "";
 
-            try
+            if(empList.SelectedItem != null)
             {
                 Match match = Regex.Match(empList.SelectedItem.ToString(), pattern);
                 if (match.Success)
@@ -45,8 +45,8 @@ namespace Employee_Management_Alpha_1._0
                     labelTotalHours.Text = $"This employee has worked for {hours} hours, including today.";
 
                 }
-
-            }catch(NullReferenceException)
+            }
+            else
             {
                 MessageBox.Show("Select an employee in the listbox to view their statistics!");
             }

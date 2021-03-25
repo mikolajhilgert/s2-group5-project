@@ -95,8 +95,6 @@ namespace Employee_Management_Alpha_1._0
         private void ViewAssignedEmp()
         {
             List<Shift> items = sm.ReturnEmployeesByShift(this.tod, this.dow);
-            
-            //MessageBox.Show(items.Count.ToString());
             if (items != null)
             {
                 for (int i = 0; i < items.Count; i++)

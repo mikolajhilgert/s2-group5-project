@@ -30,6 +30,7 @@ namespace Employee_Management_Alpha_1._0
         private void InitializeComponent()
         {
             this.gbGeneralScheduler = new System.Windows.Forms.GroupBox();
+            this.buttonCurrentWeek = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonLoadSchedule = new System.Windows.Forms.Button();
@@ -95,7 +96,7 @@ namespace Employee_Management_Alpha_1._0
             this.lblDateMon = new System.Windows.Forms.Label();
             this.pnlMornMonday = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.buttonCurrentWeek = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             this.gbGeneralScheduler.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -153,6 +154,16 @@ namespace Employee_Management_Alpha_1._0
             this.gbGeneralScheduler.TabIndex = 4;
             this.gbGeneralScheduler.TabStop = false;
             this.gbGeneralScheduler.Text = "Scheduler";
+            // 
+            // buttonCurrentWeek
+            // 
+            this.buttonCurrentWeek.Location = new System.Drawing.Point(1159, 18);
+            this.buttonCurrentWeek.Name = "buttonCurrentWeek";
+            this.buttonCurrentWeek.Size = new System.Drawing.Size(160, 23);
+            this.buttonCurrentWeek.TabIndex = 23;
+            this.buttonCurrentWeek.Text = "Return to current week";
+            this.buttonCurrentWeek.UseVisualStyleBackColor = true;
+            this.buttonCurrentWeek.Click += new System.EventHandler(this.buttonCurrentWeek_Click);
             // 
             // label5
             // 
@@ -300,6 +311,7 @@ namespace Employee_Management_Alpha_1._0
             // pnlDates
             // 
             this.pnlDates.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.pnlDates.Controls.Add(this.label6);
             this.pnlDates.Controls.Add(this.gbSunday);
             this.pnlDates.Controls.Add(this.gbSaturday);
             this.pnlDates.Controls.Add(this.gbFriday);
@@ -964,15 +976,15 @@ namespace Employee_Management_Alpha_1._0
             this.label7.TabIndex = 0;
             this.label7.Text = "???";
             // 
-            // buttonCurrentWeek
+            // label6
             // 
-            this.buttonCurrentWeek.Location = new System.Drawing.Point(1159, 18);
-            this.buttonCurrentWeek.Name = "buttonCurrentWeek";
-            this.buttonCurrentWeek.Size = new System.Drawing.Size(160, 23);
-            this.buttonCurrentWeek.TabIndex = 23;
-            this.buttonCurrentWeek.Text = "Return to current week";
-            this.buttonCurrentWeek.UseVisualStyleBackColor = true;
-            this.buttonCurrentWeek.Click += new System.EventHandler(this.buttonCurrentWeek_Click);
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(14, 6);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(320, 13);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Note: Make sure to click on the surrounding panel and not the text";
             // 
             // ViewShedule
             // 
@@ -989,6 +1001,7 @@ namespace Employee_Management_Alpha_1._0
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlDates.ResumeLayout(false);
+            this.pnlDates.PerformLayout();
             this.gbSunday.ResumeLayout(false);
             this.gbSunday.PerformLayout();
             this.pnlEvenSunday.ResumeLayout(false);
@@ -1117,5 +1130,6 @@ namespace Employee_Management_Alpha_1._0
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonCurrentWeek;
+        private System.Windows.Forms.Label label6;
     }
 }
