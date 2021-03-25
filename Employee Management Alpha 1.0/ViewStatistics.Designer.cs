@@ -73,9 +73,9 @@ namespace Employee_Management_Alpha_1._0
             this.labelTotalHours.ForeColor = System.Drawing.Color.White;
             this.labelTotalHours.Location = new System.Drawing.Point(232, 124);
             this.labelTotalHours.Name = "labelTotalHours";
-            this.labelTotalHours.Size = new System.Drawing.Size(373, 18);
+            this.labelTotalHours.Size = new System.Drawing.Size(405, 18);
             this.labelTotalHours.TabIndex = 1;
-            this.labelTotalHours.Text = "This employee has worked a total of 0 hours after today";
+            this.labelTotalHours.Text = "This employee has worked a total of 0 hours, including today";
             // 
             // labelActiveE
             // 
@@ -83,16 +83,16 @@ namespace Employee_Management_Alpha_1._0
             this.labelActiveE.ForeColor = System.Drawing.Color.Red;
             this.labelActiveE.Location = new System.Drawing.Point(13, 26);
             this.labelActiveE.Name = "labelActiveE";
-            this.labelActiveE.Size = new System.Drawing.Size(157, 13);
+            this.labelActiveE.Size = new System.Drawing.Size(165, 13);
             this.labelActiveE.TabIndex = 3;
-            this.labelActiveE.Text = "There is {null} active employees";
+            this.labelActiveE.Text = "There are {null} active employees";
             // 
             // ViewStatistics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(83)))));
-            this.ClientSize = new System.Drawing.Size(616, 396);
+            this.ClientSize = new System.Drawing.Size(649, 396);
             this.Controls.Add(this.labelActiveE);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelTotalHours);

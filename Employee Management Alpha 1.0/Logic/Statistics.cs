@@ -3,14 +3,13 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Employee_Management_Alpha_1._0
 {
     public class Statistics
     {
         protected MySqlConnection conn = new MySqlConnection("server=studmysql01.fhict.local;database=dbi456096;uid=dbi456096;password=logixtic;");//sql connector
+
         public int GetEmpShiftStats(int empID)
         {
             int count = 0;
@@ -35,29 +34,56 @@ namespace Employee_Management_Alpha_1._0
             Calendar cal = dfi.Calendar;
             int calendarWeek = cal.GetWeekOfYear(DateTime.Now, dfi.CalendarWeekRule, dfi.FirstDayOfWeek);
             int day = (int)DateTime.Now.DayOfWeek;
-            //System.Windows.Forms.MessageBox.Show(day.ToString() + calendarWeek.ToString() + year.ToString());
 
-            TimeSpan startMorningShift = new TimeSpan(8, 0, 0); 
-            TimeSpan endMorningShift = new TimeSpan(16, 0, 0);
-            TimeSpan startEveningShift = new TimeSpan(16, 0, 0);
-            TimeSpan endEveningShift = new TimeSpan(24, 0, 0);
-            TimeSpan startNightShift = new TimeSpan(24, 0, 0);
-            TimeSpan endNightShift = new TimeSpan(8, 0, 0);
-            TimeSpan now = DateTime.Now.TimeOfDay;
-            if ((now > startMorningShift) && (now < endMorningShift))
-            {
-                //match found
-            }
-            else if ((now > startEveningShift) && (now < endEveningShift)){
-            
-            }
-            else if((now > startNightShift) && (now < endNightShift)){
 
-            }
-            //UNION ALL SELECT count(afternoon) FROM `shifts` WHERE `EmpID` = '{empID}' AND `Year` <= '{year}' AND `DOfW <= '{day}' AND `cWeek` <= '{calendarWeek}' AND `afternoon` = '1' UNION ALL SELECT count(evening) FROM `shifts` WHERE `EmpID` = '{empID}' AND `Year` <= '{year}' AND `DOfW <= '{day}' AND `cWeek` <= '{calendarWeek}' AND `evening` = '1';";
-            string sql = $@"SELECT count(morning) FROM `shifts` WHERE `EmpID` = '{empID}' AND `Year` <= '{year}' AND `DOfW` <= '{day}' AND `cWeek` <= '{calendarWeek}' AND `morning` = '1'
-                        UNION ALL SELECT count(afternoon) FROM `shifts` WHERE `EmpID` = '{empID}' AND `Year` <= '{year}' AND `DOfW` <= '{day}' AND `cWeek` <= '{calendarWeek}' AND `afternoon` = '1'
-                        UNION ALL SELECT count(evening) FROM `shifts` WHERE `EmpID` = '{empID}' AND `Year` <= '{year}' AND `DOfW` <= '{day}' AND `cWeek` <= '{calendarWeek}' AND `evening` = '1';";
+            string sql = $@"SELECT count(morning)
+                        FROM `shifts`
+                        WHERE `EmpID` = '{empID}' AND
+                        (`Year` = '{year}'
+                        AND `cWeek` < '{calendarWeek}'
+                        AND `morning` = '1'
+                        ) OR (`EmpID` = '{empID}' AND `Year` < '{year}' AND `morning` = '1')
+                        UNION ALL
+                        SELECT count(afternoon)
+                        FROM `shifts`
+                        WHERE `EmpID` = '{empID}' AND
+                        (`Year` = '{year}'
+                        AND `cWeek` < '{calendarWeek}'
+                        AND `afternoon` = '1'
+                        ) OR (`EmpID` = '{empID}' AND `Year` < '{year}' AND `afternoon` = '1')
+                        UNION ALL
+                        SELECT count(evening)
+                        FROM `shifts`
+                        WHERE `EmpID` = '{empID}' AND
+                        (`Year` = '{year}'
+                        AND `cWeek` < '{calendarWeek}'
+                        AND `evening` = '1'
+                        ) OR (`EmpID` = '{empID}' AND `Year` < '{year}' AND `evening` = '1');";
+
+            string sql1 = $@"SELECT count(morning) 
+                        FROM `shifts` 
+                        WHERE `EmpID` = '{empID}' 
+                        AND `Year` = '{year}' 
+                        AND `DOfW` <= '{day}' 
+                        AND `cWeek` = '{calendarWeek}' 
+                        AND `morning` = '1'
+
+                        UNION ALL SELECT count(afternoon) 
+                        FROM `shifts` 
+                        WHERE `EmpID` = '{empID}' 
+                        AND `Year` = '{year}' 
+                        AND `DOfW` <= '{day}' 
+                        AND `cWeek` = '{calendarWeek}' 
+                        AND `afternoon` = '1'
+
+
+                        UNION ALL SELECT count(evening) 
+                        FROM `shifts` 
+                        WHERE `EmpID` = '{empID}' 
+                        AND `Year` = '{year}' 
+                        AND `DOfW` <= '{day}' 
+                        AND `cWeek` = '{calendarWeek}' 
+                        AND `evening` = '1';";
 
             MySqlCommand cmd = new MySqlCommand(sql, this.conn);
             conn.Open();
@@ -67,8 +93,18 @@ namespace Employee_Management_Alpha_1._0
                 count = count + Convert.ToInt32(dr[0]);
             }
             conn.Close();
-            return count*8;
+
+            MySqlCommand cmd1 = new MySqlCommand(sql1, this.conn);
+            conn.Open();
+            MySqlDataReader dr1 = cmd1.ExecuteReader();
+            while (dr1.Read())
+            {
+                count = count + Convert.ToInt32(dr1[0]);
+            }
+            conn.Close();
+            return count * 8;
         }
+
         public List<Employee> GetAllActiveEmployees()
         {
             List<Employee> employees = new List<Employee>();
@@ -95,7 +131,6 @@ namespace Employee_Management_Alpha_1._0
 
                 return null;
             }
-
         }
 
         public int GetActiveEmployees()

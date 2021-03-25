@@ -21,7 +21,7 @@ namespace Employee_Management_Alpha_1._0
         {
             InitializeComponent();
             this.statistics = new Statistics();
-            labelActiveE.Text = "There is " + statistics.GetActiveEmployees().ToString() + " active employees";
+            labelActiveE.Text = "There are " + statistics.GetActiveEmployees().ToString() + " active employees";
             
             RefreshActiveEmps();
         }
@@ -29,6 +29,8 @@ namespace Employee_Management_Alpha_1._0
         private void empList_SelectedIndexChanged(object sender, EventArgs e)
         {
             labelTotalShift.Text = "";
+            labelTotalHours.Text = "";
+
             try
             {
                 Match match = Regex.Match(empList.SelectedItem.ToString(), pattern);
@@ -40,7 +42,7 @@ namespace Employee_Management_Alpha_1._0
 
                     //total hours worked
                     int hours = statistics.GetEmpTotalTime(Convert.ToInt32(match.Value));
-                    labelTotalHours.Text = $"This employee has worked for {hours} hours after today.";
+                    labelTotalHours.Text = $"This employee has worked for {hours} hours, including today.";
 
                 }
 
