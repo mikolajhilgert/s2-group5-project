@@ -69,11 +69,11 @@ namespace Employee_Management_Alpha_1._0
             conn.Close();
             return count*8;
         }
-        public List<Employee> GetAllActiveEmployees()
+        public List<Employee> GetAllEmployees()
         {
             List<Employee> employees = new List<Employee>();
             employees.Clear();
-            string sql = "SELECT * FROM employee;";
+            string sql = "SELECT * FROM employee where `ID` != '4';";
             MySqlCommand cmd = new MySqlCommand(sql, this.conn);
             conn.Open();
             MySqlDataReader dr = cmd.ExecuteReader();
