@@ -23,7 +23,7 @@ namespace Employee_Management_Alpha_1._0
             this.statistics = new Statistics();
             labelActiveE.Text = "There are " + statistics.GetActiveEmployees().ToString() + " active employees";
             
-            RefreshActiveEmps();
+            RefreshEmps();
         }
 
         private void empList_SelectedIndexChanged(object sender, EventArgs e)
@@ -53,10 +53,10 @@ namespace Employee_Management_Alpha_1._0
 
         }
 
-        private void RefreshActiveEmps()
+        private void RefreshEmps()
         {
-            emps = statistics.GetAllActiveEmployees();
-            if (statistics.GetAllActiveEmployees() is null)
+            emps = statistics.GetAllEmployees();
+            if (statistics.GetAllEmployees() is null)
             {
                 
                 empList.Items.Add("The database is empty!");
