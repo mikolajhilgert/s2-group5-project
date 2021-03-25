@@ -347,5 +347,18 @@ namespace Employee_Management_Alpha_1._0
             year = ReturnCurrentYear();
             cWeek = ReturnCurrentCalWeek();
         }
+
+        private void buttonCurrentWeek_Click(object sender, EventArgs e)
+        {
+            cbYear.Text = ReturnCurrentYear().ToString();
+            cbCWeek.Text = ReturnCurrentCalWeek().ToString();
+
+            year = ReturnSelectedYear();
+            cWeek = ReturnSelectedCalWeek();
+            //MessageBox.Show(ReturnSelectedYear().ToString());
+            //MessageBox.Show(ReturnSelectedCalWeek().ToString());
+            PopulateSchedule();
+
+        }
     }
 }
