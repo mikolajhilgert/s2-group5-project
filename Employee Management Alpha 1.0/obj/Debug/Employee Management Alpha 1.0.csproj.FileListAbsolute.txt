@@ -512,3 +512,5 @@ C:\Users\James Bond\Source\Repos\s2-group5-project\Employee Management Alpha 1.0
 C:\Users\James Bond\Source\Repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.CopyComplete
 C:\Users\James Bond\Source\Repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.exe
 C:\Users\James Bond\Source\Repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.pdb
+C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.EmployeeChangeStatus.resources
+C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.RemoveEmployee.resources
