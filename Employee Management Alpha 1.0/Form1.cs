@@ -213,7 +213,7 @@ namespace Employee_Management_Alpha_1._0
         private void btnShitManager_Click(object sender, EventArgs e)
         {
             openChildForm(new ViewShedule()); //create new form object
-            Size = new Size(1655, 710); //change window size
+            Size = new Size(1540, 710); //change window size
             hideSubmenus();
         }
 

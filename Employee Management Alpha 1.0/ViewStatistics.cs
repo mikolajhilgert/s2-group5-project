@@ -21,33 +21,42 @@ namespace Employee_Management_Alpha_1._0
         {
             InitializeComponent();
             this.statistics = new Statistics();
-            RefreshActiveEmps();
+            labelActiveE.Text = "There are " + statistics.GetActiveEmployees().ToString() + " active employees";
+            
+            RefreshEmps();
         }
 
         private void empList_SelectedIndexChanged(object sender, EventArgs e)
         {
             labelTotalShift.Text = "";
-            try
+            labelTotalHours.Text = "";
+
+            if(empList.SelectedItem != null)
             {
                 Match match = Regex.Match(empList.SelectedItem.ToString(), pattern);
                 if (match.Success)
                 {
-                    //MessageBox.Show(match.Value);
+                    //all shifts assigned to single employee
                     int numbers = statistics.GetEmpShiftStats(Convert.ToInt32(match.Value));
                     labelTotalShift.Text = $"This employee has been scheduled a total of {numbers} shifts.";
-                }
 
-            }catch(NullReferenceException)
+                    //total hours worked
+                    int hours = statistics.GetEmpTotalTime(Convert.ToInt32(match.Value));
+                    labelTotalHours.Text = $"This employee has worked for {hours} hours, including today.";
+
+                }
+            }
+            else
             {
                 MessageBox.Show("Select an employee in the listbox to view their statistics!");
             }
 
         }
 
-        private void RefreshActiveEmps()
+        private void RefreshEmps()
         {
-            emps = statistics.GetAllActiveEmployees();
-            if (statistics.GetAllActiveEmployees() is null)
+            emps = statistics.GetAllEmployees();
+            if (statistics.GetAllEmployees() is null)
             {
                 
                 empList.Items.Add("The database is empty!");

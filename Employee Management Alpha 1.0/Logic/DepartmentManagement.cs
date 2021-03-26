@@ -229,7 +229,7 @@ namespace Employee_Management_Alpha_1._0
                 MessageBox.Show(ex.Message);
             }
         }
-        public static List<Employee> GetAllAssignableEmployeesForDepartment(Department d)
+        public static List<Employee> GetAllAvailableEmployeesForDepartment(Department d)
         {
             Employee_Management employee_Management = new Employee_Management();
             List<Employee> employees = employee_Management.GetAllActiveEmployees();

@@ -85,16 +85,16 @@ namespace Employee_Management_Alpha_1._0
             //add head of department
         }
 
-        public int CompareTo(Department d)
+        public int CompareTo(Department other)
         {
-            switch (this.Status.CompareTo(d.Status))
+            switch (this.Status.CompareTo(other.Status))
             {
                 case 1:
-                    return 1;
-                case -1:
                     return -1;
+                case -1:
+                    return 1;
                 case 0:
-                    return this.Id.CompareTo(d.Id);
+                    return this.Id.CompareTo(other.Id);
                 default:
                     return 0;
             }

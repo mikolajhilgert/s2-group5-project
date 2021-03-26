@@ -34,6 +34,15 @@ namespace Employee_Management_Alpha_1._0
                 }
             }
         }
+        private void ClearTextboxes()
+        {
+            this.tbAddress.Clear();
+            this.tbEmail.Clear();
+            this.tbHead.Clear();
+            this.tbLanguage.Clear();
+            this.tbName.Clear();
+            this.tbPhone.Clear();
+        }
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -49,6 +58,7 @@ namespace Employee_Management_Alpha_1._0
             }
 
             UpdateListbox();
+            ClearTextboxes();
         }
     }
 }

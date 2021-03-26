@@ -173,18 +173,21 @@ namespace Employee_Management_Alpha_1._0
         private void pnlMornMonday_Click(object sender, EventArgs e)
         {
             //pnlMornMonday.BackColor = Color.DarkSeaGreen;
+            Cursor.Current = Cursors.WaitCursor;
             ShiftAssignment sa = new ShiftAssignment(year,cWeek,1, 1);
             sa.ShowDialog();
         }
 
         private void pnlAftMonday_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             ShiftAssignment sa = new ShiftAssignment(year, cWeek,1, 2);
             sa.ShowDialog();
         }
 
         private void pnlEvenMonday_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             ShiftAssignment sa = new ShiftAssignment(year, cWeek, 1, 3);
             sa.ShowDialog();
         }
@@ -192,18 +195,21 @@ namespace Employee_Management_Alpha_1._0
         //Open shift scheduler -> Tuesday
         private void pnlMornTuesday_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             ShiftAssignment sa = new ShiftAssignment(year, cWeek, 2,1);
             sa.ShowDialog();
         }
 
         private void pnlAftTuesday_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             ShiftAssignment sa = new ShiftAssignment(year, cWeek, 2, 2);
             sa.ShowDialog();
         }
 
         private void pnlEvenTuesday_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             ShiftAssignment sa = new ShiftAssignment(year, cWeek, 2, 3);
             sa.ShowDialog();
         }
@@ -211,18 +217,21 @@ namespace Employee_Management_Alpha_1._0
         //Open shift scheduler -> Wednesday
         private void pnlMornWednesday_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             ShiftAssignment sa = new ShiftAssignment(year, cWeek, 3, 1);
             sa.ShowDialog();
         }
 
         private void pnlAftWednesday_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             ShiftAssignment sa = new ShiftAssignment(year, cWeek, 3, 2);
             sa.ShowDialog();
         }
 
         private void pnlEvenWednesday_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             ShiftAssignment sa = new ShiftAssignment(year, cWeek, 3, 3);
             sa.ShowDialog();
         }
@@ -230,18 +239,21 @@ namespace Employee_Management_Alpha_1._0
         //Open shift scheduler -> Thursday
         private void pnlMornThursday_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             ShiftAssignment sa = new ShiftAssignment(year, cWeek, 4, 1);
             sa.ShowDialog();
         }
 
         private void pnlAftThursday_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             ShiftAssignment sa = new ShiftAssignment(year, cWeek, 4, 2);
             sa.ShowDialog();
         }
 
         private void pnlEvenThursday_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             ShiftAssignment sa = new ShiftAssignment(year, cWeek, 4, 3);
             sa.ShowDialog();
         }
@@ -249,18 +261,21 @@ namespace Employee_Management_Alpha_1._0
         //Open shift scheduler -> Friday
         private void pnlMornFriday_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             ShiftAssignment sa = new ShiftAssignment(year, cWeek, 5, 1);
             sa.ShowDialog();
         }
 
         private void pnlAftFriday_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             ShiftAssignment sa = new ShiftAssignment(year, cWeek, 5, 2);
             sa.ShowDialog();
         }
 
         private void pnlEvenFriday_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             ShiftAssignment sa = new ShiftAssignment(year, cWeek, 5, 3);
             sa.ShowDialog();
         }
@@ -268,18 +283,21 @@ namespace Employee_Management_Alpha_1._0
         //Open shift scheduler -> Saturday
         private void pnlMornSaturday_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             ShiftAssignment sa = new ShiftAssignment(year, cWeek, 6, 1);
             sa.ShowDialog();
         }
 
         private void pnlAftSaturday_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             ShiftAssignment sa = new ShiftAssignment(year, cWeek, 6, 2);
             sa.ShowDialog();
         }
 
         private void pnlEvenSaturday_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             ShiftAssignment sa = new ShiftAssignment(year, cWeek, 6, 3);
             sa.ShowDialog();
         }
@@ -287,18 +305,21 @@ namespace Employee_Management_Alpha_1._0
         //Open shift scheduler -> Sunday
         private void pnlMornSunday_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             ShiftAssignment sa = new ShiftAssignment(year, cWeek, 7, 1);
             sa.ShowDialog();
         }
 
         private void pnlAftSunday_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             ShiftAssignment sa = new ShiftAssignment(year, cWeek, 7, 2);
             sa.ShowDialog();
         }
 
         private void pnlEvenSunday_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             ShiftAssignment sa = new ShiftAssignment(year, cWeek, 7, 3);
             sa.ShowDialog();
         }
@@ -348,5 +369,17 @@ namespace Employee_Management_Alpha_1._0
             cWeek = ReturnCurrentCalWeek();
         }
 
+        private void buttonCurrentWeek_Click(object sender, EventArgs e)
+        {
+            cbYear.Text = ReturnCurrentYear().ToString();
+            cbCWeek.Text = ReturnCurrentCalWeek().ToString();
+
+            year = ReturnSelectedYear();
+            cWeek = ReturnSelectedCalWeek();
+            //MessageBox.Show(ReturnSelectedYear().ToString());
+            //MessageBox.Show(ReturnSelectedCalWeek().ToString());
+            PopulateSchedule();
+
+        }
     }
 }

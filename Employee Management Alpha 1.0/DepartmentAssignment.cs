@@ -56,7 +56,7 @@ namespace Employee_Management_Alpha_1._0
             else
             {
 
-                foreach (var employee in DepartmentManagement.GetAllAssignableEmployeesForDepartment(d))
+                foreach (var employee in DepartmentManagement.GetAllAvailableEmployeesForDepartment(d))
                 {
                     lbAvailable.Items.Add(employee.GetEmployeeInfo());
                 }

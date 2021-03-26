@@ -27,11 +27,11 @@ namespace Employee_Management_Alpha_1._0
         public string certifications { get; set; } //primarily relevant for depo workers
         public string languages { get; set; }//primarily relevant for sales reps, cashiers and customer support
         public string contract { get; set; }
-        public string duration { get; set; }
-        public string status { get; set; }
+        public int salary { get; set; }
         public string departmentName { get; set; }
         public string password { get; set; }
-        public int salary { get; set; }
+        public string duration { get; set; }
+        public string status { get; set; }
         public string tag { get; set; }
 
         //string first_name, string last_name, DateTime date_of_birth, string bsn, string postion, int workinghours, string phoneNr, string address, string email, string emergencyC, string emergencyR, string emergencyNr, string certifications, string languages, string contract, string duratio
