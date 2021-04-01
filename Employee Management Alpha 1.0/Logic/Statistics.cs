@@ -32,7 +32,7 @@ namespace Employee_Management_Alpha_1._0
             int year = Convert.ToInt32(DateTime.Now.Year);
             DateTimeFormatInfo dfi = DateTimeFormatInfo.CurrentInfo;
             Calendar cal = dfi.Calendar;
-            int calendarWeek = cal.GetWeekOfYear(DateTime.Now, dfi.CalendarWeekRule, dfi.FirstDayOfWeek);
+            int calendarWeek = cal.GetWeekOfYear(DateTime.Now, CalendarWeekRule.FirstFullWeek, DayOfWeek.Monday);
             int day = (int)DateTime.Now.DayOfWeek;
 
 
@@ -75,7 +75,6 @@ namespace Employee_Management_Alpha_1._0
                         AND `DOfW` <= '{day}' 
                         AND `cWeek` = '{calendarWeek}' 
                         AND `afternoon` = '1'
-
 
                         UNION ALL SELECT count(evening) 
                         FROM `shifts` 
