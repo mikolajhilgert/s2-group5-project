@@ -18,6 +18,8 @@ namespace Employee_Management_Alpha_1._0
         public int year { get; set; }
         public int cWeek { get; set; }
         public string eDep { get; set; }
+        public int contractHours { get; set; }
+        public int workedHours { get; set; }
 
 
         public Shift(int shiftID, int DoW, int employeeID, string empName, bool morning, bool afternoon, bool evening, string eDep, int year , int cWeek)
@@ -40,6 +42,14 @@ namespace Employee_Management_Alpha_1._0
             //this.afternoon = false;
             //this.morning = false;
             //this.evening = false;
+        }
+
+        public Shift(int employeeID, string empName, int contractH, int workedH)
+        {
+            this.employeeID = employeeID;
+            this.empName = empName;
+            this.contractHours = contractH;
+            this.workedHours = workedH;
         }
     }
 }
