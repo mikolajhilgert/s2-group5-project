@@ -53,8 +53,11 @@ namespace Employee_Management_Alpha_1._0
         private void btnDelete_Click(object sender, EventArgs e)
         {
             string id = tbID.Text;
-
-            employeeManagement.RemoveEmployeebyId(id);
+            if (MessageBox.Show($"Are you sure you want to delete employee {id}?.", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                employeeManagement.RemoveEmployeebyId(id);
+            }
+            tbID.Text = string.Empty;
             UpdateList();
         }
 

@@ -16,6 +16,7 @@ namespace Employee_Management_Alpha_1._0
     {
         Employee_Management employeeManagement;
         const string pattern = @"([^\s]+)"; //pattern to get the first string before a space
+        const string patternBSN = @"^[0-9]{9}$"; //pattern to check bsn
         Regex rg = new Regex(pattern);
         public AllEmployees()
         {
@@ -41,8 +42,6 @@ namespace Employee_Management_Alpha_1._0
 
                 }
             }
-
-
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -53,8 +52,16 @@ namespace Employee_Management_Alpha_1._0
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             DateTime dtfiller = DateTime.Now;
-            if ((!String.IsNullOrEmpty(tbFirstName.Text)) && (!String.IsNullOrEmpty(tbLastName.Text)) && (!String.IsNullOrEmpty(tbBSN.Text)) && (!String.IsNullOrEmpty(tbPosition.Text)) && (!String.IsNullOrEmpty(tbWorkingH.Text)) && (!String.IsNullOrEmpty(tbPhone.Text)) && (!String.IsNullOrEmpty(tbAddress.Text)) && (!String.IsNullOrEmpty(tbEmail.Text)) && (!String.IsNullOrEmpty(tbEmergencyN.Text)) && (!String.IsNullOrEmpty(tbContactR.Text)) && (!String.IsNullOrEmpty(tbEmergencyNr.Text)) && (!String.IsNullOrEmpty(tbCertifications.Text)) && (!String.IsNullOrEmpty(tbLanguage.Text)) && (!String.IsNullOrEmpty(tbContractType.Text)) && (!String.IsNullOrEmpty(tbDuration.Text)))
-                employeeManagement.ChangeEmployeeTest(Convert.ToInt32(tbID.Text), tbFirstName.Text, tbLastName.Text, dtfiller, tbBSN.Text, tbPosition.Text, Convert.ToInt32(tbWorkingH.Text), tbPhone.Text, tbAddress.Text, tbEmail.Text, tbEmergencyN.Text, tbContactR.Text, tbEmergencyNr.Text, tbCertifications.Text, tbLanguage.Text, tbContractType.Text, tbDuration.Text, Convert.ToInt32(tbSalary.Text));
+            Match BSNmatch = Regex.Match(tbBSN.Text, patternBSN);
+            if ((!String.IsNullOrEmpty(tbFirstName.Text)) && (!String.IsNullOrEmpty(tbLastName.Text)) && (!String.IsNullOrEmpty(tbBSN.Text)) && (!String.IsNullOrEmpty(tbPosition.Text)) && (!String.IsNullOrEmpty(cbWorkingH.Text)) && (!String.IsNullOrEmpty(tbPhone.Text)) && (!String.IsNullOrEmpty(tbAddress.Text)) && (!String.IsNullOrEmpty(tbEmail.Text)) && (!String.IsNullOrEmpty(tbEmergencyN.Text)) && (!String.IsNullOrEmpty(tbContactR.Text)) && (!String.IsNullOrEmpty(tbEmergencyNr.Text)) && (!String.IsNullOrEmpty(tbCertifications.Text)) && (!String.IsNullOrEmpty(tbLanguage.Text)) && (!String.IsNullOrEmpty(dateTimeStart.Text)) && (!String.IsNullOrEmpty(dateTimeEnd.Text)))
+                if ((DateTime.Parse(dateTimeStart.Text) < DateTime.Parse(dateTimeEnd.Text)) && BSNmatch.Success && int.TryParse(tbSalary.Text, out int value))
+                {
+                    employeeManagement.ChangeEmployeeTest(Convert.ToInt32(tbID.Text), tbFirstName.Text, tbLastName.Text, dtfiller, tbBSN.Text, tbPosition.Text, Convert.ToInt32(cbWorkingH.Text), tbPhone.Text, tbAddress.Text, tbEmail.Text, tbEmergencyN.Text, tbContactR.Text, tbEmergencyNr.Text, tbCertifications.Text, tbLanguage.Text,dateTimeStart.Value, dateTimeEnd.Value, Convert.ToInt32(tbSalary.Text));
+                }
+                else
+                {
+                    MessageBox.Show("Some details are invalid. (Check BSN syntax, make sure a start date is before an end date!)");
+                }  
             else
             {
                 MessageBox.Show("Please make sure all information fields have been filled in.");
@@ -83,9 +90,9 @@ namespace Employee_Management_Alpha_1._0
             tbLanguage.Text = employee.languages;
             tbPosition.Text = employee.postion;
             tbEmail.Text = employee.email;
-            tbContractType.Text = employee.contract;
-            tbDuration.Text = employee.duration;
-            tbWorkingH.Text = employee.workinghours.ToString();
+            dateTimeStart.Text = employee.startDate.ToString();
+            dateTimeEnd.Text = employee.endDate.ToString();
+            cbWorkingH.Text = employee.workinghours.ToString();
             tbPhone.Text = employee.phoneNr;
             tbSalary.Text = employee.salary.ToString();
         }
@@ -104,7 +111,6 @@ namespace Employee_Management_Alpha_1._0
                 if (match.Success)
                 {
                     tbID.Text = match.Value;
-
                 }
             }
         }

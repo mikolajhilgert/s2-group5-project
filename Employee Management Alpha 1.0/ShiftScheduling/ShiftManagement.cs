@@ -49,10 +49,48 @@ namespace Employee_Management_Alpha_1._0
             }
         }
 
+        public void AutoScheduleWeek(int inputLimit, bool onePerShift)
+        {
+            int limit = inputLimit;
+            int runAgain = 0;
+            if (onePerShift)
+            {
+                //List<Shift> allEmps = ReturnHoursScheduledInWeek();
+                //int empPotentialHours = 0;
+                //foreach (var emp in allEmps)
+                //{
+                //    empPotentialHours += emp.contractHours;
+                //}
+                //if (empPotentialHours < 168) { limit = 1; runAgain = 1; }
+                limit = 1; runAgain = 1;
+            }
+            for (int i = 0; i <= runAgain; i++)
+            {
+                for (int dow = 1; dow <= 7; dow++)
+                {
+                    for (int tod = 1; tod <= 3; tod++)
+                    {
+                        List<Shift> available = ReturnAvailableEmployees(tod, dow);
+                        Random rnd = new Random();
+                        for (int assigned = 1; assigned <= limit; assigned++)
+                        {
+                            if (available.Count >= 1)
+                            {
+                                int selectedEmp = rnd.Next(0, available.Count); // creates a number from available emps
+                                AssignEmployeeToShift(available[selectedEmp].employeeID, tod, dow);
+                                available.RemoveAt(selectedEmp);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         public List<Shift> ReturnAvailableEmployees(int tod, int dow)
         {
             List<Shift> Scheduled = this.ReturnScheduledEmployees();
             List<Shift> All = this.ReturnAllEmps();
+            List<Shift> HoursScheduled = this.ReturnHoursScheduledInWeek();
             List<Shift> isAvailable = new List<Shift>();
             foreach (Shift person in All)
             {
@@ -71,24 +109,42 @@ namespace Employee_Management_Alpha_1._0
 
                             if (scheduledPerson.DoW == dow && scheduledPerson.cWeek == cWeek && wasScheduled == false )
                             {
-                                if ((tod == 1) && (scheduledPerson.morning == false) && (scheduledPerson.afternoon == false))
+                                foreach (Shift hours in HoursScheduled)
                                 {
-                                    isAvailable.Add(person);
+                                    if (hours.employeeID == scheduledPerson.employeeID)
+                                    {
+                                        if (hours.contractHours - hours.workedHours > 0)
+                                        {
+                                            if ((tod == 1) && (scheduledPerson.morning == false) && (scheduledPerson.afternoon == false))
+                                            {
+                                                isAvailable.Add(hours);
+                                            }
+                                            if ((tod == 2) && (scheduledPerson.afternoon == false) && (scheduledPerson.morning == false))
+                                            {
+                                                isAvailable.Add(hours);
+                                            }
+                                            if ((tod == 3) && (scheduledPerson.evening == false) && (scheduledPerson.afternoon == false))
+                                            {
+                                                isAvailable.Add(hours);
+                                            }
+                                            wasScheduled = true;
+                                        }
+                                    }
                                 }
-                                if ((tod == 2) && (scheduledPerson.afternoon == false) && (scheduledPerson.morning == false))
-                                {
-                                    isAvailable.Add(person);
-                                }
-                                if ((tod == 3) && (scheduledPerson.evening == false) && (scheduledPerson.afternoon == false))
-                                {
-                                    isAvailable.Add(person);
-                                }
-                                wasScheduled = true;
                             }
                         }
                     }
                 }
-                if (wasScheduled == false) { isAvailable.Add(person);}
+                if (wasScheduled == false)
+                {
+                    foreach (Shift hours in HoursScheduled)
+                    {
+                        if (hours.employeeID == person.employeeID)
+                        {
+                            if(hours.contractHours - hours.workedHours > 0) { isAvailable.Add(hours); }
+                        }
+                    }
+                }
             }
             return isAvailable;
         }
@@ -143,7 +199,7 @@ namespace Employee_Management_Alpha_1._0
         {
             List<Shift> items = new List<Shift>();
 
-            string sql = $@"SELECT e.Status as EmpStatus, s.ShiftID, s.EmpID, CONCAT(e.FirstName, ' ' , e.LastName) AS Name, s.DofW,s.morning, s.afternoon, s.evening, e.Department, s.Year, s.cWeek
+            string sql = $@"SELECT e.Status as EmpStatus, s.ShiftID, s.EmpID, CONCAT(e.FirstName, ' ' , e.LastName) AS Name, s.DofW,s.morning, s.afternoon, s.evening, s.Year, s.cWeek
                             FROM shifts as s 
                             INNER JOIN employee as e ON s.EmpID = e.ID
                             WHERE s.Year = {year} AND s.cWeek = {cWeek} OR (s.Year = {year} AND s.cWeek = {cWeek - 1} AND s.DofW = '7' AND evening = '1') OR (s.Year = {year} AND s.cWeek = {cWeek + 1} AND s.DofW = '1' AND morning = '1')
@@ -154,7 +210,7 @@ namespace Employee_Management_Alpha_1._0
             MySqlDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
-                items.Add(new Shift(Convert.ToInt32(dr["ShiftID"]), Convert.ToInt32(dr["DofW"]), Convert.ToInt32(dr["EmpID"]), Convert.ToString(dr["Name"]), Convert.ToBoolean(dr["morning"]), Convert.ToBoolean(dr["afternoon"]), Convert.ToBoolean(dr["evening"]), Convert.ToString(dr["Department"]), Convert.ToInt32(dr["Year"]), Convert.ToInt32(dr["cWeek"])));
+                items.Add(new Shift(Convert.ToInt32(dr["ShiftID"]), Convert.ToInt32(dr["DofW"]), Convert.ToInt32(dr["EmpID"]), Convert.ToString(dr["Name"]), Convert.ToBoolean(dr["morning"]), Convert.ToBoolean(dr["afternoon"]), Convert.ToBoolean(dr["evening"]), Convert.ToInt32(dr["Year"]), Convert.ToInt32(dr["cWeek"])));
             }
             conn.Close();
 
@@ -165,6 +221,38 @@ namespace Employee_Management_Alpha_1._0
             else
             {
                 return items;
+            }
+        }
+
+        public List<Shift> ReturnHoursScheduledInWeek()
+        {
+            List<Shift> employees = new List<Shift>();
+            Shift temp;
+            string sql = $@"SELECT e.ID,CONCAT(e.FirstName, ' ' , e.LastName) AS Name,e.WorkingHours,COALESCE(SUM(c.morning), 0) + COALESCE(SUM(c.afternoon), 0) + COALESCE(SUM(c.evening), 0) AS shiftsTotal
+                            FROM employee as e
+                            left JOIN (select * from shifts as s where s.Year = '{year}' AND s.cWeek = '{cWeek}')c
+                            ON e.ID = c.EmpID
+                            GROUP BY e.ID;";
+
+            MySqlCommand cmd = new MySqlCommand(sql, this.conn);
+            conn.Open();
+            MySqlDataReader dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                temp = new Shift(Convert.ToInt32(dr[0]), Convert.ToString(dr[1]), Convert.ToInt32(dr[2]), Convert.ToInt32(dr[3]) * 8);
+                //MessageBox.Show($"{temp.contractHours}   {temp.workedHours}");
+                employees.Add(temp);
+            }
+            if (employees.Count() > 0)
+            {
+                conn.Close();
+                return employees;
+            }
+            else
+            {
+                conn.Close();
+                return null;
             }
         }
 

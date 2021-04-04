@@ -25,6 +25,37 @@ namespace Employee_Management_Alpha_1._0
             conn.Close();
             return count;
         }
+        public int GetEmpSalary(int empID)
+        {
+            int salary = 0;
+            string sql = $@"SELECT Salary FROM `employee` WHERE `ID` = '{empID}';";
+
+            MySqlCommand cmd = new MySqlCommand(sql, this.conn);
+            conn.Open();
+            MySqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                salary = Convert.ToInt32(dr[0]);
+            }
+            conn.Close();
+            return salary;
+        }
+        public int GetEmpWorkingDuration(int empID)
+        {
+            DateTime startDate = DateTime.Now;
+            DateTime currentDate = DateTime.Now;
+            string sql = $@"SELECT StartDate FROM `employee` WHERE `ID` = '{empID}';";
+
+            MySqlCommand cmd = new MySqlCommand(sql, this.conn);
+            conn.Open();
+            MySqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                startDate = Convert.ToDateTime(dr[0]);
+            }
+            conn.Close();
+            return (int)(currentDate - startDate).TotalDays;
+        }
 
         public int GetEmpTotalTime(int empID)
         {
@@ -32,7 +63,7 @@ namespace Employee_Management_Alpha_1._0
             int year = Convert.ToInt32(DateTime.Now.Year);
             DateTimeFormatInfo dfi = DateTimeFormatInfo.CurrentInfo;
             Calendar cal = dfi.Calendar;
-            int calendarWeek = cal.GetWeekOfYear(DateTime.Now, dfi.CalendarWeekRule, dfi.FirstDayOfWeek);
+            int calendarWeek = cal.GetWeekOfYear(DateTime.Now, CalendarWeekRule.FirstFullWeek, DayOfWeek.Monday);
             int day = (int)DateTime.Now.DayOfWeek;
 
 
@@ -75,7 +106,6 @@ namespace Employee_Management_Alpha_1._0
                         AND `DOfW` <= '{day}' 
                         AND `cWeek` = '{calendarWeek}' 
                         AND `afternoon` = '1'
-
 
                         UNION ALL SELECT count(evening) 
                         FROM `shifts` 

@@ -113,7 +113,7 @@ namespace Employee_Management_Alpha_1._0
                 for (int i = 0; i < items.Count; i++)
                 {
                     gdvAvailable.Rows.Add(1);
-                    gdvAvailable.Rows[i].Cells[0].Value = $"{items[i].employeeID} {items[i].empName}";
+                    gdvAvailable.Rows[i].Cells[0].Value = $"{items[i].employeeID} {items[i].empName} ({items[i].workedHours}/{items[i].contractHours} Hours)";
                 }
             }
             dgvAssigned.ClearSelection();

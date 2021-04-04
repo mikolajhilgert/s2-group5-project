@@ -26,11 +26,11 @@ namespace Employee_Management_Alpha_1._0
         public string emergencyNr { get; set; } //emergency contact phone number for contact
         public string certifications { get; set; } //primarily relevant for depo workers
         public string languages { get; set; }//primarily relevant for sales reps, cashiers and customer support
-        public string contract { get; set; }
+        public DateTime startDate { get; set; }
         public int salary { get; set; }
         public string departmentName { get; set; }
         public string password { get; set; }
-        public string duration { get; set; }
+        public DateTime endDate { get; set; }
         public string status { get; set; }
         public string tag { get; set; }
 
@@ -65,7 +65,7 @@ namespace Employee_Management_Alpha_1._0
         }
 
         //constructors
-        public Employee(string first_name, string last_name, DateTime date_of_birth, string bsn, string postion, int workinghours, string phoneNr, string address, string email, string emergencyC, string emergencyR, string emergencyNr, string certifications, string languages, string contract, string duration, int salary)
+        public Employee(string first_name, string last_name, DateTime date_of_birth, string bsn, string postion, int workinghours, string phoneNr, string address, string email, string emergencyC, string emergencyR, string emergencyNr, string certifications, string languages, DateTime startDate, DateTime endDate, int salary)
         {
             
             this.first_name = first_name;
@@ -80,8 +80,8 @@ namespace Employee_Management_Alpha_1._0
             this.emergencyR = emergencyR;
             this.address = address;
             this.certifications = certifications;
-            this.contract = contract;
-            this.duration = duration;
+            this.startDate = startDate;
+            this.endDate = endDate;
             this.email = email;
             this.languages = languages;
             this.status = status;
@@ -91,11 +91,8 @@ namespace Employee_Management_Alpha_1._0
 
         public Employee(string first_name, string last_name)
         {
-
             this.first_name = first_name;
             this.last_name = last_name;
-            
-
         }
 
         public Employee(int id, string first_name, string last_name)

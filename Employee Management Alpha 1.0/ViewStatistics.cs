@@ -28,8 +28,7 @@ namespace Employee_Management_Alpha_1._0
 
         private void empList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            labelTotalShift.Text = "";
-            labelTotalHours.Text = "";
+            labelTotalShift.Text = labelTotalHours.Text = labelTotalDaysWorked.Text = labelTotalPayment.Text = string.Empty;
 
             if(empList.SelectedItem != null)
             {
@@ -44,6 +43,13 @@ namespace Employee_Management_Alpha_1._0
                     int hours = statistics.GetEmpTotalTime(Convert.ToInt32(match.Value));
                     labelTotalHours.Text = $"This employee has worked for {hours} hours, including today.";
 
+                    int workedDays = statistics.GetEmpWorkingDuration(Convert.ToInt32(match.Value));
+                    labelTotalDaysWorked.Text = $"This employee has been at the company for {workedDays} days.";
+
+                    int salary = statistics.GetEmpSalary(Convert.ToInt32(match.Value));
+                    int monthsWorked = workedDays / 30;
+                    labelTotalPayment.Text = $"Total payment to employee: {salary*monthsWorked} Euro.";
+                    
                 }
             }
             else

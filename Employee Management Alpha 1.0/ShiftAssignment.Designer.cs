@@ -36,8 +36,8 @@ namespace Employee_Management_Alpha_1._0
             this.bttnUnAssign = new System.Windows.Forms.Button();
             this.bttnAssign = new System.Windows.Forms.Button();
             this.gdvAvailable = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAssigned)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdvAvailable)).BeginInit();
             this.SuspendLayout();
@@ -116,15 +116,8 @@ namespace Employee_Management_Alpha_1._0
             this.gdvAvailable.Name = "gdvAvailable";
             this.gdvAvailable.ReadOnly = true;
             this.gdvAvailable.RowHeadersVisible = false;
-            this.gdvAvailable.Size = new System.Drawing.Size(153, 313);
+            this.gdvAvailable.Size = new System.Drawing.Size(210, 313);
             this.gdvAvailable.TabIndex = 9;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 150;
             // 
             // lblTitle
             // 
@@ -137,12 +130,19 @@ namespace Employee_Management_Alpha_1._0
             this.lblTitle.TabIndex = 10;
             this.lblTitle.Text = "label3";
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 242;
+            // 
             // ShiftAssignment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(83)))));
-            this.ClientSize = new System.Drawing.Size(448, 426);
+            this.ClientSize = new System.Drawing.Size(508, 426);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.gdvAvailable);
             this.Controls.Add(this.bttnAssign);
@@ -169,7 +169,7 @@ namespace Employee_Management_Alpha_1._0
         private System.Windows.Forms.Button bttnAssign;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridView gdvAvailable;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
     }
 }
