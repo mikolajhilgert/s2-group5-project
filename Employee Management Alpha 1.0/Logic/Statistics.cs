@@ -43,8 +43,8 @@ namespace Employee_Management_Alpha_1._0
         public int GetEmpWorkingDuration(int empID)
         {
             DateTime startDate = DateTime.Now;
-            DateTime endDate = DateTime.Now;
-            string sql = $@"SELECT StartDate,EndDate FROM `employee` WHERE `ID` = '{empID}';";
+            DateTime currentDate = DateTime.Now;
+            string sql = $@"SELECT StartDate FROM `employee` WHERE `ID` = '{empID}';";
 
             MySqlCommand cmd = new MySqlCommand(sql, this.conn);
             conn.Open();
@@ -52,10 +52,9 @@ namespace Employee_Management_Alpha_1._0
             while (dr.Read())
             {
                 startDate = Convert.ToDateTime(dr[0]);
-                endDate = Convert.ToDateTime(dr[1]);
             }
             conn.Close();
-            return (int)(endDate - startDate).TotalDays;
+            return (int)(currentDate - startDate).TotalDays;
         }
 
         public int GetEmpTotalTime(int empID)
