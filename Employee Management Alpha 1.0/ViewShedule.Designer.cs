@@ -97,10 +97,6 @@ namespace Employee_Management_Alpha_1._0
             this.lblDateMon = new System.Windows.Forms.Label();
             this.pnlMornMonday = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnAutoSchedule = new System.Windows.Forms.Button();
-            this.tbAutoScheduleLimit = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.checkBCondition = new System.Windows.Forms.CheckBox();
             this.gbGeneralScheduler.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -139,10 +135,6 @@ namespace Employee_Management_Alpha_1._0
             // gbGeneralScheduler
             // 
             this.gbGeneralScheduler.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(83)))));
-            this.gbGeneralScheduler.Controls.Add(this.checkBCondition);
-            this.gbGeneralScheduler.Controls.Add(this.label21);
-            this.gbGeneralScheduler.Controls.Add(this.tbAutoScheduleLimit);
-            this.gbGeneralScheduler.Controls.Add(this.btnAutoSchedule);
             this.gbGeneralScheduler.Controls.Add(this.buttonCurrentWeek);
             this.gbGeneralScheduler.Controls.Add(this.label5);
             this.gbGeneralScheduler.Controls.Add(this.label1);
@@ -994,47 +986,6 @@ namespace Employee_Management_Alpha_1._0
             this.label7.TabIndex = 0;
             this.label7.Text = "???";
             // 
-            // btnAutoSchedule
-            // 
-            this.btnAutoSchedule.Location = new System.Drawing.Point(1159, 49);
-            this.btnAutoSchedule.Name = "btnAutoSchedule";
-            this.btnAutoSchedule.Size = new System.Drawing.Size(160, 39);
-            this.btnAutoSchedule.TabIndex = 24;
-            this.btnAutoSchedule.Text = "Auto Schedule Week";
-            this.btnAutoSchedule.UseVisualStyleBackColor = true;
-            this.btnAutoSchedule.Click += new System.EventHandler(this.btnAutoSchedule_Click);
-            // 
-            // tbAutoScheduleLimit
-            // 
-            this.tbAutoScheduleLimit.BackColor = System.Drawing.Color.White;
-            this.tbAutoScheduleLimit.ForeColor = System.Drawing.Color.Black;
-            this.tbAutoScheduleLimit.Location = new System.Drawing.Point(985, 66);
-            this.tbAutoScheduleLimit.Name = "tbAutoScheduleLimit";
-            this.tbAutoScheduleLimit.Size = new System.Drawing.Size(21, 20);
-            this.tbAutoScheduleLimit.TabIndex = 25;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(1010, 69);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(98, 13);
-            this.label21.TabIndex = 26;
-            this.label21.Text = "Employees per shift";
-            // 
-            // checkBCondition
-            // 
-            this.checkBCondition.AutoSize = true;
-            this.checkBCondition.ForeColor = System.Drawing.Color.White;
-            this.checkBCondition.Location = new System.Drawing.Point(985, 49);
-            this.checkBCondition.Name = "checkBCondition";
-            this.checkBCondition.Size = new System.Drawing.Size(163, 17);
-            this.checkBCondition.TabIndex = 27;
-            this.checkBCondition.Text = "   Ensure atleast one per shift";
-            this.checkBCondition.UseVisualStyleBackColor = true;
-            this.checkBCondition.CheckedChanged += new System.EventHandler(this.checkBCondition_CheckedChanged);
-            // 
             // ViewShedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1180,9 +1131,5 @@ namespace Employee_Management_Alpha_1._0
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonCurrentWeek;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btnAutoSchedule;
-        private System.Windows.Forms.TextBox tbAutoScheduleLimit;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.CheckBox checkBCondition;
     }
 }

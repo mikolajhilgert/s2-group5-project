@@ -385,41 +385,41 @@ namespace Employee_Management_Alpha_1._0
 
         }
 
-        private void btnAutoSchedule_Click(object sender, EventArgs e)
-        {
-            bool shiftCondition = false;
-            int limit = 0;
+        //private void btnAutoSchedule_Click(object sender, EventArgs e)
+        //{
+        //    bool shiftCondition = false;
+        //    int limit = 0;
 
-            if (checkBCondition.Checked) { shiftCondition = true; limit = 1; } else {
-                if(int.TryParse(tbAutoScheduleLimit.Text, out int value)){ limit = value; }}
+        //    if (checkBCondition.Checked) { shiftCondition = true; limit = 1; } else {
+        //        if(int.TryParse(tbAutoScheduleLimit.Text, out int value)){ limit = value; }}
 
-            if (limit > 0 && limit <= sm.ReturnAllEmps().Count)
-            {
-                Cursor.Current = Cursors.WaitCursor;
+        //    if (limit > 0 && limit <= sm.ReturnAllEmps().Count)
+        //    {
+        //        Cursor.Current = Cursors.WaitCursor;
 
-                sm.AutoScheduleWeek(limit, shiftCondition);
-                Cursor.Current = Cursors.Arrow;
-                tbAutoScheduleLimit.Text = "";
-                checkBCondition.Checked = false;
-                PopulateSchedule();
-            }
-            else { MessageBox.Show("Invalid Input!"); }
-        }
+        //        sm.AutoScheduleWeek(limit, shiftCondition);
+        //        Cursor.Current = Cursors.Arrow;
+        //        tbAutoScheduleLimit.Text = "";
+        //        checkBCondition.Checked = false;
+        //        PopulateSchedule();
+        //    }
+        //    else { MessageBox.Show("Invalid Input!"); }
+        //}
 
-        private void checkBCondition_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBCondition.Checked)
-            {
-                tbAutoScheduleLimit.Enabled = false;
-                label21.ForeColor = Color.DarkGray;
-                tbAutoScheduleLimit.Text = "";
-            }
-            else
-            {
-                tbAutoScheduleLimit.Enabled = true;
-                label21.ForeColor = Color.White;
-                tbAutoScheduleLimit.Text = "";
-            }
-        }
+        //private void checkBCondition_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    if (checkBCondition.Checked)
+        //    {
+        //        tbAutoScheduleLimit.Enabled = false;
+        //        label21.ForeColor = Color.DarkGray;
+        //        tbAutoScheduleLimit.Text = "";
+        //    }
+        //    else
+        //    {
+        //        tbAutoScheduleLimit.Enabled = true;
+        //        label21.ForeColor = Color.White;
+        //        tbAutoScheduleLimit.Text = "";
+        //    }
+        //}
     }
 }
