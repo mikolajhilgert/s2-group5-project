@@ -49,6 +49,43 @@ namespace Employee_Management_Alpha_1._0
             }
         }
 
+        public void AutoScheduleWeek(int inputLimit, bool onePerShift)
+        {
+            int limit = inputLimit;
+            int runAgain = 0;
+            if (onePerShift)
+            {
+                //List<Shift> allEmps = ReturnHoursScheduledInWeek();
+                //int empPotentialHours = 0;
+                //foreach (var emp in allEmps)
+                //{
+                //    empPotentialHours += emp.contractHours;
+                //}
+                //if (empPotentialHours < 168) { limit = 1; runAgain = 1; }
+                limit = 1; runAgain = 1;
+            }
+            for (int i = 0; i <= runAgain; i++)
+            {
+                for (int dow = 1; dow <= 7; dow++)
+                {
+                    for (int tod = 1; tod <= 3; tod++)
+                    {
+                        List<Shift> available = ReturnAvailableEmployees(tod, dow);
+                        Random rnd = new Random();
+                        for (int assigned = 1; assigned <= limit; assigned++)
+                        {
+                            if (available.Count >= 1)
+                            {
+                                int selectedEmp = rnd.Next(0, available.Count); // creates a number from available emps
+                                AssignEmployeeToShift(available[selectedEmp].employeeID, tod, dow);
+                                available.RemoveAt(selectedEmp);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         public List<Shift> ReturnAvailableEmployees(int tod, int dow)
         {
             List<Shift> Scheduled = this.ReturnScheduledEmployees();
