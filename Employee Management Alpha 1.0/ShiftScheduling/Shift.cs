@@ -17,12 +17,11 @@ namespace Employee_Management_Alpha_1._0
         public bool evening { get; set; }
         public int year { get; set; }
         public int cWeek { get; set; }
-        public string eDep { get; set; }
         public int contractHours { get; set; }
         public int workedHours { get; set; }
 
 
-        public Shift(int shiftID, int DoW, int employeeID, string empName, bool morning, bool afternoon, bool evening, string eDep, int year , int cWeek)
+        public Shift(int shiftID, int DoW, int employeeID, string empName, bool morning, bool afternoon, bool evening, int year , int cWeek)
         {
             this.shiftID = shiftID;
             this.DoW = DoW;
@@ -31,7 +30,6 @@ namespace Employee_Management_Alpha_1._0
             this.morning = morning;
             this.afternoon = afternoon;
             this.evening = evening;
-            this.eDep = eDep;
             this.cWeek = cWeek;
             this.year = year;
         }

@@ -25,6 +25,38 @@ namespace Employee_Management_Alpha_1._0
             conn.Close();
             return count;
         }
+        public int GetEmpSalary(int empID)
+        {
+            int salary = 0;
+            string sql = $@"SELECT Salary FROM `employee` WHERE `ID` = '{empID}';";
+
+            MySqlCommand cmd = new MySqlCommand(sql, this.conn);
+            conn.Open();
+            MySqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                salary = Convert.ToInt32(dr[0]);
+            }
+            conn.Close();
+            return salary;
+        }
+        public int GetEmpWorkingDuration(int empID)
+        {
+            DateTime startDate = DateTime.Now;
+            DateTime endDate = DateTime.Now;
+            string sql = $@"SELECT StartDate,EndDate FROM `employee` WHERE `ID` = '{empID}';";
+
+            MySqlCommand cmd = new MySqlCommand(sql, this.conn);
+            conn.Open();
+            MySqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                startDate = Convert.ToDateTime(dr[0]);
+                endDate = Convert.ToDateTime(dr[1]);
+            }
+            conn.Close();
+            return (int)(endDate - startDate).TotalDays;
+        }
 
         public int GetEmpTotalTime(int empID)
         {

@@ -82,7 +82,7 @@ namespace Employee_Management_Alpha_1._0
 
             while (dr.Read())
             {
-                employee = new Employee(Convert.ToString(dr["FirstName"]), Convert.ToString(dr["LastName"]), Convert.ToDateTime(dr["DOB"]), Convert.ToString(dr["BSN"]), Convert.ToString(dr["Position"]), Convert.ToInt32(dr["WorkingHours"]), Convert.ToString(dr["PhoneNr"]), Convert.ToString(dr["Address"]), Convert.ToString(dr["Email"]), Convert.ToString(dr["EmergencyC"]), Convert.ToString(dr["EmergencyR"]), Convert.ToString(dr["EmergencyNr"]), Convert.ToString(dr["Certifications"]), Convert.ToString(dr["Languages"]), Convert.ToString(dr["ContractType"]), Convert.ToString(dr["ContractDuration"]), Convert.ToInt32(dr["Salary"]));
+                employee = new Employee(Convert.ToString(dr["FirstName"]), Convert.ToString(dr["LastName"]), Convert.ToDateTime(dr["DOB"]), Convert.ToString(dr["BSN"]), Convert.ToString(dr["Position"]), Convert.ToInt32(dr["WorkingHours"]), Convert.ToString(dr["PhoneNr"]), Convert.ToString(dr["Address"]), Convert.ToString(dr["Email"]), Convert.ToString(dr["EmergencyC"]), Convert.ToString(dr["EmergencyR"]), Convert.ToString(dr["EmergencyNr"]), Convert.ToString(dr["Certifications"]), Convert.ToString(dr["Languages"]), Convert.ToDateTime(dr["StartDate"]), Convert.ToDateTime(dr["EndDate"]), Convert.ToInt32(dr["Salary"]));
                 conn.Close();
                 return employee;
             }
@@ -120,8 +120,9 @@ namespace Employee_Management_Alpha_1._0
 
         public void RemoveEmployeebyId(string id)
         {
-            string sql = $"DELETE FROM `employee` WHERE `employee`.`ID` = {id};";
+            string sql = $"DELETE FROM `employee` WHERE `employee`.`ID` = @ID;";
             MySqlCommand cmd = new MySqlCommand(sql, this.conn);
+            cmd.Parameters.AddWithValue("@ID", id);
             try
             {
                 conn.Open();
@@ -148,10 +149,9 @@ namespace Employee_Management_Alpha_1._0
                 if (connection.State == ConnectionState.Open)
                 {
                     //MessageBox.Show("Data entered succesfully.");
-                    MySqlCommand cmd = new MySqlCommand($"UPDATE `employee` SET `Status` = '{status}' WHERE ID = {id}", connection);
+                    MySqlCommand cmd = new MySqlCommand($"UPDATE `employee` SET `Status` = '{status}' WHERE ID = @ID", connection);
+                    cmd.Parameters.AddWithValue("@ID", id);
                     cmd.ExecuteNonQuery();
-
-
                 }
             }
             catch (Exception ex)
@@ -163,9 +163,9 @@ namespace Employee_Management_Alpha_1._0
         }
         
 
-        public void AddEmployee(string first_name, string last_name, DateTime date_of_birth, string bsn, string postion, int workinghours, string phoneNr, string address, string email, string emergencyC, string emergencyR, string emergencyNr, string certifications, string languages, string contract, string duration, int salary)
+        public void AddEmployee(string first_name, string last_name, DateTime date_of_birth, string bsn, string postion, int workinghours, string phoneNr, string address, string email, string emergencyC, string emergencyR, string emergencyNr, string certifications, string languages, DateTime startDate, DateTime endDate, int salary)
         {
-            this.employee = new Employee(first_name, last_name, date_of_birth, bsn, postion, workinghours, phoneNr, address, email, emergencyC, emergencyR, emergencyNr, certifications, languages, contract, duration, salary); //instantiate a new object of type employee
+            this.employee = new Employee(first_name, last_name, date_of_birth, bsn, postion, workinghours, phoneNr, address, email, emergencyC, emergencyR, emergencyNr, certifications, languages, startDate, endDate, salary); //instantiate a new object of type employee
             this.employees.Add(employee); //add it to list of type employee
             MySqlConnection connection;
             string connectionString;
@@ -177,7 +177,7 @@ namespace Employee_Management_Alpha_1._0
                 if (connection.State == ConnectionState.Open)
                 {
                     //MessageBox.Show("Data entered succesfully.");
-                    MySqlCommand cmd = new MySqlCommand($@"INSERT INTO employee (FirstName, LastName, DOB, BSN, Position, WorkingHours, PhoneNr, Address, Email, EmergencyC, EmergencyR, EmergencyNr, Certifications, Languages, ContractType, ContractDuration, Salary) VALUES (@FirstName, @LastName, @DOB, @BSN, @Position, @WorkingHours, @PhoneNr, @Address, @Email, @EmergencyC, @EmergencyR, @EmergencyNr, @Certifications, @Languages, @ContractType, @ContractDuration, @Salary);", connection);
+                    MySqlCommand cmd = new MySqlCommand($@"INSERT INTO employee (FirstName, LastName, DOB, BSN, Position, WorkingHours, PhoneNr, Address, Email, EmergencyC, EmergencyR, EmergencyNr, Certifications, Languages, StartDate, EndDate, Salary) VALUES (@FirstName, @LastName, @DOB, @BSN, @Position, @WorkingHours, @PhoneNr, @Address, @Email, @EmergencyC, @EmergencyR, @EmergencyNr, @Certifications, @Languages, @StartDate, @EndDate, @Salary);", connection);
                     //cmd.Parameters.AddWithValue("@employeeID", Convert.ToInt32(tbEmployeeID.Text));
 
                     cmd.Parameters.AddWithValue("@FirstName", first_name);
@@ -194,8 +194,8 @@ namespace Employee_Management_Alpha_1._0
                     cmd.Parameters.AddWithValue("@EmergencyNr", emergencyNr);
                     cmd.Parameters.AddWithValue("@Certifications", certifications);
                     cmd.Parameters.AddWithValue("@Languages", languages);
-                    cmd.Parameters.AddWithValue("@ContractType", contract);
-                    cmd.Parameters.AddWithValue("@ContractDuration", duration);
+                    cmd.Parameters.AddWithValue("@StartDate", startDate);
+                    cmd.Parameters.AddWithValue("@EndDate", endDate);
                     cmd.Parameters.AddWithValue("@Salary", salary);
                     cmd.ExecuteNonQuery();
 
@@ -210,9 +210,9 @@ namespace Employee_Management_Alpha_1._0
             connection.Close();
         }
         
-        public void ChangeEmployeeTest(int id, string first_name, string last_name, DateTime date_of_birth, string bsn, string postion, int workinghours, string phoneNr, string address, string email, string emergencyC, string emergencyR, string emergencyNr, string certifications, string languages, string contract, string duration, int salary)
+        public void ChangeEmployeeTest(int id, string first_name, string last_name, DateTime date_of_birth, string bsn, string postion, int workinghours, string phoneNr, string address, string email, string emergencyC, string emergencyR, string emergencyNr, string certifications, string languages, DateTime startDate, DateTime endDate, int salary)
         {
-            this.employee = new Employee(first_name, last_name, date_of_birth, bsn, postion, workinghours, phoneNr, address, email, emergencyC, emergencyR, emergencyNr, certifications, languages, contract, duration, salary); //instantiate a new object of type employee
+            this.employee = new Employee(first_name, last_name, date_of_birth, bsn, postion, workinghours, phoneNr, address, email, emergencyC, emergencyR, emergencyNr, certifications, languages, startDate, endDate, salary); //instantiate a new object of type employee
             this.employees.Add(employee); //add it to list of type employee
             MySqlConnection connection;
             string connectionString;
@@ -224,7 +224,7 @@ namespace Employee_Management_Alpha_1._0
                 if (connection.State == ConnectionState.Open)
                 {
                     //MessageBox.Show("Data entered succesfully.");
-                    MySqlCommand cmd = new MySqlCommand($"UPDATE `employee` SET `FirstName` = '{first_name}', `LastName` = '{last_name}', `BSN` = '{bsn}', `Position` = '{postion}', `WorkingHours` = '{Convert.ToInt32(workinghours)}', `PhoneNr` = '{phoneNr}', `Address` = '{address}', `Email` = '{email}', `EmergencyC` = '{emergencyC}', `EmergencyR` = '{emergencyR}', `EmergencyNr`= '{emergencyNr}', `Certifications`= '{certifications}', `Languages` = '{languages}', `ContractType`= '{contract}', `ContractDuration` = '{duration}', `Salary` = '{salary}' WHERE `ID` = {id};", connection);
+                    MySqlCommand cmd = new MySqlCommand($"UPDATE `employee` SET `FirstName` = '{first_name}', `LastName` = '{last_name}', `BSN` = '{bsn}', `Position` = '{postion}', `WorkingHours` = '{Convert.ToInt32(workinghours)}', `PhoneNr` = '{phoneNr}', `Address` = '{address}', `Email` = '{email}', `EmergencyC` = '{emergencyC}', `EmergencyR` = '{emergencyR}', `EmergencyNr`= '{emergencyNr}', `Certifications`= '{certifications}', `Languages` = '{languages}', `StartDate`= '{startDate.ToString("yyyy/MM/dd")}', `EndDate` = '{endDate.ToString("yyyy/MM/dd")}', `Salary` = '{salary}' WHERE `ID` = {id};", connection);
                     cmd.Parameters.AddWithValue("@FirstName", first_name);
                     cmd.Parameters.AddWithValue("@LastName", last_name);
                     cmd.Parameters.AddWithValue("@DOB", date_of_birth);
@@ -239,8 +239,8 @@ namespace Employee_Management_Alpha_1._0
                     cmd.Parameters.AddWithValue("@EmergencyNr", emergencyNr);
                     cmd.Parameters.AddWithValue("@Certifications", certifications);
                     cmd.Parameters.AddWithValue("@Languages", languages);
-                    cmd.Parameters.AddWithValue("@ContractType", contract);
-                    cmd.Parameters.AddWithValue("@ContractDuration", duration);
+                    cmd.Parameters.AddWithValue("@StartDate", startDate.ToShortDateString());
+                    cmd.Parameters.AddWithValue("@EndDate", endDate.ToShortDateString());
                     cmd.Parameters.AddWithValue("@Salary", salary);
                     cmd.ExecuteNonQuery();
 
@@ -250,7 +250,8 @@ namespace Employee_Management_Alpha_1._0
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show(startDate.ToShortDateString());
+                MessageBox.Show(endDate.ToShortDateString());
                 MessageBox.Show(ex.Message);
             }
             connection.Close();

@@ -162,7 +162,7 @@ namespace Employee_Management_Alpha_1._0
         {
             List<Shift> items = new List<Shift>();
 
-            string sql = $@"SELECT e.Status as EmpStatus, s.ShiftID, s.EmpID, CONCAT(e.FirstName, ' ' , e.LastName) AS Name, s.DofW,s.morning, s.afternoon, s.evening, e.Department, s.Year, s.cWeek
+            string sql = $@"SELECT e.Status as EmpStatus, s.ShiftID, s.EmpID, CONCAT(e.FirstName, ' ' , e.LastName) AS Name, s.DofW,s.morning, s.afternoon, s.evening, s.Year, s.cWeek
                             FROM shifts as s 
                             INNER JOIN employee as e ON s.EmpID = e.ID
                             WHERE s.Year = {year} AND s.cWeek = {cWeek} OR (s.Year = {year} AND s.cWeek = {cWeek - 1} AND s.DofW = '7' AND evening = '1') OR (s.Year = {year} AND s.cWeek = {cWeek + 1} AND s.DofW = '1' AND morning = '1')
@@ -173,7 +173,7 @@ namespace Employee_Management_Alpha_1._0
             MySqlDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
-                items.Add(new Shift(Convert.ToInt32(dr["ShiftID"]), Convert.ToInt32(dr["DofW"]), Convert.ToInt32(dr["EmpID"]), Convert.ToString(dr["Name"]), Convert.ToBoolean(dr["morning"]), Convert.ToBoolean(dr["afternoon"]), Convert.ToBoolean(dr["evening"]), Convert.ToString(dr["Department"]), Convert.ToInt32(dr["Year"]), Convert.ToInt32(dr["cWeek"])));
+                items.Add(new Shift(Convert.ToInt32(dr["ShiftID"]), Convert.ToInt32(dr["DofW"]), Convert.ToInt32(dr["EmpID"]), Convert.ToString(dr["Name"]), Convert.ToBoolean(dr["morning"]), Convert.ToBoolean(dr["afternoon"]), Convert.ToBoolean(dr["evening"]), Convert.ToInt32(dr["Year"]), Convert.ToInt32(dr["cWeek"])));
             }
             conn.Close();
 

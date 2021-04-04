@@ -34,6 +34,8 @@ namespace Employee_Management_Alpha_1._0
             this.label1 = new System.Windows.Forms.Label();
             this.labelTotalHours = new System.Windows.Forms.Label();
             this.labelActiveE = new System.Windows.Forms.Label();
+            this.labelTotalDaysWorked = new System.Windows.Forms.Label();
+            this.labelTotalPayment = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // empList
@@ -87,12 +89,36 @@ namespace Employee_Management_Alpha_1._0
             this.labelActiveE.TabIndex = 3;
             this.labelActiveE.Text = "There are {null} active employees";
             // 
+            // labelTotalDaysWorked
+            // 
+            this.labelTotalDaysWorked.AutoSize = true;
+            this.labelTotalDaysWorked.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTotalDaysWorked.ForeColor = System.Drawing.Color.White;
+            this.labelTotalDaysWorked.Location = new System.Drawing.Point(232, 167);
+            this.labelTotalDaysWorked.Name = "labelTotalDaysWorked";
+            this.labelTotalDaysWorked.Size = new System.Drawing.Size(346, 18);
+            this.labelTotalDaysWorked.TabIndex = 4;
+            this.labelTotalDaysWorked.Text = "This employee has been at the company for 0 days.";
+            // 
+            // labelTotalPayment
+            // 
+            this.labelTotalPayment.AutoSize = true;
+            this.labelTotalPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTotalPayment.ForeColor = System.Drawing.Color.White;
+            this.labelTotalPayment.Location = new System.Drawing.Point(232, 207);
+            this.labelTotalPayment.Name = "labelTotalPayment";
+            this.labelTotalPayment.Size = new System.Drawing.Size(238, 18);
+            this.labelTotalPayment.TabIndex = 5;
+            this.labelTotalPayment.Text = "Total payment to employee: 0 Euro";
+            // 
             // ViewStatistics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(83)))));
             this.ClientSize = new System.Drawing.Size(649, 396);
+            this.Controls.Add(this.labelTotalPayment);
+            this.Controls.Add(this.labelTotalDaysWorked);
             this.Controls.Add(this.labelActiveE);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelTotalHours);
@@ -112,5 +138,7 @@ namespace Employee_Management_Alpha_1._0
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelTotalHours;
         private System.Windows.Forms.Label labelActiveE;
+        private System.Windows.Forms.Label labelTotalDaysWorked;
+        private System.Windows.Forms.Label labelTotalPayment;
     }
 }
