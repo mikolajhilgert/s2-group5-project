@@ -346,10 +346,13 @@ namespace Employee_Management_Alpha_1._0
 
         public int ReturnCurrentCalWeek()
         {
-            DateTimeFormatInfo dfi = DateTimeFormatInfo.CurrentInfo;
-            Calendar cal = dfi.Calendar;
+            DateTime dt = DateTime.Now;
+            Calendar cal = new CultureInfo("en-US").Calendar;
+            return cal.GetWeekOfYear(dt, CalendarWeekRule.FirstFullWeek, DayOfWeek.Monday);
+            //DateTimeFormatInfo dfi = DateTimeFormatInfo.CurrentInfo;
+            //Calendar cal = dfi.Calendar;
 
-            return cal.GetWeekOfYear(DateTime.Now, dfi.CalendarWeekRule, dfi.FirstDayOfWeek);
+            //return cal.GetWeekOfYear(DateTime.Now, dfi.CalendarWeekRule, dfi.FirstDayOfWeek);
         }
         public int ReturnSelectedYear()
         {
