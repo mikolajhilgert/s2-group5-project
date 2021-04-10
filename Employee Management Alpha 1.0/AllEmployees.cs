@@ -56,7 +56,7 @@ namespace Employee_Management_Alpha_1._0
             if ((!String.IsNullOrEmpty(tbFirstName.Text)) && (!String.IsNullOrEmpty(tbLastName.Text)) && (!String.IsNullOrEmpty(tbBSN.Text)) && (!String.IsNullOrEmpty(tbPosition.Text)) && (!String.IsNullOrEmpty(cbWorkingH.Text)) && (!String.IsNullOrEmpty(tbPhone.Text)) && (!String.IsNullOrEmpty(tbAddress.Text)) && (!String.IsNullOrEmpty(tbEmail.Text)) && (!String.IsNullOrEmpty(tbEmergencyN.Text)) && (!String.IsNullOrEmpty(tbContactR.Text)) && (!String.IsNullOrEmpty(tbEmergencyNr.Text)) && (!String.IsNullOrEmpty(tbCertifications.Text)) && (!String.IsNullOrEmpty(tbLanguage.Text)) && (!String.IsNullOrEmpty(dateTimeStart.Text)) && (!String.IsNullOrEmpty(dateTimeEnd.Text)))
                 if ((DateTime.Parse(dateTimeStart.Text) < DateTime.Parse(dateTimeEnd.Text)) && BSNmatch.Success && int.TryParse(tbSalary.Text, out int value))
                 {
-                    employeeManagement.ChangeEmployeeTest(Convert.ToInt32(tbID.Text), tbFirstName.Text, tbLastName.Text, dtfiller, tbBSN.Text, tbPosition.Text, Convert.ToInt32(cbWorkingH.Text), tbPhone.Text, tbAddress.Text, tbEmail.Text, tbEmergencyN.Text, tbContactR.Text, tbEmergencyNr.Text, tbCertifications.Text, tbLanguage.Text,dateTimeStart.Value, dateTimeEnd.Value, Convert.ToInt32(tbSalary.Text));
+                    employeeManagement.ChangeEmployeeTest(Convert.ToInt32(tbID.Text), tbFirstName.Text, tbLastName.Text, dtfiller, tbBSN.Text, tbPosition.Text, Convert.ToInt32(cbWorkingH.Text), tbPhone.Text, tbAddress.Text, tbEmail.Text, tbPassword.Text, tbEmergencyN.Text, tbContactR.Text, tbEmergencyNr.Text, tbCertifications.Text, tbLanguage.Text,dateTimeStart.Value, dateTimeEnd.Value, Convert.ToInt32(tbSalary.Text));
                 }
                 else
                 {
@@ -90,6 +90,7 @@ namespace Employee_Management_Alpha_1._0
             tbLanguage.Text = employee.languages;
             tbPosition.Text = employee.postion;
             tbEmail.Text = employee.email;
+            tbPassword.Text = employee.password;
             dateTimeStart.Text = employee.startDate.ToString();
             dateTimeEnd.Text = employee.endDate.ToString();
             cbWorkingH.Text = employee.workinghours.ToString();
@@ -113,6 +114,14 @@ namespace Employee_Management_Alpha_1._0
                     tbID.Text = match.Value;
                 }
             }
+        }
+
+        private void btnPassVisible_Click(object sender, EventArgs e)
+        {
+            if (tbPassword.PasswordChar == '*')
+                tbPassword.PasswordChar = '\0';
+            else
+                tbPassword.PasswordChar = '*';
         }
     }
 }

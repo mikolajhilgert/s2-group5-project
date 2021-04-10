@@ -82,7 +82,7 @@ namespace Employee_Management_Alpha_1._0
 
             while (dr.Read())
             {
-                employee = new Employee(Convert.ToString(dr["FirstName"]), Convert.ToString(dr["LastName"]), Convert.ToDateTime(dr["DOB"]), Convert.ToString(dr["BSN"]), Convert.ToString(dr["Position"]), Convert.ToInt32(dr["WorkingHours"]), Convert.ToString(dr["PhoneNr"]), Convert.ToString(dr["Address"]), Convert.ToString(dr["Email"]), Convert.ToString(dr["EmergencyC"]), Convert.ToString(dr["EmergencyR"]), Convert.ToString(dr["EmergencyNr"]), Convert.ToString(dr["Certifications"]), Convert.ToString(dr["Languages"]), Convert.ToDateTime(dr["StartDate"]), Convert.ToDateTime(dr["EndDate"]), Convert.ToInt32(dr["Salary"]));
+                employee = new Employee(Convert.ToString(dr["FirstName"]), Convert.ToString(dr["LastName"]), Convert.ToDateTime(dr["DOB"]), Convert.ToString(dr["BSN"]), Convert.ToString(dr["Position"]), Convert.ToInt32(dr["WorkingHours"]), Convert.ToString(dr["PhoneNr"]), Convert.ToString(dr["Address"]), Convert.ToString(dr["Email"]), Convert.ToString(dr["Password"]), Convert.ToString(dr["EmergencyC"]), Convert.ToString(dr["EmergencyR"]), Convert.ToString(dr["EmergencyNr"]), Convert.ToString(dr["Certifications"]), Convert.ToString(dr["Languages"]), Convert.ToDateTime(dr["StartDate"]), Convert.ToDateTime(dr["EndDate"]), Convert.ToInt32(dr["Salary"]));
                 conn.Close();
                 return employee;
             }
@@ -163,9 +163,9 @@ namespace Employee_Management_Alpha_1._0
         }
         
 
-        public void AddEmployee(string first_name, string last_name, DateTime date_of_birth, string bsn, string postion, int workinghours, string phoneNr, string address, string email, string emergencyC, string emergencyR, string emergencyNr, string certifications, string languages, DateTime startDate, DateTime endDate, int salary)
+        public void AddEmployee(string first_name, string last_name, DateTime date_of_birth, string bsn, string postion, int workinghours, string phoneNr, string address, string email, string password, string emergencyC, string emergencyR, string emergencyNr, string certifications, string languages, DateTime startDate, DateTime endDate, int salary)
         {
-            this.employee = new Employee(first_name, last_name, date_of_birth, bsn, postion, workinghours, phoneNr, address, email, emergencyC, emergencyR, emergencyNr, certifications, languages, startDate, endDate, salary); //instantiate a new object of type employee
+            this.employee = new Employee(first_name, last_name, date_of_birth, bsn, postion, workinghours, phoneNr, address, email, password, emergencyC, emergencyR, emergencyNr, certifications, languages, startDate, endDate, salary); //instantiate a new object of type employee
             this.employees.Add(employee); //add it to list of type employee
             MySqlConnection connection;
             string connectionString;
@@ -177,7 +177,7 @@ namespace Employee_Management_Alpha_1._0
                 if (connection.State == ConnectionState.Open)
                 {
                     //MessageBox.Show("Data entered succesfully.");
-                    MySqlCommand cmd = new MySqlCommand($@"INSERT INTO employee (FirstName, LastName, DOB, BSN, Position, WorkingHours, PhoneNr, Address, Email, EmergencyC, EmergencyR, EmergencyNr, Certifications, Languages, StartDate, EndDate, Salary) VALUES (@FirstName, @LastName, @DOB, @BSN, @Position, @WorkingHours, @PhoneNr, @Address, @Email, @EmergencyC, @EmergencyR, @EmergencyNr, @Certifications, @Languages, @StartDate, @EndDate, @Salary);", connection);
+                    MySqlCommand cmd = new MySqlCommand($@"INSERT INTO employee (FirstName, LastName, DOB, BSN, Position, WorkingHours, PhoneNr, Address, Email, Password, EmergencyC, EmergencyR, EmergencyNr, Certifications, Languages, StartDate, EndDate, Salary) VALUES (@FirstName, @LastName, @DOB, @BSN, @Position, @WorkingHours, @PhoneNr, @Address, @Email, @Password, @EmergencyC, @EmergencyR, @EmergencyNr, @Certifications, @Languages, @StartDate, @EndDate, @Salary);", connection);
                     //cmd.Parameters.AddWithValue("@employeeID", Convert.ToInt32(tbEmployeeID.Text));
 
                     cmd.Parameters.AddWithValue("@FirstName", first_name);
@@ -189,6 +189,7 @@ namespace Employee_Management_Alpha_1._0
                     cmd.Parameters.AddWithValue("@PhoneNr", phoneNr);
                     cmd.Parameters.AddWithValue("@Address", address);
                     cmd.Parameters.AddWithValue("@Email", email);
+                    cmd.Parameters.AddWithValue("@Password", password);
                     cmd.Parameters.AddWithValue("@EmergencyC", emergencyC);
                     cmd.Parameters.AddWithValue("@EmergencyR", emergencyR);
                     cmd.Parameters.AddWithValue("@EmergencyNr", emergencyNr);
@@ -210,9 +211,9 @@ namespace Employee_Management_Alpha_1._0
             connection.Close();
         }
         
-        public void ChangeEmployeeTest(int id, string first_name, string last_name, DateTime date_of_birth, string bsn, string postion, int workinghours, string phoneNr, string address, string email, string emergencyC, string emergencyR, string emergencyNr, string certifications, string languages, DateTime startDate, DateTime endDate, int salary)
+        public void ChangeEmployeeTest(int id, string first_name, string last_name, DateTime date_of_birth, string bsn, string postion, int workinghours, string phoneNr, string address, string email, string password, string emergencyC, string emergencyR, string emergencyNr, string certifications, string languages, DateTime startDate, DateTime endDate, int salary)
         {
-            this.employee = new Employee(first_name, last_name, date_of_birth, bsn, postion, workinghours, phoneNr, address, email, emergencyC, emergencyR, emergencyNr, certifications, languages, startDate, endDate, salary); //instantiate a new object of type employee
+            this.employee = new Employee(first_name, last_name, date_of_birth, bsn, postion, workinghours, phoneNr, address, email, password, emergencyC, emergencyR, emergencyNr, certifications, languages, startDate, endDate, salary); //instantiate a new object of type employee
             this.employees.Add(employee); //add it to list of type employee
             MySqlConnection connection;
             string connectionString;
@@ -224,7 +225,7 @@ namespace Employee_Management_Alpha_1._0
                 if (connection.State == ConnectionState.Open)
                 {
                     //MessageBox.Show("Data entered succesfully.");
-                    MySqlCommand cmd = new MySqlCommand($"UPDATE `employee` SET `FirstName` = '{first_name}', `LastName` = '{last_name}', `BSN` = '{bsn}', `Position` = '{postion}', `WorkingHours` = '{Convert.ToInt32(workinghours)}', `PhoneNr` = '{phoneNr}', `Address` = '{address}', `Email` = '{email}', `EmergencyC` = '{emergencyC}', `EmergencyR` = '{emergencyR}', `EmergencyNr`= '{emergencyNr}', `Certifications`= '{certifications}', `Languages` = '{languages}', `StartDate`= '{startDate.ToString("yyyy/MM/dd")}', `EndDate` = '{endDate.ToString("yyyy/MM/dd")}', `Salary` = '{salary}' WHERE `ID` = {id};", connection);
+                    MySqlCommand cmd = new MySqlCommand($"UPDATE `employee` SET `FirstName` = '{first_name}', `LastName` = '{last_name}', `BSN` = '{bsn}', `Position` = '{postion}', `WorkingHours` = '{Convert.ToInt32(workinghours)}', `PhoneNr` = '{phoneNr}', `Address` = '{address}', `Email` = '{email}', `Password` = '{password}',`EmergencyC` = '{emergencyC}', `EmergencyR` = '{emergencyR}', `EmergencyNr`= '{emergencyNr}', `Certifications`= '{certifications}', `Languages` = '{languages}', `StartDate`= '{startDate.ToString("yyyy/MM/dd")}', `EndDate` = '{endDate.ToString("yyyy/MM/dd")}', `Salary` = '{salary}' WHERE `ID` = {id};", connection);
                     cmd.Parameters.AddWithValue("@FirstName", first_name);
                     cmd.Parameters.AddWithValue("@LastName", last_name);
                     cmd.Parameters.AddWithValue("@DOB", date_of_birth);
@@ -234,6 +235,7 @@ namespace Employee_Management_Alpha_1._0
                     cmd.Parameters.AddWithValue("@PhoneNr", phoneNr);
                     cmd.Parameters.AddWithValue("@Address", address);
                     cmd.Parameters.AddWithValue("@Email", email);
+                    cmd.Parameters.AddWithValue("@Password", password);
                     cmd.Parameters.AddWithValue("@EmergencyC", emergencyC);
                     cmd.Parameters.AddWithValue("@EmergencyR", emergencyR);
                     cmd.Parameters.AddWithValue("@EmergencyNr", emergencyNr);

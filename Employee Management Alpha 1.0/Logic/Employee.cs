@@ -65,7 +65,7 @@ namespace Employee_Management_Alpha_1._0
         }
 
         //constructors
-        public Employee(string first_name, string last_name, DateTime date_of_birth, string bsn, string postion, int workinghours, string phoneNr, string address, string email, string emergencyC, string emergencyR, string emergencyNr, string certifications, string languages, DateTime startDate, DateTime endDate, int salary)
+        public Employee(string first_name, string last_name, DateTime date_of_birth, string bsn, string postion, int workinghours, string phoneNr, string address, string email, string password, string emergencyC, string emergencyR, string emergencyNr, string certifications, string languages, DateTime startDate, DateTime endDate, int salary)
         {
             
             this.first_name = first_name;
@@ -83,6 +83,7 @@ namespace Employee_Management_Alpha_1._0
             this.startDate = startDate;
             this.endDate = endDate;
             this.email = email;
+            this.password = password;
             this.languages = languages;
             this.status = status;
             this.salary = salary;
