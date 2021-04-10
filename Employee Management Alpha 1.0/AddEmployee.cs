@@ -84,6 +84,13 @@ namespace Employee_Management_Alpha_1._0
 
         }
 
-       
+
+        private void btnPassVisible_Click_1(object sender, EventArgs e)
+        {
+            if (tbPassword.PasswordChar == '*')
+                tbPassword.PasswordChar = '\0';
+            else
+                tbPassword.PasswordChar = '*';
+        }
     }
 }

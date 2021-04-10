@@ -252,6 +252,7 @@
   <ItemGroup>
     <Content Include="bin\Debug\Employee Management Alpha 1.0.exe" />
     <Content Include="bin\Debug\Employee Management Alpha 1.0.pdb" />
+    <None Include="Resources\eye.png" />
     <None Include="Resources\icons8-sunrise-48.png" />
     <None Include="Resources\icons8-sun-48.png" />
     <None Include="Resources\icons8-sunset-48.png" />
