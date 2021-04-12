@@ -19,9 +19,11 @@ namespace Employee_Management_Alpha_1._0
         public int cWeek { get; set; }
         public int contractHours { get; set; }
         public int workedHours { get; set; }
+        public int bannedDay1 { get; set; }
+        public int bannedDay2 { get; set; }
 
 
-        public Shift(int shiftID, int DoW, int employeeID, string empName, bool morning, bool afternoon, bool evening, int year , int cWeek)
+        public Shift(int shiftID, int DoW, int employeeID, string empName, bool morning, bool afternoon, bool evening, int year, int cWeek)
         {
             this.shiftID = shiftID;
             this.DoW = DoW;
@@ -33,13 +35,13 @@ namespace Employee_Management_Alpha_1._0
             this.cWeek = cWeek;
             this.year = year;
         }
-        public Shift(int employeeID, string empName)
+        public Shift(int employeeID, string empName, string bannedDays)
         {
             this.employeeID = employeeID;
             this.empName = empName;
-            //this.afternoon = false;
-            //this.morning = false;
-            //this.evening = false;
+            string[] values = bannedDays.Split(',');
+            this.bannedDay1 = Convert.ToInt32(values[0]);
+            this.bannedDay2 = Convert.ToInt32(values[1]);
         }
 
         public Shift(int employeeID, string empName, int contractH, int workedH)

@@ -27,7 +27,7 @@ namespace Employee_Management_Alpha_1._0
         {
             List<Shift> items = new List<Shift>();
 
-            string sql = $@"SELECT e.ID,e.Status as EmpStatus, CONCAT(e.FirstName, ' ' , e.LastName) AS Name
+            string sql = $@"SELECT e.ID,e.Status as EmpStatus, CONCAT(e.FirstName, ' ' , e.LastName) AS Name, BannedDays
                             FROM employee AS e
                             HAVING e.Status = 'Active'";
 
@@ -36,7 +36,7 @@ namespace Employee_Management_Alpha_1._0
             MySqlDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
-                items.Add(new Shift(Convert.ToInt32(dr["ID"]), Convert.ToString(dr["Name"])));
+                items.Add(new Shift(Convert.ToInt32(dr["ID"]), Convert.ToString(dr["Name"]), Convert.ToString(dr["BannedDays"])));
             }
             conn.Close();
             if (items.Count() < 1)
@@ -95,25 +95,27 @@ namespace Employee_Management_Alpha_1._0
             foreach (Shift person in All)
             {
                 bool wasScheduled = false;
-                if(Scheduled != null)
+
+                if (person.bannedDay1 == dow || person.bannedDay2 == dow) { wasScheduled = true; }
+
+                if (Scheduled != null && wasScheduled == false)
                 {
                     foreach (Shift scheduledPerson in Scheduled)
                     {
-
                         if (person.employeeID == scheduledPerson.employeeID)
                         {
-                            if ((tod==1 && CheckPreviousEvening(scheduledPerson.employeeID, dow, cWeek)) || (tod == 3 && CheckNextMorning(scheduledPerson.employeeID, dow, cWeek)))
+                            if ((tod == 1 && CheckPreviousEvening(scheduledPerson.employeeID, dow, cWeek)) || (tod == 3 && CheckNextMorning(scheduledPerson.employeeID, dow, cWeek)))
                             {
                                 wasScheduled = true;
                             }
 
-                            if (scheduledPerson.DoW == dow && scheduledPerson.cWeek == cWeek && wasScheduled == false )
+                            if (scheduledPerson.DoW == dow && scheduledPerson.cWeek == cWeek && wasScheduled == false)
                             {
                                 foreach (Shift hours in HoursScheduled)
                                 {
                                     if (hours.employeeID == scheduledPerson.employeeID)
                                     {
-                                        if (hours.contractHours - hours.workedHours > 0)
+                                        if (hours.contractHours - hours.workedHours > 0 || hours.contractHours == 0)
                                         {
                                             if ((tod == 1) && (scheduledPerson.morning == false) && (scheduledPerson.afternoon == false))
                                             {
@@ -141,15 +143,13 @@ namespace Employee_Management_Alpha_1._0
                     {
                         if (hours.employeeID == person.employeeID)
                         {
-                            if(hours.contractHours - hours.workedHours > 0) { isAvailable.Add(hours); }
+                            if (hours.contractHours - hours.workedHours > 0 || hours.contractHours == 0) { isAvailable.Add(hours); }
                         }
                     }
                 }
             }
             return isAvailable;
         }
-
-
 
         private bool CheckPreviousEvening(int empID, int dow, int cWeek)
         {
@@ -159,12 +159,12 @@ namespace Employee_Management_Alpha_1._0
             {
                 if (empID == scheduledPerson.employeeID)
                 {
-                    if(dow-1 == 0)
+                    if (dow - 1 == 0)
                     {
                         CWeek = CWeek - 1;
                         dow = 8;
                     }
-                    if (scheduledPerson.DoW == dow-1 && scheduledPerson.cWeek == CWeek)
+                    if (scheduledPerson.DoW == dow - 1 && scheduledPerson.cWeek == CWeek)
                     {
                         if (scheduledPerson.evening == true) { return true; }
                     }
@@ -393,10 +393,10 @@ namespace Employee_Management_Alpha_1._0
             string sql2 = $@"SELECT e.ContractType WHERE `EmpID` = '{empID}';";
 
             MySqlCommand cmd = new MySqlCommand(sql, this.conn);
-           
+
             conn.Open();
             MySqlDataReader dr = cmd.ExecuteReader();
-            
+
             while (dr.Read())
             {
                 count = count + Convert.ToInt32(dr[0]);
