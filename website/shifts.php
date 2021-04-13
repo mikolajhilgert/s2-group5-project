@@ -78,7 +78,8 @@ $weekNumber = date("W");
 
         </tr>
         <?php
-        $query1 = "SELECT DofW,morning,afternoon,evening FROM shifts where cWeek = $weekNumber and EmpID = $id and Year='2021'";
+        $year = date("Y");
+        $query1 = "SELECT DofW,morning,afternoon,evening FROM shifts where cWeek = $weekNumber and EmpID = $id and Year=$year";
         $result1 = mysqli_query($conn, $query1);
         $rows = mysqli_fetch_all($result1);
        // var_dump($rows);
@@ -102,7 +103,7 @@ $weekNumber = date("W");
             
             ?>
           <tr>
-            <td> <?php echo $dayOfWeek[$shift[0]+1] ?> </td>
+            <td> <?php echo $dayOfWeek[$shift[0]-1] ?> </td>
             <td> <?php echo CheckKindOfShift($shift); ?> </td>   
           </tr>
         <?php }?>
