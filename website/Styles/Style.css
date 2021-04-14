@@ -40,14 +40,12 @@ body{
     grid-template-columns: 10% 10% 10% auto;
     width: 100%;
 	background-color: #575fb0;
-    padding: 0px;
     padding-top: 10px;
     padding-bottom: 10px;
-    margin-bottom: 20px;
 }
 
 .NBitem{
-    text-align: center;
+  text-align: center;
 	color: white;
 	
 }
@@ -62,11 +60,11 @@ body{
 }
 
 .footerparagraph{
-    display: inline-grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: 5% auto;
-    
-    margin-top: 30px;
+  color: white;
+  font-size: 9px;
+  position: fixed;
+  padding: 10px 10px 0px 10px;
+  bottom: 0;
     
 }
 .text{
@@ -213,6 +211,6 @@ input[type=submit1] {
 
 #logoutbtn{
 	margin-top: 5%;
-	margin-left: 80%;
+	margin-left: 75%;
 	width: 20%;
 }
