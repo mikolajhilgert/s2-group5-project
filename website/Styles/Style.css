@@ -113,8 +113,12 @@ body{
 .schedule table,.schedule th,.schedule td {
   border: 1px solid black;
   text-align: center;
+  width: 250px;
 }
 
+.schedule td{
+  height: 42px;
+}
 
 button {
   width: auto;
@@ -128,9 +132,12 @@ button {
 }
 
 #goforward{
-  margin-left: 108px;
+  margin-left: 142px;
 }
 
+#gobackwords{
+  margin-right: 142px;
+}
 
 
 input[type=text], select {
