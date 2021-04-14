@@ -115,7 +115,7 @@ namespace Employee_Management_Alpha_1._0
                                 {
                                     if (hours.employeeID == scheduledPerson.employeeID)
                                     {
-                                        if (hours.contractHours - hours.workedHours > 0 || hours.contractHours == 0)
+                                        if (hours.contractHours - hours.workedHours > 0 || hours.contractHours == 0 && hours.workedHours <= 40)
                                         {
                                             if ((tod == 1) && (scheduledPerson.morning == false) && (scheduledPerson.afternoon == false))
                                             {
