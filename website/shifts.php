@@ -4,6 +4,7 @@
 require_once('Classes/User.php');
 include_once ('Includes/dbh.inc.php');
 $weekNumber = date("W");
+$year = date("Y");
 ?>
 <html>
 <script type="text/javascript">
@@ -56,59 +57,63 @@ $weekNumber = date("W");
     <div class="contCenter">
         <div class="dashwrapper">
             <div class="containerdash">
-
                 <?php
                 if(isset($_GET['weekN'])){ $weekNumber = $_GET['weekN']?>
 
-                    <b>Schedule for week <?php echo $weekNumber;?></b><br><br>
-                    <?php } else { ?>
-                    <b>Schedule for week <?php echo $weekNumber;?></b><br><br> <?php } ?>
+                <b>Your schedule for week <?php echo $weekNumber;?>: <br> <?php GetDateBounds($weekNumber,$year);?> </b><br><br>
+                <?php } else { ?>
+                <b>Your schedule for week <?php echo $weekNumber;?>: <br> <?php GetDateBounds($weekNumber,$year);?> </b><br><br> <?php } ?>
 
-                
-                
-                <a href='shifts.php?weekN=<?php echo $weekNumber - 1;?>'> <button id="gobackwords" > < </button> </a>
-                <a href='shifts.php?weekN=<?php echo $weekNumber + 1;?>'> <button id="goforward"> > </button> </a>
-                
-                
                 <form action="post" action="shifts.php"></form>
-        <table>
-        <tr>
-          <th>Day of week</th>
-          <th>Time of day</th>
-
-        </tr>
-        <?php
-        $year = date("Y");
+                <table class="schedule">
+                    <tr class="schedule">
+                        <th class="schedule">Day of week</th>
+                        <th class="schedule">Time of day</th>
+                    </tr>
+        <?php 
         $query1 = "SELECT DofW,morning,afternoon,evening FROM shifts where cWeek = $weekNumber and EmpID = $id and Year=$year";
         $result1 = mysqli_query($conn, $query1);
         $rows = mysqli_fetch_all($result1);
-       // var_dump($rows);
-       $dayOfWeek = ['Monday', 'Tuesday','Wednesday' ,'Thursday', 'Friday', 'Saturday', 'Sunday'];
+        // var_dump($rows);
+        $dayOfWeek = ['Monday', 'Tuesday','Wednesday' ,'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
         
         function CheckKindOfShift($shift){
             if ($shift[1] == 1 and $shift[3] == 1) {
-                return "morning and evening";
+                return "Morning and Evening";
             } elseif ($shift[1] == 1){
-                return "morning";
+                return "Morning";
             }
             elseif ($shift[2] == 1){
-                return "afternoon";
+                return "Afternoon";
             } else if($shift[3] == 1){
-                return "evening";
+                return "Evening";
+            }
+        }
+
+        function GetDateBounds($week_number,$year){
+            for($day=1; $day<=7; $day++)
+            {
+                if($day==1 || $day==7){
+                    echo date('d/m/Y', strtotime($year."W".$week_number.$day))."\n";
+                    if($day==1){
+                        echo " - ";
+                    }
+                }
             }
         }
         
-        foreach($rows as $shift){
-            
-            ?>
-          <tr>
-            <td> <?php echo $dayOfWeek[$shift[0]-1] ?> </td>
-            <td> <?php echo CheckKindOfShift($shift); ?> </td>   
-          </tr>
-        <?php }?>
-      </table>
+        foreach($rows as $shift){?>
+                    <tr class="schedule">
+                        <td class="schedule"> <?php echo $dayOfWeek[$shift[0]-1] ?> </td>
+                        <td class="schedule"> <?php echo CheckKindOfShift($shift); ?> </td>
+                    </tr>
+                    <?php }?>
+                </table>
+                <a href='shifts.php?weekN=<?php echo $weekNumber - 1;?>'> <button id="gobackwords"><</button></a>
+                <a href='shifts.php?weekN=<?php echo $weekNumber + 1;?>'> <button id="goforward">></button></a>
             </div>
+            
 
             <div class="containerdash">
                 <?php
@@ -125,14 +130,10 @@ $weekNumber = date("W");
                     return "checked";
                 }
                 return "";
-            }
-            ?>
-
-
-                <b>Select unwanted work days</b>
-
-
+            }?>
+                <b>Select unwanted work days:</b>
                 <form name=form1 method=post action=Handlers/bandays.php enctype="multipart/form-data">
+                    <br>
                     <table>
                         <tr>
                             <td><input type=checkbox id=0 name="formDay[]" value=1 onclick='chkcontrol(0)'
