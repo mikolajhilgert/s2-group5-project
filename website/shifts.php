@@ -68,7 +68,7 @@ $year = date("Y");
                 <table class="schedule">
                     <tr class="schedule">
                         <th class="schedule">Day of week</th>
-                        <th class="schedule">Time of day</th>
+                        <th class="schedule">Time of shift</th>
                     </tr>
         <?php 
         $query1 = "SELECT DofW,morning,afternoon,evening FROM shifts where cWeek = $weekNumber and EmpID = $id and Year=$year";
@@ -78,17 +78,22 @@ $year = date("Y");
         $dayOfWeek = ['Monday', 'Tuesday','Wednesday' ,'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
         
-        function CheckKindOfShift($shift){
-            if ($shift[1] == 1 and $shift[3] == 1) {
-                return "Morning and Evening";
-            } elseif ($shift[1] == 1){
-                return "Morning";
+        function CheckKindOfShift($day,$rows){
+            foreach($rows as $r){
+                if($day == $r[0]){
+                    if ($r[1] == 1 and $r[3] == 1) {
+                        return "Morning & Evening";
+                    } elseif ($r[1] == 1){
+                        return "Morning";
+                    }
+                    elseif ($r[2] == 1){
+                        return "Afternoon";
+                    }else if($r[3] == 1){
+                        return "Evening";
+                    }
+                }
             }
-            elseif ($shift[2] == 1){
-                return "Afternoon";
-            } else if($shift[3] == 1){
-                return "Evening";
-            }
+            return "-";
         }
 
         function GetDateBounds($week_number,$year){
@@ -102,16 +107,15 @@ $year = date("Y");
                 }
             }
         }
-        
-        foreach($rows as $shift){?>
-                    <tr class="schedule">
-                        <td class="schedule"> <?php echo $dayOfWeek[$shift[0]-1] ?> </td>
-                        <td class="schedule"> <?php echo CheckKindOfShift($shift); ?> </td>
-                    </tr>
-                    <?php }?>
-                </table>
-                <a href='shifts.php?weekN=<?php echo $weekNumber - 1;?>'> <button id="gobackwords"><</button></a>
-                <a href='shifts.php?weekN=<?php echo $weekNumber + 1;?>'> <button id="goforward">></button></a>
+        for($day=1; $day<=7; $day++){?>
+            <tr class="schedule">
+                <td class="schedule"> <?php echo $dayOfWeek[$day-1]?> </td>
+                <td class="schedule"> <?php echo CheckKindOfShift($day,$rows); ?> </td>
+            </tr>
+            <?php }?>
+            </table>
+            <a href='shifts.php?weekN=<?php echo $weekNumber - 1;?>'> <button id="gobackwords"><</button></a>
+            <a href='shifts.php?weekN=<?php echo $weekNumber + 1;?>'> <button id="goforward">></button></a>
             </div>
             
 
@@ -171,7 +175,7 @@ $year = date("Y");
                             <td>Sunday</td>
                         </tr>
                     </table>
-                    <br>
+                    <br><br><br><br><br>
                     <input type="submit" name="formSubmit" value="Update!" />
                 </form>
             </div>
