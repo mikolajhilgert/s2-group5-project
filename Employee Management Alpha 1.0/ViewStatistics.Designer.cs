@@ -36,14 +36,15 @@ namespace Employee_Management_Alpha_1._0
             this.labelActiveE = new System.Windows.Forms.Label();
             this.labelTotalDaysWorked = new System.Windows.Forms.Label();
             this.labelTotalPayment = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // empList
             // 
             this.empList.FormattingEnabled = true;
-            this.empList.Location = new System.Drawing.Point(12, 58);
+            this.empList.Location = new System.Drawing.Point(12, 84);
             this.empList.Name = "empList";
-            this.empList.Size = new System.Drawing.Size(214, 303);
+            this.empList.Size = new System.Drawing.Size(187, 277);
             this.empList.TabIndex = 0;
             this.empList.SelectedIndexChanged += new System.EventHandler(this.empList_SelectedIndexChanged);
             // 
@@ -52,7 +53,7 @@ namespace Employee_Management_Alpha_1._0
             this.labelTotalShift.AutoSize = true;
             this.labelTotalShift.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTotalShift.ForeColor = System.Drawing.Color.White;
-            this.labelTotalShift.Location = new System.Drawing.Point(232, 77);
+            this.labelTotalShift.Location = new System.Drawing.Point(205, 84);
             this.labelTotalShift.Name = "labelTotalShift";
             this.labelTotalShift.Size = new System.Drawing.Size(355, 18);
             this.labelTotalShift.TabIndex = 1;
@@ -62,7 +63,7 @@ namespace Employee_Management_Alpha_1._0
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(9, 42);
+            this.label1.Location = new System.Drawing.Point(8, 68);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(237, 13);
             this.label1.TabIndex = 2;
@@ -73,17 +74,17 @@ namespace Employee_Management_Alpha_1._0
             this.labelTotalHours.AutoSize = true;
             this.labelTotalHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTotalHours.ForeColor = System.Drawing.Color.White;
-            this.labelTotalHours.Location = new System.Drawing.Point(232, 124);
+            this.labelTotalHours.Location = new System.Drawing.Point(205, 131);
             this.labelTotalHours.Name = "labelTotalHours";
-            this.labelTotalHours.Size = new System.Drawing.Size(370, 18);
+            this.labelTotalHours.Size = new System.Drawing.Size(384, 18);
             this.labelTotalHours.TabIndex = 1;
-            this.labelTotalHours.Text = "This employee has worked for 0 hours, including today.";
+            this.labelTotalHours.Text = "This employee has had 0 shifts (0 hours), including today.";
             // 
             // labelActiveE
             // 
             this.labelActiveE.AutoSize = true;
             this.labelActiveE.ForeColor = System.Drawing.Color.Red;
-            this.labelActiveE.Location = new System.Drawing.Point(13, 26);
+            this.labelActiveE.Location = new System.Drawing.Point(9, 51);
             this.labelActiveE.Name = "labelActiveE";
             this.labelActiveE.Size = new System.Drawing.Size(165, 13);
             this.labelActiveE.TabIndex = 3;
@@ -94,7 +95,7 @@ namespace Employee_Management_Alpha_1._0
             this.labelTotalDaysWorked.AutoSize = true;
             this.labelTotalDaysWorked.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTotalDaysWorked.ForeColor = System.Drawing.Color.White;
-            this.labelTotalDaysWorked.Location = new System.Drawing.Point(232, 167);
+            this.labelTotalDaysWorked.Location = new System.Drawing.Point(205, 176);
             this.labelTotalDaysWorked.Name = "labelTotalDaysWorked";
             this.labelTotalDaysWorked.Size = new System.Drawing.Size(346, 18);
             this.labelTotalDaysWorked.TabIndex = 4;
@@ -105,11 +106,24 @@ namespace Employee_Management_Alpha_1._0
             this.labelTotalPayment.AutoSize = true;
             this.labelTotalPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTotalPayment.ForeColor = System.Drawing.Color.White;
-            this.labelTotalPayment.Location = new System.Drawing.Point(232, 207);
+            this.labelTotalPayment.Location = new System.Drawing.Point(205, 218);
             this.labelTotalPayment.Name = "labelTotalPayment";
             this.labelTotalPayment.Size = new System.Drawing.Size(238, 18);
             this.labelTotalPayment.TabIndex = 5;
             this.labelTotalPayment.Text = "Total payment to employee: 0 Euro";
+            // 
+            // btnClose
+            // 
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Image = global::Employee_Management_Alpha_1._0.Properties.Resources.icons8_back_24;
+            this.btnClose.Location = new System.Drawing.Point(11, 13);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(32, 27);
+            this.btnClose.TabIndex = 68;
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // ViewStatistics
             // 
@@ -117,6 +131,7 @@ namespace Employee_Management_Alpha_1._0
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(83)))));
             this.ClientSize = new System.Drawing.Size(649, 396);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.labelTotalPayment);
             this.Controls.Add(this.labelTotalDaysWorked);
             this.Controls.Add(this.labelActiveE);
@@ -140,5 +155,6 @@ namespace Employee_Management_Alpha_1._0
         private System.Windows.Forms.Label labelActiveE;
         private System.Windows.Forms.Label labelTotalDaysWorked;
         private System.Windows.Forms.Label labelTotalPayment;
+        private System.Windows.Forms.Button btnClose;
     }
 }

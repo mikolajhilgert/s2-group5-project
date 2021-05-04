@@ -41,7 +41,7 @@ namespace Employee_Management_Alpha_1._0
 
                     //total hours worked
                     int hours = statistics.GetEmpTotalTime(Convert.ToInt32(match.Value));
-                    labelTotalHours.Text = $"This employee has worked for {hours} hours, including today.";
+                    labelTotalHours.Text = $"This employee has had {hours/8} shifts ({hours} hours), including today.";
 
                     int workedDays = statistics.GetEmpWorkingDuration(Convert.ToInt32(match.Value));
                     labelTotalDaysWorked.Text = $"This employee has been at the company for {workedDays} days.";
@@ -74,6 +74,11 @@ namespace Employee_Management_Alpha_1._0
                     empList.Items.Add(emps[i].GetEmployeeInfo());
                 }
             }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

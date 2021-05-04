@@ -39,9 +39,8 @@ namespace Employee_Management_Alpha_1._0
             {
                 btnDepMan.Visible = false;
                 btnEmpMan.Visible = false;
-                btnAddStock.Visible = false;
+                btnAddEditRemStock.Visible = false;
                 btnBuyStock.Visible = false;
-                btnRemoveStock.Visible = false;
             }
         }
      
@@ -107,7 +106,8 @@ namespace Employee_Management_Alpha_1._0
         #region StockSub
         private void BtnModStock_Click(object sender, EventArgs e)
         {
-            
+            openChildForm(new CRUDProduct()); //create new form object
+            hideSubmenus();
         }
         private void BtnRemoveStock_Click_1(object sender, EventArgs e)
         {
@@ -116,11 +116,13 @@ namespace Employee_Management_Alpha_1._0
 
         private void BtnStockInfo_Click_1(object sender, EventArgs e)
         {
-
+            openChildForm(new ViewStore()); //create new form object
+            hideSubmenus();
         }
         private void BtnBuyStock_Click_1(object sender, EventArgs e)
         {
-
+            openChildForm(new CashierMachine()); //create new form object
+            hideSubmenus();
         }
 
         private void BtnStockRequests_Click(object sender, EventArgs e)
@@ -129,7 +131,8 @@ namespace Employee_Management_Alpha_1._0
         }
         private void BtnDepoRequests_Click_1(object sender, EventArgs e)
         {
-
+            openChildForm(new ViewDepo()); //create new form object
+            hideSubmenus();
         }
 
         private void BtnDepoInfo_Click(object sender, EventArgs e)
@@ -242,6 +245,9 @@ namespace Employee_Management_Alpha_1._0
         {
         }
 
-        
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

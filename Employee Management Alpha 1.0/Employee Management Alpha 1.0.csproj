@@ -75,6 +75,19 @@
     <Compile Include="AllEmployees.Designer.cs">
       <DependentUpon>AllEmployees.cs</DependentUpon>
     </Compile>
+    <Compile Include="CashierMachine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashierMachine.Designer.cs">
+      <DependentUpon>CashierMachine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUDProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUDProduct.Designer.cs">
+      <DependentUpon>CRUDProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseAccess\StockDAL.cs" />
     <Compile Include="DepartmentAssignment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +117,10 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logic\Product.cs" />
+    <Compile Include="Logic\ProductCategory.cs" />
+    <Compile Include="Logic\DepoManager.cs" />
+    <Compile Include="Logic\ProductManager.cs" />
     <Compile Include="Logic\Statistics.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -119,6 +136,12 @@
     </Compile>
     <Compile Include="RemoveEmployee.Designer.cs">
       <DependentUpon>RemoveEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewDepo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewDepo.Designer.cs">
+      <DependentUpon>ViewDepo.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewStatistics.cs">
       <SubType>Form</SubType>
@@ -146,6 +169,12 @@
     <Compile Include="ViewShedule.Designer.cs">
       <DependentUpon>ViewShedule.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewStore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewStore.Designer.cs">
+      <DependentUpon>ViewStore.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddDepartment.resx">
       <DependentUpon>AddDepartment.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +184,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AllEmployees.resx">
       <DependentUpon>AllEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashierMachine.resx">
+      <DependentUpon>CashierMachine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUDProduct.resx">
+      <DependentUpon>CRUDProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DepartmentAssignment.resx">
       <DependentUpon>DepartmentAssignment.cs</DependentUpon>
@@ -184,6 +219,9 @@
     <EmbeddedResource Include="ShiftAssignment.resx">
       <DependentUpon>ShiftAssignment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ViewDepo.resx">
+      <DependentUpon>ViewDepo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ViewStatistics.resx">
       <DependentUpon>ViewStatistics.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,6 +230,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ViewShedule.resx">
       <DependentUpon>ViewShedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewStore.resx">
+      <DependentUpon>ViewStore.cs</DependentUpon>
     </EmbeddedResource>
     <None Include=".vs\Employee Management Alpha 1.0\v16\.suo" />
     <None Include=".vs\slnx.sqlite" />
