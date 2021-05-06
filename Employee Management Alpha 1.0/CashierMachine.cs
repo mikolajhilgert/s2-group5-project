@@ -59,12 +59,7 @@ namespace Employee_Management_Alpha_1._0
                 {
                     MessageBox.Show("Insert correct value");
                     Console.WriteLine(exception);
-                    throw;
                 }
-                   
-                    
-                
-             
             }
             RefreshProducts();
         }
