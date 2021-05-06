@@ -33,16 +33,16 @@ namespace Employee_Management_Alpha_1._0
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgDepo = new System.Windows.Forms.DataGridView();
+            this.nRestockAmount = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Request = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.nRestockAmount = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgDepo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nRestockAmount)).BeginInit();
             this.SuspendLayout();
@@ -94,45 +94,6 @@ namespace Employee_Management_Alpha_1._0
             this.dgDepo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgStore_CellContentClick);
             this.dgDepo.SelectionChanged += new System.EventHandler(this.dgStore_SelectionChanged);
             // 
-            // ID
-            // 
-            this.ID.HeaderText = "ProductID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // ProductName
-            // 
-            this.ProductName.HeaderText = "Product Name";
-            this.ProductName.Name = "ProductName";
-            this.ProductName.ReadOnly = true;
-            // 
-            // Price
-            // 
-            this.Price.HeaderText = "Price Per Item";
-            this.Price.Name = "Price";
-            this.Price.ReadOnly = true;
-            // 
-            // Stock
-            // 
-            this.Stock.HeaderText = "Store Stock";
-            this.Stock.Name = "Stock";
-            this.Stock.ReadOnly = true;
-            // 
-            // Category
-            // 
-            this.Category.HeaderText = "Category";
-            this.Category.Name = "Category";
-            this.Category.ReadOnly = true;
-            // 
-            // Request
-            // 
-            this.Request.HeaderText = "Request Stock";
-            this.Request.Name = "Request";
-            this.Request.ReadOnly = true;
-            this.Request.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Request.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Request.Text = "Make Request";
-            // 
             // nRestockAmount
             // 
             this.nRestockAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -181,6 +142,45 @@ namespace Employee_Management_Alpha_1._0
             this.label1.TabIndex = 71;
             this.label1.Text = "Request quantity:";
             // 
+            // ID
+            // 
+            this.ID.HeaderText = "ProductID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // ProductName
+            // 
+            this.ProductName.HeaderText = "Product Name";
+            this.ProductName.Name = "ProductName";
+            this.ProductName.ReadOnly = true;
+            // 
+            // Price
+            // 
+            this.Price.HeaderText = "Price Per Item";
+            this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
+            // 
+            // Stock
+            // 
+            this.Stock.HeaderText = "Depo Stock";
+            this.Stock.Name = "Stock";
+            this.Stock.ReadOnly = true;
+            // 
+            // Category
+            // 
+            this.Category.HeaderText = "Category";
+            this.Category.Name = "Category";
+            this.Category.ReadOnly = true;
+            // 
+            // Request
+            // 
+            this.Request.HeaderText = "Request Stock";
+            this.Request.Name = "Request";
+            this.Request.ReadOnly = true;
+            this.Request.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Request.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Request.Text = "Make Request";
+            // 
             // ViewDepo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -204,15 +204,15 @@ namespace Employee_Management_Alpha_1._0
         #endregion
 
         private System.Windows.Forms.DataGridView dgDepo;
+        private System.Windows.Forms.NumericUpDown nRestockAmount;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn Stock;
         private System.Windows.Forms.DataGridViewTextBoxColumn Category;
         private System.Windows.Forms.DataGridViewButtonColumn Request;
-        private System.Windows.Forms.NumericUpDown nRestockAmount;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Label label1;
     }
 }

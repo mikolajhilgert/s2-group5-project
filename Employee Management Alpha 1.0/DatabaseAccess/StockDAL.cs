@@ -74,5 +74,29 @@ namespace Employee_Management_Alpha_1._0
             cmd.ExecuteNonQuery();
             conn.Close();
         }
+
+        public void SellProduct(int id, int amount)
+        {
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand($"UPDATE product SET StoreQuantity = StoreQuantity-@amount WHERE ID=@ID", conn);
+            cmd.Parameters.AddWithValue("@amount", amount);
+            cmd.Parameters.AddWithValue("@ID", id);
+
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+            AddToSales( id,amount);
+        }
+
+        public void AddToSales(int id, int amount)
+        {
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand($"INSERT INTO sales (ProductID,Quantity) VALUES(@ID,@amount)", conn);
+            cmd.Parameters.AddWithValue("@amount", amount);
+            cmd.Parameters.AddWithValue("@ID", id);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
+
     }
 }

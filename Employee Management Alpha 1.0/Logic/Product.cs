@@ -15,6 +15,12 @@ namespace Employee_Management_Alpha_1._0
         private decimal pricePerUnit;
         private ProductCategory category;
 
+        public int Id
+        {
+            get { return id;}
+            private set { id = value; }
+        }
+
         public Product(string name, int quantityStore, int quantityDepo, decimal PricePerUnit, ProductCategory category)
         {
             this.name = name;
@@ -91,6 +97,13 @@ namespace Employee_Management_Alpha_1._0
         public string[] GetDepoInfoArray()
         {
             string[] details = { id.ToString(), name, pricePerUnit.ToString("0.00"), quantityDepo.ToString(), category.ToString(), "Make Request" };
+
+            return details;
+        }
+
+        public string[] GetCashierInfoArray()
+        {
+            string[] details = { id.ToString(), name, quantityStore.ToString(), pricePerUnit.ToString("0.00"),"0" ,"Sell" };
 
             return details;
         }

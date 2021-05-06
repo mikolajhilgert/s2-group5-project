@@ -514,3 +514,42 @@ C:\Users\James Bond\Source\Repos\s2-group5-project\Employee Management Alpha 1.0
 C:\Users\James Bond\Source\Repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.pdb
 C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.EmployeeChangeStatus.resources
 C:\Users\Geraldo\Documents\!fonty\fail\G5\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.RemoveEmployee.resources
+D:\The good work\code\logixtic\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.exe.config
+D:\The good work\code\logixtic\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.exe
+D:\The good work\code\logixtic\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\Employee Management Alpha 1.0.pdb
+D:\The good work\code\logixtic\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\Google.Protobuf.dll
+D:\The good work\code\logixtic\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\Zstandard.Net.dll
+D:\The good work\code\logixtic\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\The good work\code\logixtic\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\BouncyCastle.Crypto.dll
+D:\The good work\code\logixtic\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\Ubiety.Dns.Core.dll
+D:\The good work\code\logixtic\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\Renci.SshNet.dll
+D:\The good work\code\logixtic\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\System.Buffers.dll
+D:\The good work\code\logixtic\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\K4os.Compression.LZ4.dll
+D:\The good work\code\logixtic\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\K4os.Hash.xxHash.dll
+D:\The good work\code\logixtic\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\System.Memory.dll
+D:\The good work\code\logixtic\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\The good work\code\logixtic\s2-group5-project\Employee Management Alpha 1.0\bin\Debug\MySql.Data.xml
+D:\The good work\code\logixtic\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csprojAssemblyReference.cache
+D:\The good work\code\logixtic\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.exe.config
+D:\The good work\code\logixtic\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AddDepartment.resources
+D:\The good work\code\logixtic\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AddEmployee.resources
+D:\The good work\code\logixtic\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AllEmployees.resources
+D:\The good work\code\logixtic\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.CashierMachine.resources
+D:\The good work\code\logixtic\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.CRUDProduct.resources
+D:\The good work\code\logixtic\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.DepartmentAssignment.resources
+D:\The good work\code\logixtic\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.EmployeeChangeStatus.resources
+D:\The good work\code\logixtic\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Form1.resources
+D:\The good work\code\logixtic\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.LoginForm.resources
+D:\The good work\code\logixtic\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.Properties.Resources.resources
+D:\The good work\code\logixtic\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.RemoveEmployee.resources
+D:\The good work\code\logixtic\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.ShiftAssignment.resources
+D:\The good work\code\logixtic\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.ViewDepo.resources
+D:\The good work\code\logixtic\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.ViewStatistics.resources
+D:\The good work\code\logixtic\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.UpdateDepartment.resources
+D:\The good work\code\logixtic\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.ViewShedule.resources
+D:\The good work\code\logixtic\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.ViewStore.resources
+D:\The good work\code\logixtic\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.GenerateResource.cache
+D:\The good work\code\logixtic\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.CoreCompileInputs.cache
+D:\The good work\code\logixtic\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.CopyComplete
+D:\The good work\code\logixtic\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.exe
+D:\The good work\code\logixtic\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.pdb

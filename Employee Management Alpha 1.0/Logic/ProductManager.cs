@@ -35,5 +35,23 @@ namespace Employee_Management_Alpha_1._0
         {
             db.DeleteProduct(id);
         }
+
+        public void SellProduct(int id, int amount)
+        {
+            db.SellProduct(id, amount);
+        }
+
+        public Product GetProductByID(int id)
+        {
+            foreach (Product product in products)
+            {
+                if (product.Id == id)
+                {
+                    return product;
+                }
+            }
+
+            return null;
+        }
     }
 }
