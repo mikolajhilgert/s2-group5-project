@@ -43,6 +43,7 @@ namespace Employee_Management_Alpha_1._0
 
         public Product GetProductByID(int id)
         {
+            RefreshProducts();
             foreach (Product product in products)
             {
                 if (product.Id == id)

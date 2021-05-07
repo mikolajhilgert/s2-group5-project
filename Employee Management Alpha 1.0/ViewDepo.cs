@@ -56,7 +56,7 @@ namespace Employee_Management_Alpha_1._0
                 {
                     if (MessageBox.Show("Are you sure you want to restock this product?.", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        depoManager.AddStock(Convert.ToInt32(dgDepo.Rows[e.RowIndex].Cells[0].Value), Convert.ToInt32(nRestockAmount.Text));
+                        depoManager.AddDepoStock(Convert.ToInt32(dgDepo.Rows[e.RowIndex].Cells[0].Value), Convert.ToInt32(nRestockAmount.Text));
                         MessageBox.Show("Re-Stock Completed!");
                     }
                 }

@@ -12,17 +12,28 @@ namespace Employee_Management_Alpha_1._0
 {
     public partial class ViewStore : Form
     {
-        ProductManager productManager = new ProductManager();
+        DepoManager dm = new DepoManager();
         public ViewStore()
         {
             InitializeComponent();
             RefreshProducts();
+
+            if (Form1.loggedUser != "Admin")
+            {
+                label1.Visible = false;
+                nRestockAmount.Visible = false;
+                dgStore.Columns[5].Visible = false;
+                for (int i = 0; i <= 4; i++)
+                {
+                    dgStore.Columns[i].Width += 20;
+                }
+            }
         }
 
         private void RefreshProducts()
         {
             dgStore.Rows.Clear();
-            List<Product> products = productManager.RefreshProducts();
+            List<Product> products = dm.RefreshProducts();
 
             for (int i = 0; i < products.Count; i++)
             {
@@ -61,9 +72,8 @@ namespace Employee_Management_Alpha_1._0
             {
                 if (nRestockAmount.Text != "" && Convert.ToInt32(nRestockAmount.Text) >= 5)
                 {
-                    MessageBox.Show(nRestockAmount.Text);
-
-                    MessageBox.Show(dgStore.Rows[e.RowIndex].Cells[0].Value.ToString());
+                    dm.AddStockRequest(Convert.ToInt32(dgStore.Rows[e.RowIndex].Cells[0].Value), Convert.ToInt32(nRestockAmount.Text));
+                    MessageBox.Show("Restock request sent successfuly!");
                 }
                 else
                 {

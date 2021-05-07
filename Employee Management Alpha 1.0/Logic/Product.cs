@@ -107,5 +107,11 @@ namespace Employee_Management_Alpha_1._0
 
             return details;
         }
+        public string[] GetRestockInfoArray()
+        {
+            string[] details = {"", category.ToString(), id.ToString(), name, "" , quantityDepo.ToString() };
+
+            return details;
+        }
     }
 }

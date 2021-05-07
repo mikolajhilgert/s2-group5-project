@@ -553,3 +553,8 @@ D:\The good work\code\logixtic\s2-group5-project\Employee Management Alpha 1.0\o
 D:\The good work\code\logixtic\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.csproj.CopyComplete
 D:\The good work\code\logixtic\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.exe
 D:\The good work\code\logixtic\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee Management Alpha 1.0.pdb
+C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.CashierMachine.resources
+C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.CRUDProduct.resources
+C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.ViewDepo.resources
+C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.ViewStore.resources
+C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.StockRequestsForm.resources

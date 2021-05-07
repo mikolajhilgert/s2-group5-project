@@ -98,5 +98,53 @@ namespace Employee_Management_Alpha_1._0
             conn.Close();
         }
 
+        public void AddStockRequest(int productID, int quantity)
+        {
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand($"INSERT INTO stockrequest (ProductID,Quantity) VALUES(@productID,@quantity)", conn);
+            cmd.Parameters.AddWithValue("@productID", productID);
+            cmd.Parameters.AddWithValue("@quantity", quantity);
+
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
+        public List<StockRequest> GetAllStockRequests()
+        {
+            List<StockRequest> allStockRequests = new List<StockRequest>();
+            ProductManager pm = new ProductManager();
+
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand($"SELECT * FROM stockrequest", conn);
+
+            MySqlDataReader dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                allStockRequests.Add(new StockRequest(Convert.ToInt32(dr[0]), pm.GetProductByID(Convert.ToInt32(dr[1])), Convert.ToInt32(dr[2]),(RequestStatus)Convert.ToInt32(dr[3])));
+            }
+            conn.Close();
+
+            return allStockRequests;
+        }
+        public void ChangeStockRequestStatus(int id, int status)
+        {
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand($"UPDATE stockrequest SET RequestStatus = @status WHERE ID = @ID", conn);
+            cmd.Parameters.AddWithValue("@status", status);
+            cmd.Parameters.AddWithValue("@ID", id);
+
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
+        public void MoveStock(int productID, int amount)
+        {
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand($"UPDATE product SET DepoQuantity = DepoQuantity-@amount, StoreQuantity = StoreQuantity+@amount WHERE ID=@ID", conn);
+            cmd.Parameters.AddWithValue("@amount", amount);
+            cmd.Parameters.AddWithValue("@ID", productID);
+
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
     }
 }

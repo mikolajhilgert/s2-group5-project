@@ -121,7 +121,9 @@
     <Compile Include="Logic\ProductCategory.cs" />
     <Compile Include="Logic\DepoManager.cs" />
     <Compile Include="Logic\ProductManager.cs" />
+    <Compile Include="Logic\RequestStatus.cs" />
     <Compile Include="Logic\Statistics.cs" />
+    <Compile Include="Logic\StockRequest.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +138,12 @@
     </Compile>
     <Compile Include="RemoveEmployee.Designer.cs">
       <DependentUpon>RemoveEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StockRequestsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StockRequestsForm.Designer.cs">
+      <DependentUpon>StockRequestsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewDepo.cs">
       <SubType>Form</SubType>
@@ -218,6 +226,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ShiftAssignment.resx">
       <DependentUpon>ShiftAssignment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StockRequestsForm.resx">
+      <DependentUpon>StockRequestsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewDepo.resx">
       <DependentUpon>ViewDepo.cs</DependentUpon>

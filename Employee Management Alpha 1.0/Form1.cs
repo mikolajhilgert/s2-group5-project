@@ -29,7 +29,11 @@ namespace Employee_Management_Alpha_1._0
         
         public void userAccess()
         {
-            
+            if (loggedUser == "Admin")
+            {
+                btnBuyStock.Visible = false;
+                btnDepoRequests.Visible = false;
+            }
             if(loggedUser == "Management")
             {
                 btnDepMan.Visible = false;
@@ -42,6 +46,15 @@ namespace Employee_Management_Alpha_1._0
                 btnAddEditRemStock.Visible = false;
                 btnBuyStock.Visible = false;
             }
+            if (loggedUser == "Cashier")
+            {
+                btnDepMan.Visible = false;
+                btnEmpMan.Visible = false;
+                btnAddEditRemStock.Visible = false;
+                btnDepoRequests.Visible = false;
+                btnBuyStock.Visible = false;
+            }
+
         }
      
 
@@ -127,7 +140,8 @@ namespace Employee_Management_Alpha_1._0
 
         private void BtnStockRequests_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new StockRequestsForm());
+            hideSubmenus();
         }
         private void BtnDepoRequests_Click_1(object sender, EventArgs e)
         {
