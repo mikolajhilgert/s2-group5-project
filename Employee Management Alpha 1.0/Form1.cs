@@ -33,11 +33,16 @@ namespace Employee_Management_Alpha_1._0
             {
                 btnBuyStock.Visible = false;
                 btnDepoRequests.Visible = false;
+
+                panelStockSubmenu.Height = 115;
             }
             if(loggedUser == "Management")
             {
                 btnDepMan.Visible = false;
                 btnEmpMan.Visible = false;
+                btnBuyStock.Visible = false;
+
+                panelStockSubmenu.Height = 115;
             }
             if(loggedUser == "Stock worker")
             {
@@ -45,6 +50,9 @@ namespace Employee_Management_Alpha_1._0
                 btnEmpMan.Visible = false;
                 btnAddEditRemStock.Visible = false;
                 btnBuyStock.Visible = false;
+                btnStats.Visible = false;
+
+                panelStockSubmenu.Height = 105;
             }
             if (loggedUser == "Cashier")
             {
@@ -52,7 +60,9 @@ namespace Employee_Management_Alpha_1._0
                 btnEmpMan.Visible = false;
                 btnAddEditRemStock.Visible = false;
                 btnDepoRequests.Visible = false;
-                btnBuyStock.Visible = false;
+                btnStats.Visible = false;
+
+                panelStockSubmenu.Height = 105;
             }
 
         }

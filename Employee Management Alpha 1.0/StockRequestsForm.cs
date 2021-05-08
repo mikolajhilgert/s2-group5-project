@@ -60,25 +60,39 @@ namespace Employee_Management_Alpha_1._0
 
         private void btnAccept_Click(object sender, EventArgs e)
         {
-            int index = dgRequests.SelectedRows[0].Index;
+            try
+            {
+                int index = dgRequests.SelectedRows[0].Index;
 
-            int requestId = Convert.ToInt32(dgRequests.Rows[index].Cells[0].Value);
-            int requestedAmount = Convert.ToInt32(dgRequests.Rows[index].Cells[4].Value);
-            int depoStock = Convert.ToInt32(dgRequests.Rows[index].Cells[5].Value);
+                int requestId = Convert.ToInt32(dgRequests.Rows[index].Cells[0].Value);
+                int requestedAmount = Convert.ToInt32(dgRequests.Rows[index].Cells[4].Value);
+                int depoStock = Convert.ToInt32(dgRequests.Rows[index].Cells[5].Value);
 
-            if (depoStock >= requestedAmount)
-                dm.AcceptStockRequest(requestId);
-            else
-                MessageBox.Show("Insufficient stock in depo to accept request!");
-            RefreshRequests();
+                if (depoStock >= requestedAmount)
+                    dm.AcceptStockRequest(requestId);
+                else
+                    MessageBox.Show("Insufficient stock in depo to accept request!");
+                RefreshRequests();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error");
+            }
         }
 
         private void btnReject_Click(object sender, EventArgs e)
         {
-            int index = dgRequests.SelectedRows[0].Index;
-            int requestId = Convert.ToInt32(dgRequests.Rows[index].Cells[0].Value);
-            dm.RejectStockRequest(requestId);
-            RefreshRequests();
+            try
+            {
+                int index = dgRequests.SelectedRows[0].Index;
+                int requestId = Convert.ToInt32(dgRequests.Rows[index].Cells[0].Value);
+                dm.RejectStockRequest(requestId);
+                RefreshRequests();
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Error");
+            }
+
         }
         private void chckResolved_CheckedChanged(object sender, EventArgs e)
         {

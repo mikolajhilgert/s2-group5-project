@@ -103,7 +103,7 @@ namespace Employee_Management_Alpha_1._0
 
         public string[] GetCashierInfoArray()
         {
-            string[] details = { id.ToString(), name, quantityStore.ToString(), pricePerUnit.ToString("0.00"),"0" ,"Sell" };
+            string[] details = { id.ToString(), name, quantityStore.ToString(), pricePerUnit.ToString("0.00"),"0" };
 
             return details;
         }

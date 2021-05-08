@@ -21,11 +21,11 @@ namespace Employee_Management_Alpha_1._0
 
         private void RefreshProducts()
         {
-            dataGridView1.Rows.Clear();
+            dgSell.Rows.Clear();
             List<Product> products = productManager.RefreshProducts();
             foreach (Product p in products)
             {
-                dataGridView1.Rows.Add(p.GetCashierInfoArray());
+                dgSell.Rows.Add(p.GetCashierInfoArray());
             }
         }
 
@@ -34,34 +34,46 @@ namespace Employee_Management_Alpha_1._0
             this.Close();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnSell_Click(object sender, EventArgs e)
         {
+            var checkedRows = from DataGridViewRow r in dgSell.Rows
+                              where Convert.ToBoolean(r.Cells[5].Value) == true
+                              select r;
 
-            var senderGrid = (DataGridView)sender;
-
-            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
+            foreach (var row in checkedRows)
             {
-                Product p = productManager.GetProductByID(Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value));
+                Product p = productManager.GetProductByID(Convert.ToInt32(row.Cells[0].Value));
                 try
                 {
-                    int sellAmount = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[4].Value);
-                    if (p.Sell(sellAmount))
+                    int sellAmount = Convert.ToInt32(row.Cells[4].Value);
+                    if (sellAmount > 0)
                     {
-                        productManager.SellProduct(Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value), Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[4].Value));
-                        MessageBox.Show("Sold!");
+                        if (p.Sell(sellAmount))
+                        {
+                            productManager.SellProduct(Convert.ToInt32(row.Cells[0].Value), Convert.ToInt32(row.Cells[4].Value));
+                        }
+                        else
+                        {
+                            MessageBox.Show($"Not is not enough of product {row.Cells[0].Value} in stock!");
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Not enough in the stock!");
+                        MessageBox.Show("You cannot sell 0 or less of an item!");
                     }
                 }
                 catch (Exception exception)
                 {
                     MessageBox.Show("Insert correct value");
                     Console.WriteLine(exception);
-                }
+                }   
             }
             RefreshProducts();
+        }
+
+        private void dgvSell_SelectionChanged(object sender, EventArgs e)
+        {
+            dgSell.ClearSelection();
         }
     }
 }
