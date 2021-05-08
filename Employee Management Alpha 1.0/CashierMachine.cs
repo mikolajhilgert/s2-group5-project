@@ -54,7 +54,7 @@ namespace Employee_Management_Alpha_1._0
                         }
                         else
                         {
-                            MessageBox.Show($"Not is not enough of product {row.Cells[0].Value} in stock!");
+                            MessageBox.Show($"There is not enough of product ID:{row.Cells[0].Value} in the store!");
                         }
                     }
                     else
