@@ -87,6 +87,8 @@
     <Compile Include="CRUDProduct.Designer.cs">
       <DependentUpon>CRUDProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseAccess\DepartmentDAL.cs" />
+    <Compile Include="DatabaseAccess\EmployeeDAL.cs" />
     <Compile Include="DatabaseAccess\StatisticsDAL.cs" />
     <Compile Include="DatabaseAccess\ShiftDAL.cs" />
     <Compile Include="DatabaseAccess\StockDAL.cs" />
