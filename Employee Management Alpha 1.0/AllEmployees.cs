@@ -14,7 +14,7 @@ namespace Employee_Management_Alpha_1._0
 {
     public partial class AllEmployees : Form
     {
-        Employee_Management employeeManagement;
+        EmployeeManagement employeeManagement;
         const string pattern = @"([^\s]+)"; //pattern to get the first string before a space
         const string patternBSN = @"^[0-9]{9}$"; //pattern to check bsn
         Regex rg = new Regex(pattern);
@@ -27,7 +27,7 @@ namespace Employee_Management_Alpha_1._0
         private void UpdateList()
         {
             lbViewEmployees.Items.Clear();
-            employeeManagement = new Employee_Management();
+            employeeManagement = new EmployeeManagement();
             if (employeeManagement.GetAllEmployees() is null)
             {
                 MessageBox.Show("The database is empty!");
@@ -56,7 +56,7 @@ namespace Employee_Management_Alpha_1._0
             if ((!String.IsNullOrEmpty(tbFirstName.Text)) && (!String.IsNullOrEmpty(tbLastName.Text)) && (!String.IsNullOrEmpty(tbBSN.Text)) && (!String.IsNullOrEmpty(tbPosition.Text)) && (!String.IsNullOrEmpty(cbWorkingH.Text)) && (!String.IsNullOrEmpty(tbPhone.Text)) && (!String.IsNullOrEmpty(tbAddress.Text)) && (!String.IsNullOrEmpty(tbEmail.Text)) && (!String.IsNullOrEmpty(tbEmergencyN.Text)) && (!String.IsNullOrEmpty(tbContactR.Text)) && (!String.IsNullOrEmpty(tbEmergencyNr.Text)) && (!String.IsNullOrEmpty(tbCertifications.Text)) && (!String.IsNullOrEmpty(tbLanguage.Text)) && (!String.IsNullOrEmpty(dateTimeStart.Text)) && (!String.IsNullOrEmpty(dateTimeEnd.Text)))
                 if ((DateTime.Parse(dateTimeStart.Text) < DateTime.Parse(dateTimeEnd.Text)) && BSNmatch.Success && int.TryParse(tbSalary.Text, out int value))
                 {
-                    employeeManagement.ChangeEmployeeTest(Convert.ToInt32(tbID.Text), tbFirstName.Text, tbLastName.Text, dtfiller, tbBSN.Text, tbPosition.Text, Convert.ToInt32(cbWorkingH.Text), tbPhone.Text, tbAddress.Text, tbEmail.Text, tbPassword.Text, tbEmergencyN.Text, tbContactR.Text, tbEmergencyNr.Text, tbCertifications.Text, tbLanguage.Text,dateTimeStart.Value, dateTimeEnd.Value, Convert.ToInt32(tbSalary.Text));
+                    employeeManagement.EditEmployee(Convert.ToInt32(tbID.Text), tbFirstName.Text, tbLastName.Text, dtfiller, tbBSN.Text, tbPosition.Text, Convert.ToInt32(cbWorkingH.Text), tbPhone.Text, tbAddress.Text, tbEmail.Text, tbPassword.Text, tbEmergencyN.Text, tbContactR.Text, tbEmergencyNr.Text, tbCertifications.Text, tbLanguage.Text,dateTimeStart.Value, dateTimeEnd.Value, Convert.ToInt32(tbSalary.Text));
                 }
                 else
                 {
@@ -78,7 +78,7 @@ namespace Employee_Management_Alpha_1._0
         {
             Employee employee;
             employee = new Employee();
-            employee = employeeManagement.ReturnEmployeeByID(Convert.ToInt32(tbID.Text));
+            employee = employeeManagement.GetEmployeeByID(Convert.ToInt32(tbID.Text));
             tbFirstName.Text = employee.Firstname;
             tbLastName.Text = employee.Lastname;
             tbAddress.Text = employee.address;

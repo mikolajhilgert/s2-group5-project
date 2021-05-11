@@ -77,7 +77,6 @@ namespace Employee_Management_Alpha_1._0
 
                 while (dr.Read())
                 {
-                    //System.Windows.Forms.MessageBox.Show($"{dr[0]} {dr[1]} {dr[2]} {dr[3]} {dr[4]} {dr[5]}");
                     allProducts.Add(new Product(Convert.ToInt32(dr[0]), dr[1].ToString(), Convert.ToInt32(dr[2]), Convert.ToInt32(dr[3]), Convert.ToDecimal(dr[4]), (ProductCategory)Enum.Parse(typeof(ProductCategory), dr[5].ToString())));
                 }
             }

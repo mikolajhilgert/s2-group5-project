@@ -74,13 +74,13 @@ namespace Employee_Management_Alpha_1._0
 
         private void btnAssign_Click(object sender, EventArgs e)
         {
-            Employee_Management employee_Management = new Employee_Management();
+            EmployeeManagement employee_Management = new EmployeeManagement();
             Employee employee = new Employee();
             if (lbAvailable.SelectedIndex >= 0 && lbAvailable.SelectedItem != null)
             {
                 string inputFromListBox = lbAvailable.SelectedItem.ToString();
                 Match match = Regex.Match(inputFromListBox, @"([^\s]+)");
-                employee = employee_Management.GetEmployeebyID(Convert.ToInt32(match.Value));
+                employee = employee_Management.GetEmployeeByID(Convert.ToInt32(match.Value));
                 DepartmentManagement.AssignEmployee(employee, GetComboBoxDepartment());
                 UpdateListboxes(GetComboBoxDepartment());
             }
@@ -90,14 +90,14 @@ namespace Employee_Management_Alpha_1._0
 
         private void btnUnassign_Click(object sender, EventArgs e)
         {
-            Employee_Management employee_Management = new Employee_Management();
+            EmployeeManagement employee_Management = new EmployeeManagement();
 
             Employee employee = new Employee();
             if (lbAssigned.SelectedIndex >= 0 && lbAssigned.SelectedItem != null)
             {
                 string inputFromListBox = lbAssigned.SelectedItem.ToString();
                 Match match = Regex.Match(inputFromListBox, @"([^\s]+)");
-                employee = employee_Management.GetEmployeebyID(Convert.ToInt32(match.Value));
+                employee = employee_Management.GetEmployeeByID(Convert.ToInt32(match.Value));
                 DepartmentManagement.UnassignEmployee(employee);
                 UpdateListboxes(GetComboBoxDepartment());
             }

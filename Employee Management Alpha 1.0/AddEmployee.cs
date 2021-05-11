@@ -15,13 +15,13 @@ namespace Employee_Management_Alpha_1._0
 {
     public partial class AddEmployee : Form
     {
-        Employee_Management employeeManagement;
+        EmployeeManagement employeeManagement;
         const string pattern = @"^[0-9]{9}$"; //pattern to check bsn
         Regex rg = new Regex(pattern);
         public AddEmployee()
         {
             InitializeComponent();
-            employeeManagement = new Employee_Management();
+            employeeManagement = new EmployeeManagement();
             UpdateList();
         }
 
@@ -33,7 +33,7 @@ namespace Employee_Management_Alpha_1._0
         private void UpdateList()
         {
             lbEmployees.Items.Clear();
-            employeeManagement = new Employee_Management();
+            employeeManagement = new EmployeeManagement();
             if (employeeManagement.GetAllEmployees() is null)
             {
                 MessageBox.Show("The database is empty!");
@@ -75,7 +75,7 @@ namespace Employee_Management_Alpha_1._0
             }
 
             lbEmployees.Items.Clear();
-            employeeManagement = new Employee_Management();
+            employeeManagement = new EmployeeManagement();
             UpdateList();
         }
 

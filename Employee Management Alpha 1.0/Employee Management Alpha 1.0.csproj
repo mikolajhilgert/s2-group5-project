@@ -87,6 +87,8 @@
     <Compile Include="CRUDProduct.Designer.cs">
       <DependentUpon>CRUDProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseAccess\StatisticsDAL.cs" />
+    <Compile Include="DatabaseAccess\ShiftDAL.cs" />
     <Compile Include="DatabaseAccess\StockDAL.cs" />
     <Compile Include="DepartmentAssignment.cs">
       <SubType>Form</SubType>
@@ -104,7 +106,7 @@
     <Compile Include="Logic\DepartmentManagement.cs" />
     <Compile Include="Logic\Employee.cs" />
     <Compile Include="Logic\EmployeeStatus.cs" />
-    <Compile Include="Logic\Employee_Management.cs" />
+    <Compile Include="Logic\EmployeeManagement.cs" />
     <Compile Include="AddEmployee.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -324,11 +324,6 @@ namespace Employee_Management_Alpha_1._0
             sa.ShowDialog();
         }
 
-        private void buttonClearWeek_Click(object sender, EventArgs e)
-        {
-            sm.ClearWeekSchedule();
-            PopulateSchedule();
-        }
 
         private void buttonLoadSchedule_Click(object sender, EventArgs e)
         {

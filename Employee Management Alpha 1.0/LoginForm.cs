@@ -16,12 +16,12 @@ namespace Employee_Management_Alpha_1._0
     public partial class LoginForm : Form
     {
         public static string userType;
-        Employee_Management employeeManagement;
+        EmployeeManagement employeeManagement;
         MySqlConnection conn = new MySqlConnection("server=studmysql01.fhict.local;database=dbi456096;uid=dbi456096;password=logixtic;");
         public LoginForm()
         {
             InitializeComponent();
-            employeeManagement = new Employee_Management();
+            employeeManagement = new EmployeeManagement();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

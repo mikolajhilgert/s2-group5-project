@@ -12,10 +12,10 @@ namespace Employee_Management_Alpha_1._0
 {
     public class ShiftManagement
     {
-        protected MySqlConnection conn = new MySqlConnection("server=studmysql01.fhict.local;database=dbi456096;uid=dbi456096;password=logixtic;");//sql connector
         protected int year;
         protected int cWeek;
         protected int empsAssigned = 0;
+        protected ShiftDAL db = new ShiftDAL();
 
         public ShiftManagement(int year, int cWeek)
         {
@@ -23,31 +23,6 @@ namespace Employee_Management_Alpha_1._0
             this.cWeek = cWeek;
         }
 
-        public List<Shift> ReturnAllEmps()
-        {
-            List<Shift> items = new List<Shift>();
-
-            string sql = $@"SELECT e.ID,e.Status as EmpStatus, CONCAT(e.FirstName, ' ' , e.LastName) AS Name, BannedDays
-                            FROM employee AS e
-                            HAVING e.Status = 'Active'";
-
-            MySqlCommand cmd = new MySqlCommand(sql, this.conn);
-            conn.Open();
-            MySqlDataReader dr = cmd.ExecuteReader();
-            while (dr.Read())
-            {
-                items.Add(new Shift(Convert.ToInt32(dr["ID"]), Convert.ToString(dr["Name"]), Convert.ToString(dr["BannedDays"])));
-            }
-            conn.Close();
-            if (items.Count() < 1)
-            {
-                return null;
-            }
-            else
-            {
-                return items;
-            }
-        }
 
         public void AutoScheduleWeek(int inputLimit, bool onePerShift)
         {
@@ -89,8 +64,8 @@ namespace Employee_Management_Alpha_1._0
         public List<Shift> ReturnAvailableEmployees(int tod, int dow)
         {
             List<Shift> Scheduled = this.ReturnScheduledEmployees();
-            List<Shift> All = this.ReturnAllEmps();
-            List<Shift> HoursScheduled = this.ReturnHoursScheduledInWeek();
+            List<Shift> All = db.ReturnAllEmps();
+            List<Shift> HoursScheduled = db.ReturnHoursScheduledInWeek(cWeek, year);
             List<Shift> isAvailable = new List<Shift>();
             foreach (Shift person in All)
             {
@@ -115,7 +90,7 @@ namespace Employee_Management_Alpha_1._0
                                 {
                                     if (hours.employeeID == scheduledPerson.employeeID)
                                     {
-                                        if (hours.contractHours - hours.workedHours > 0 || hours.contractHours == 0 && hours.workedHours <= 40)
+                                        if (hours.contractHours - hours.workedHours > 0 || hours.contractHours == 0 && hours.workedHours < 40)
                                         {
                                             if ((tod == 1) && (scheduledPerson.morning == false) && (scheduledPerson.afternoon == false))
                                             {
@@ -197,70 +172,13 @@ namespace Employee_Management_Alpha_1._0
         }
         public List<Shift> ReturnScheduledEmployees()
         {
-            List<Shift> items = new List<Shift>();
-
-            string sql = $@"SELECT e.Status as EmpStatus, s.ShiftID, s.EmpID, CONCAT(e.FirstName, ' ' , e.LastName) AS Name, s.DofW,s.morning, s.afternoon, s.evening, s.Year, s.cWeek
-                            FROM shifts as s 
-                            INNER JOIN employee as e ON s.EmpID = e.ID
-                            WHERE s.Year = {year} AND s.cWeek = {cWeek} OR (s.Year = {year} AND s.cWeek = {cWeek - 1} AND s.DofW = '7' AND evening = '1') OR (s.Year = {year} AND s.cWeek = {cWeek + 1} AND s.DofW = '1' AND morning = '1')
-                            HAVING e.Status = 'Active'";
-
-            MySqlCommand cmd = new MySqlCommand(sql, this.conn);
-            conn.Open();
-            MySqlDataReader dr = cmd.ExecuteReader();
-            while (dr.Read())
-            {
-                items.Add(new Shift(Convert.ToInt32(dr["ShiftID"]), Convert.ToInt32(dr["DofW"]), Convert.ToInt32(dr["EmpID"]), Convert.ToString(dr["Name"]), Convert.ToBoolean(dr["morning"]), Convert.ToBoolean(dr["afternoon"]), Convert.ToBoolean(dr["evening"]), Convert.ToInt32(dr["Year"]), Convert.ToInt32(dr["cWeek"])));
-            }
-            conn.Close();
-
-            if (items.Count() < 1)
-            {
-                return null;
-            }
-            else
-            {
-                return items;
-            }
-        }
-
-        public List<Shift> ReturnHoursScheduledInWeek()
-        {
-            List<Shift> employees = new List<Shift>();
-            Shift temp;
-            string sql = $@"SELECT e.ID,CONCAT(e.FirstName, ' ' , e.LastName) AS Name,e.WorkingHours,COALESCE(SUM(c.morning), 0) + COALESCE(SUM(c.afternoon), 0) + COALESCE(SUM(c.evening), 0) AS shiftsTotal
-                            FROM employee as e
-                            left JOIN (select * from shifts as s where s.Year = '{year}' AND s.cWeek = '{cWeek}')c
-                            ON e.ID = c.EmpID
-                            GROUP BY e.ID;";
-
-            MySqlCommand cmd = new MySqlCommand(sql, this.conn);
-            conn.Open();
-            MySqlDataReader dr = cmd.ExecuteReader();
-
-            while (dr.Read())
-            {
-                temp = new Shift(Convert.ToInt32(dr[0]), Convert.ToString(dr[1]), Convert.ToInt32(dr[2]), Convert.ToInt32(dr[3]) * 8);
-                //MessageBox.Show($"{temp.contractHours}   {temp.workedHours}");
-                employees.Add(temp);
-            }
-            if (employees.Count() > 0)
-            {
-                conn.Close();
-                return employees;
-            }
-            else
-            {
-                conn.Close();
-                return null;
-            }
+            return db.ReturnScheduledEmployees(cWeek,year);
         }
 
         public List<Shift> ReturnEmployeesByShift(int tod, int dow)
         {
             List<Shift> employees = new List<Shift>();
             List<Shift> scheduledEmployees = this.ReturnScheduledEmployees();
-            //MessageBox.Show(scheduledEmployees.Count.ToString());
             if (scheduledEmployees != null)
             {
                 switch (tod)
@@ -300,12 +218,8 @@ namespace Employee_Management_Alpha_1._0
 
         public void AssignEmployeeToShift(int employeeID, int tod, int dow)
         {
-            string sql_insert;
-            string sql_check;
             string shiftTimeToDb;
             string toEdit;
-            int duplicateID = -1;
-
             switch (tod)
             {
                 case 1:
@@ -321,32 +235,7 @@ namespace Employee_Management_Alpha_1._0
                     toEdit = "Evening";
                     break;
             }
-            sql_check = $@"SELECT ShiftID FROM `shifts` WHERE DofW = {dow} AND Year = {year} AND cWeek = {cWeek} AND EmpID = {employeeID};";
-
-
-            MySqlCommand cmd = new MySqlCommand(sql_check, this.conn);
-            conn.Open();
-            MySqlDataReader dr = cmd.ExecuteReader();
-            while (dr.Read())
-            {
-                duplicateID = Convert.ToInt32(dr["ShiftID"]);
-            }
-            conn.Close();
-
-            if (duplicateID == -1)
-            {
-                sql_insert = $@"INSERT INTO `shifts` (EmpID, DofW, morning, afternoon, evening, Year, cWeek)
-                            VALUES ('{employeeID}', '{dow}', {shiftTimeToDb}, {year}, {cWeek});";
-            }
-            else
-            {
-                sql_insert = $@"UPDATE `shifts` SET {toEdit} = '1' WHERE ShiftID = {duplicateID}";
-            }
-
-            conn.Open();
-            MySqlCommand cmd1 = new MySqlCommand(sql_insert, this.conn);
-            cmd1.ExecuteNonQuery();
-            conn.Close();
+            db.AssignEmployeeToShift(shiftTimeToDb,toEdit,cWeek,year,employeeID,dow);
         }
 
         public void UnAssignEmployeeToShift(int employeeID, int tod, int dow)
@@ -365,58 +254,42 @@ namespace Employee_Management_Alpha_1._0
                     break;
             }
 
-            string sql_update = $@"UPDATE `shifts` SET {shiftTimeToDb} = '0' WHERE `DofW` = '{dow}' AND `EmpID` = '{employeeID}' AND `{shiftTimeToDb}` = '1' AND `Year` = {year} AND `cWeek` = {cWeek};";
+            db.UnAssignEmployeeToShift(cWeek,year,shiftTimeToDb,employeeID,tod,dow);
 
-            conn.Open();
-            MySqlCommand cmd = new MySqlCommand(sql_update, this.conn);
-            cmd.ExecuteNonQuery();
-
-            conn.Close();
         }
 
-        public void ClearWeekSchedule()
-        {
-            string sql_update = $@"UPDATE `shifts` SET Status = '0';";
+        //public bool HasShiftsRemaining(int empID)
+        //{
+        //    int count = 0;
+        //    int contract = 0;
+        //    string sql = $@"SELECT count(morning) FROM `shifts` WHERE `EmpID` = '{empID}' AND `morning` = '1' AND `cWeek` = {cWeek} UNION ALL SELECT count(afternoon) FROM `shifts` WHERE `EmpID` = '{empID}' AND `afternoon` = '1' AND `cWeek` = {cWeek} UNION ALL SELECT count(evening) FROM `shifts` WHERE `EmpID` = '{empID}' AND `evening` = '1' AND `cWeek` = {cWeek};";
+        //    string sql2 = $@"SELECT e.ContractType WHERE `EmpID` = '{empID}';";
 
-            conn.Open();
-            MySqlCommand cmd = new MySqlCommand(sql_update, this.conn);
-            cmd.ExecuteNonQuery();
+        //    MySqlCommand cmd = new MySqlCommand(sql, this.conn);
 
-            conn.Close();
-        }
+        //    conn.Open();
+        //    MySqlDataReader dr = cmd.ExecuteReader();
 
-        public bool HasShiftsRemaining(int empID)
-        {
-            int count = 0;
-            int contract = 0;
-            string sql = $@"SELECT count(morning) FROM `shifts` WHERE `EmpID` = '{empID}' AND `morning` = '1' AND `cWeek` = {cWeek} UNION ALL SELECT count(afternoon) FROM `shifts` WHERE `EmpID` = '{empID}' AND `afternoon` = '1' AND `cWeek` = {cWeek} UNION ALL SELECT count(evening) FROM `shifts` WHERE `EmpID` = '{empID}' AND `evening` = '1' AND `cWeek` = {cWeek};";
-            string sql2 = $@"SELECT e.ContractType WHERE `EmpID` = '{empID}';";
-
-            MySqlCommand cmd = new MySqlCommand(sql, this.conn);
-
-            conn.Open();
-            MySqlDataReader dr = cmd.ExecuteReader();
-
-            while (dr.Read())
-            {
-                count = count + Convert.ToInt32(dr[0]);
-            }
-            conn.Close();
+        //    while (dr.Read())
+        //    {
+        //        count = count + Convert.ToInt32(dr[0]);
+        //    }
+        //    conn.Close();
 
 
-            MySqlCommand cmd2 = new MySqlCommand(sql2, this.conn);
-            conn.Open();
-            MySqlDataReader dr2 = cmd2.ExecuteReader();
-            while (dr2.Read())
-            {
-                contract = Convert.ToInt32(dr[0]);
-            }
-            conn.Close();
-            if (contract - (8 * count) > 0)
-            {
-                return true;
-            }
-            return false;
-        }
+        //    MySqlCommand cmd2 = new MySqlCommand(sql2, this.conn);
+        //    conn.Open();
+        //    MySqlDataReader dr2 = cmd2.ExecuteReader();
+        //    while (dr2.Read())
+        //    {
+        //        contract = Convert.ToInt32(dr[0]);
+        //    }
+        //    conn.Close();
+        //    if (contract - (8 * count) > 0)
+        //    {
+        //        return true;
+        //    }
+        //    return false;
+        //}
     }
 }

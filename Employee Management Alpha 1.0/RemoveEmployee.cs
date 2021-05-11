@@ -15,7 +15,7 @@ namespace Employee_Management_Alpha_1._0
 {
     public partial class RemoveEmployee : Form
     {
-        Employee_Management employeeManagement;
+        EmployeeManagement employeeManagement;
         const string pattern = @"([^\s]+)"; //pattern to get the first string before a space
         Regex rg = new Regex(pattern);
         public RemoveEmployee()
@@ -28,7 +28,7 @@ namespace Employee_Management_Alpha_1._0
         private void UpdateList()
         {
             lbViewEmployees.Items.Clear();
-            employeeManagement = new Employee_Management();
+            employeeManagement = new EmployeeManagement();
             if (employeeManagement.GetAllEmployees() is null)
             {
                 MessageBox.Show("The database is empty!");
