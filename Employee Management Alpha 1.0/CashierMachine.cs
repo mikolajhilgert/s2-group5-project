@@ -37,7 +37,7 @@ namespace Employee_Management_Alpha_1._0
         private void btnSell_Click(object sender, EventArgs e)
         {
             var checkedRows = from DataGridViewRow r in dgSell.Rows
-                              where Convert.ToBoolean(r.Cells[5].Value) == true
+                              where Convert.ToInt32(r.Cells[4].Value) > 0
                               select r;
 
             foreach (var row in checkedRows)

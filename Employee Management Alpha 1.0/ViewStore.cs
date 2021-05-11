@@ -39,12 +39,12 @@ namespace Employee_Management_Alpha_1._0
             {
                 dgStore.Rows.Add(products[i].GetStoreInfoArray());
 
-                if (Convert.ToInt32(products[i].GetStoreQuantity()) < 5)
+                if (Convert.ToInt32(products[i].GetStoreQuantity()) < 10)
                 {
                     dgStore.Rows[i].Cells[3].Style.BackColor = Color.Red;
                     dgStore.Rows[i].Cells[3].Style.ForeColor = Color.White;
                 }
-                else if (Convert.ToInt32(products[i].GetStoreQuantity()) < 10)
+                else if (Convert.ToInt32(products[i].GetStoreQuantity()) < 25)
                 {
                     dgStore.Rows[i].Cells[3].Style.BackColor = Color.Yellow;
                     dgStore.Rows[i].Cells[3].Style.ForeColor = Color.Black;
@@ -70,14 +70,14 @@ namespace Employee_Management_Alpha_1._0
 
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
             {
-                if (nRestockAmount.Text != "" && Convert.ToInt32(nRestockAmount.Text) >= 5)
+                if (nRestockAmount.Text != "" && Convert.ToInt32(nRestockAmount.Text) >= 1)
                 {
                     dm.AddStockRequest(Convert.ToInt32(dgStore.Rows[e.RowIndex].Cells[0].Value), Convert.ToInt32(nRestockAmount.Text));
                     MessageBox.Show("Restock request sent successfuly!");
                 }
                 else
                 {
-                    MessageBox.Show("You may only make requests of atleast 5 items!");
+                    MessageBox.Show("You may only make requests of atleast 1 item!");
                 }
             }
             RefreshProducts();

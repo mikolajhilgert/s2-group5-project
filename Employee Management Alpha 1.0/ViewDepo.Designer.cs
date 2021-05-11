@@ -141,7 +141,7 @@ namespace Employee_Management_Alpha_1._0
             this.nRestockAmount.Size = new System.Drawing.Size(68, 26);
             this.nRestockAmount.TabIndex = 69;
             this.nRestockAmount.Value = new decimal(new int[] {
-            100,
+            1,
             0,
             0,
             0});

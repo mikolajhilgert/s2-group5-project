@@ -39,7 +39,6 @@ namespace Employee_Management_Alpha_1._0
             this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sell = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgSell)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,8 +65,7 @@ namespace Employee_Management_Alpha_1._0
             this.name,
             this.quantity,
             this.price,
-            this.amount,
-            this.sell});
+            this.amount});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -76,16 +74,16 @@ namespace Employee_Management_Alpha_1._0
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Transparent;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgSell.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgSell.Location = new System.Drawing.Point(30, 61);
+            this.dgSell.Location = new System.Drawing.Point(38, 61);
             this.dgSell.Name = "dgSell";
             this.dgSell.RowHeadersVisible = false;
-            this.dgSell.Size = new System.Drawing.Size(573, 290);
+            this.dgSell.Size = new System.Drawing.Size(558, 290);
             this.dgSell.TabIndex = 69;
             this.dgSell.SelectionChanged += new System.EventHandler(this.dgvSell_SelectionChanged);
             // 
             // btnSell
             // 
-            this.btnSell.Location = new System.Drawing.Point(510, 357);
+            this.btnSell.Location = new System.Drawing.Point(521, 357);
             this.btnSell.Name = "btnSell";
             this.btnSell.Size = new System.Drawing.Size(75, 36);
             this.btnSell.TabIndex = 70;
@@ -104,19 +102,20 @@ namespace Employee_Management_Alpha_1._0
             this.name.HeaderText = "Name";
             this.name.Name = "name";
             this.name.ReadOnly = true;
+            this.name.Width = 135;
             // 
             // quantity
             // 
             this.quantity.HeaderText = "Available quantity";
             this.quantity.Name = "quantity";
             this.quantity.ReadOnly = true;
-            this.quantity.Width = 70;
             // 
             // price
             // 
             this.price.HeaderText = "Price";
             this.price.Name = "price";
             this.price.ReadOnly = true;
+            this.price.Width = 110;
             // 
             // amount
             // 
@@ -125,12 +124,7 @@ namespace Employee_Management_Alpha_1._0
             this.amount.HeaderText = "Insert sold amount";
             this.amount.Name = "amount";
             this.amount.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // sell
-            // 
-            this.sell.HeaderText = "Select to sell";
-            this.sell.Name = "sell";
-            this.sell.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.amount.Width = 110;
             // 
             // CashierMachine
             // 
@@ -158,6 +152,5 @@ namespace Employee_Management_Alpha_1._0
         private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn price;
         private System.Windows.Forms.DataGridViewTextBoxColumn amount;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn sell;
     }
 }

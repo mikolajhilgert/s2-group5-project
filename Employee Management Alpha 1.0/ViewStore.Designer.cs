@@ -34,15 +34,15 @@ namespace Employee_Management_Alpha_1._0
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.nRestockAmount = new System.Windows.Forms.NumericUpDown();
             this.dgStore = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnClose = new System.Windows.Forms.Button();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Request = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nRestockAmount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgStore)).BeginInit();
             this.SuspendLayout();
@@ -55,7 +55,7 @@ namespace Employee_Management_Alpha_1._0
             this.nRestockAmount.Size = new System.Drawing.Size(68, 26);
             this.nRestockAmount.TabIndex = 64;
             this.nRestockAmount.Value = new decimal(new int[] {
-            5,
+            1,
             0,
             0,
             0});
@@ -107,41 +107,6 @@ namespace Employee_Management_Alpha_1._0
             this.dgStore.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDepo_CellContentClick);
             this.dgStore.SelectionChanged += new System.EventHandler(this.dgStore_SelectionChanged);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(416, 50);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 18);
-            this.label1.TabIndex = 66;
-            this.label1.Text = "Request quantity:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(12, 41);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 20);
-            this.label2.TabIndex = 68;
-            this.label2.Text = "Store Overview:";
-            // 
-            // btnClose
-            // 
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Image = global::Employee_Management_Alpha_1._0.Properties.Resources.icons8_back_24;
-            this.btnClose.Location = new System.Drawing.Point(11, 11);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(32, 27);
-            this.btnClose.TabIndex = 67;
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
             // ID
             // 
             this.ID.HeaderText = "ProductID";
@@ -180,6 +145,41 @@ namespace Employee_Management_Alpha_1._0
             this.Request.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Request.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Request.Text = "Make Request";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(416, 50);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(121, 18);
+            this.label1.TabIndex = 66;
+            this.label1.Text = "Request quantity:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(12, 41);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(119, 20);
+            this.label2.TabIndex = 68;
+            this.label2.Text = "Store Overview:";
+            // 
+            // btnClose
+            // 
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Image = global::Employee_Management_Alpha_1._0.Properties.Resources.icons8_back_24;
+            this.btnClose.Location = new System.Drawing.Point(11, 11);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(32, 27);
+            this.btnClose.TabIndex = 67;
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // ViewStore
             // 

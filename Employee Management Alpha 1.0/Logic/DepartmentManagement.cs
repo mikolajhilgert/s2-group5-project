@@ -85,6 +85,8 @@ namespace Employee_Management_Alpha_1._0
                     {
                         departments.Add(new Department(Convert.ToInt32(dr["ID"]), Convert.ToString(dr["Name"]), Convert.ToString(dr["Head"]), Convert.ToString(dr["Address"]), Convert.ToInt32(dr["Phone"]), Convert.ToString(dr["Email"]), Convert.ToString(dr["Language"]), Convert.ToInt32(dr["Status"])));
                     }
+
+                    conn.Close();
                 }
             }
             catch (Exception ex)
@@ -120,6 +122,8 @@ namespace Employee_Management_Alpha_1._0
                     {
                         departments.Add(new Department(Convert.ToInt32(dr["ID"]), Convert.ToString(dr["Name"]), Convert.ToString(dr["Head"]), Convert.ToString(dr["Address"]), Convert.ToInt32(dr["Phone"]), Convert.ToString(dr["Email"]), Convert.ToString(dr["Language"]), Convert.ToInt32(dr["Status"])));
                     }
+
+                    conn.Close();
                 }
             }
             catch (Exception ex)
@@ -157,6 +161,8 @@ namespace Employee_Management_Alpha_1._0
                     cmd.Parameters.AddWithValue("@Email", email);
                     cmd.Parameters.AddWithValue("@Language", language);
                     cmd.ExecuteNonQuery();
+
+                    conn.Close();
                 }
             }
             catch (Exception ex)
@@ -178,6 +184,7 @@ namespace Employee_Management_Alpha_1._0
 
                     cmd.Parameters.AddWithValue("@ID", id); 
                     cmd.ExecuteNonQuery();
+                    conn.Close();
                 }
             }
             catch (Exception ex)
@@ -201,6 +208,8 @@ namespace Employee_Management_Alpha_1._0
                     cmd.Parameters.AddWithValue("@DepID", d.Id);
                     cmd.Parameters.AddWithValue("@EmpID", e.Id);
                     cmd.ExecuteNonQuery();
+
+                    conn.Close();
                 }
             }
             catch (Exception ex)
@@ -222,6 +231,8 @@ namespace Employee_Management_Alpha_1._0
 
                     cmd.Parameters.AddWithValue("@EmpID", e.Id);
                     cmd.ExecuteNonQuery();
+
+                    conn.Close();
                 }
             }
             catch (Exception ex)
@@ -250,6 +261,8 @@ namespace Employee_Management_Alpha_1._0
                     {
                         IDsOfEmployees.Add(Convert.ToInt32(dr["EmpID"]));
                     }
+
+                    conn.Close();
                 }
             }
             catch (Exception ex)
@@ -289,6 +302,8 @@ namespace Employee_Management_Alpha_1._0
                     {
                         IDsOfEmployees.Add(Convert.ToInt32(dr["EmpID"]));
                     }
+
+                    conn.Close();
                 }
             }
             catch (Exception ex)
@@ -328,6 +343,8 @@ namespace Employee_Management_Alpha_1._0
                     cmd.Parameters.AddWithValue("@ID", d.Id);
                     cmd.Parameters.AddWithValue("@Status", changedStatus);
                     cmd.ExecuteNonQuery();
+
+                    conn.Close();
                 }
             }
             catch (Exception ex)

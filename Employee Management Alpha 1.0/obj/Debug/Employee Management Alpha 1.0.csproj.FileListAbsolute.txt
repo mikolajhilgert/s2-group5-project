@@ -558,3 +558,15 @@ C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\obj\
 C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.ViewDepo.resources
 C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.ViewStore.resources
 C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.StockRequestsForm.resources
+C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AddDepartment.resources
+C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.AllEmployees.resources
+C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.CashierMachine.resources
+C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.CRUDProduct.resources
+C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.DepartmentAssignment.resources
+C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.EmployeeChangeStatus.resources
+C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.RemoveEmployee.resources
+C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.StockRequestsForm.resources
+C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.ViewDepo.resources
+C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.ViewStatistics.resources
+C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.UpdateDepartment.resources
+C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.ViewStore.resources

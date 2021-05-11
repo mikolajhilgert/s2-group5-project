@@ -52,7 +52,7 @@ namespace Employee_Management_Alpha_1._0
 
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
             {
-                if (nRestockAmount.Text != "" && Convert.ToInt32(nRestockAmount.Text) >= 100)
+                if (nRestockAmount.Text != "" && Convert.ToInt32(nRestockAmount.Text) >= 1)
                 {
                     if (MessageBox.Show("Are you sure you want to restock this product?.", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
@@ -62,7 +62,7 @@ namespace Employee_Management_Alpha_1._0
                 }
                 else
                 {
-                    MessageBox.Show("You may only make requests of atleast 100 items!");
+                    MessageBox.Show("You may only make requests of atleast 1 item!");
                 }
             }
             RefreshProducts();
