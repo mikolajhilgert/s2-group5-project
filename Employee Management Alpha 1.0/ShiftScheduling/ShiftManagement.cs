@@ -133,7 +133,7 @@ namespace Employee_Management_Alpha_1._0
                     {
                         if (hours.employeeID == person.employeeID)
                         {
-                            if (hours.contractHours - hours.workedHours > 0 || hours.contractHours == 0) { isAvailable.Add(hours); }
+                            if (hours.contractHours - hours.workedHours > 0 || hours.contractHours == 0 && hours.workedHours < 40) { isAvailable.Add(hours); }
                         }
                     }
                 }
