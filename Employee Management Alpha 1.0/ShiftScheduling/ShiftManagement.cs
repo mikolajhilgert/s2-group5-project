@@ -290,11 +290,11 @@ namespace Employee_Management_Alpha_1._0
             }
             if (isOnePer)
             {
-                return $"This option will assign atleast one employee per shift. Then continue to assign employees untill all contract hours are met.\n\nThis process is quite taxing and therefore may take a while!\n\nContinue?";
+                return $"This option will assign atleast one employee per shift. Then continue to assign employees untill all contract hours are met.\n\nThis process is quite taxing and therefore may take a while, especially with many employees!\n\nContinue?";
             }
             else if(canAccountFor - wantedShifts >= 0)
             {
-                return $"This option will assign {perShift} employee/s to each shift.\n\nThis process is quite taxing and therefore may take a while!\n\nContinue?";
+                return $"This option will assign {perShift} employee/s to each shift.\n\nThis process is quite taxing and therefore may take a while, especially with many employees!\n\nContinue?";
             }
             return $"You dont have enough active employess to accomodate for {perShift} employees per shift. This will leave you with understaffed / empty shifts. ({wantedShifts-canAccountFor} missing shifts)\n\nContinue anyway?";
         }
