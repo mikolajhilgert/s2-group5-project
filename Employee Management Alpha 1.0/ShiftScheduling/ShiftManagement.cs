@@ -30,13 +30,6 @@ namespace Employee_Management_Alpha_1._0
             int runAgain = 0;
             if (onePerShift)
             {
-                //List<Shift> allEmps = ReturnHoursScheduledInWeek();
-                //int empPotentialHours = 0;
-                //foreach (var emp in allEmps)
-                //{
-                //    empPotentialHours += emp.contractHours;
-                //}
-                //if (empPotentialHours < 168) { limit = 1; runAgain = 1; }
                 limit = 1; runAgain = 1;
             }
             for (int i = 0; i <= runAgain; i++)
@@ -45,15 +38,37 @@ namespace Employee_Management_Alpha_1._0
                 {
                     for (int tod = 1; tod <= 3; tod++)
                     {
-                        List<Shift> available = ReturnAvailableEmployees(tod, dow);
+                        List<Shift> availableWithContract = new List<Shift>();
+                        List<Shift> available = new List<Shift>();
+                        foreach (Shift shift in ReturnAvailableEmployees(tod, dow))
+                        {
+                            if(shift.contractHours == 0)
+                            {
+                                available.Add(shift);
+                            }
+                            else
+                            {
+                                availableWithContract.Add(shift);
+                            }
+                        }
+                        
                         Random rnd = new Random();
                         for (int assigned = 1; assigned <= limit; assigned++)
                         {
-                            if (available.Count >= 1)
+                            if (availableWithContract.Count != 0)
                             {
-                                int selectedEmp = rnd.Next(0, available.Count); // creates a number from available emps
-                                AssignEmployeeToShift(available[selectedEmp].employeeID, tod, dow);
-                                available.RemoveAt(selectedEmp);
+                                int selectedEmp = rnd.Next(0, availableWithContract.Count-1); // creates a number from available emps
+                                AssignEmployeeToShift(availableWithContract[selectedEmp].employeeID, tod, dow);
+                                availableWithContract.RemoveAt(selectedEmp);
+                            }
+                            else
+                            {   
+                                if(available.Count != 0)
+                                {
+                                    int selectedEmp = rnd.Next(0, available.Count-1); // creates a number from available emps
+                                    AssignEmployeeToShift(available[selectedEmp].employeeID, tod, dow);
+                                    available.RemoveAt(selectedEmp);
+                                }
                             }
                         }
                     }
@@ -256,6 +271,32 @@ namespace Employee_Management_Alpha_1._0
 
             db.UnAssignEmployeeToShift(cWeek,year,shiftTimeToDb,employeeID,tod,dow);
 
+        }
+
+        public string AutoScheduleAlert(bool isOnePer, int perShift)
+        {
+            int canAccountFor = 0;
+            int wantedShifts = perShift * 21;
+            foreach (var item in db.ReturnAllEmps())
+            {
+                if(item.contractHours == 0 || item.contractHours == 40) 
+                {
+                    canAccountFor += 5;
+                }
+                else
+                {
+                    canAccountFor += 4;
+                }
+            }
+            if (isOnePer)
+            {
+                return $"This option will assign atleast one employee per shift. Then continue to assign employees untill all contract hours are met.\n\nThis process is quite taxing and therefore may take a while!\n\nContinue?";
+            }
+            else if(canAccountFor - wantedShifts >= 0)
+            {
+                return $"This option will assign {perShift} employee/s to each shift.\n\nThis process is quite taxing and therefore may take a while!\n\nContinue?";
+            }
+            return $"You dont have enough active employess to accomodate for {perShift} employees per shift. This will leave you with understaffed / empty shifts. ({wantedShifts-canAccountFor} missing shifts)\n\nContinue anyway?";
         }
 
         //public bool HasShiftsRemaining(int empID)

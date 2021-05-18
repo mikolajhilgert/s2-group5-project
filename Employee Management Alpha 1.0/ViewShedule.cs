@@ -29,7 +29,10 @@ namespace Employee_Management_Alpha_1._0
             InitializeComponent();
             InsertCurrentDates();
             PopulateSchedule();
+            CheckAutoScheduleOption();
         }
+
+
 
         public void PopulateSchedule()
         {
@@ -40,8 +43,8 @@ namespace Employee_Management_Alpha_1._0
             tod = 3;
             sm = new ShiftManagement(year, cWeek);
 
-            List<Shift> Items = new List<Shift>();
-            Items = sm.ReturnScheduledEmployees();
+            List<Shift> Items = Items = sm.ReturnScheduledEmployees();
+
             try
             {
                 //Traversal through each groupbox from right to left -> https://stackoverflow.com/questions/18895864/how-to-use-foreach-for-the-textboxes-in-a-panel
@@ -332,6 +335,8 @@ namespace Employee_Management_Alpha_1._0
             //MessageBox.Show(ReturnSelectedYear().ToString());
             //MessageBox.Show(ReturnSelectedCalWeek().ToString());
             PopulateSchedule();
+            checkBCondition.Checked = true;
+            CheckAutoScheduleOption();
         }
 
         public int ReturnCurrentYear()
@@ -377,44 +382,56 @@ namespace Employee_Management_Alpha_1._0
             //MessageBox.Show(ReturnSelectedYear().ToString());
             //MessageBox.Show(ReturnSelectedCalWeek().ToString());
             PopulateSchedule();
-
+            checkBCondition.Checked = true;
+            CheckAutoScheduleOption();
         }
 
-        //private void btnAutoSchedule_Click(object sender, EventArgs e)
-        //{
-        //    bool shiftCondition = false;
-        //    int limit = 0;
+        private void btnAutoSchedule_Click(object sender, EventArgs e)
+        {
+            int limit = (int)nMaxPerShift.Value;
+            if (checkBCondition.Checked)
+            {
+                var dialogResult  = MessageBox.Show(sm.AutoScheduleAlert(true,limit), "Auto Schedule Alert!", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (dialogResult == DialogResult.Yes && limit > 0)
+                {
+                    Cursor.Current = Cursors.WaitCursor;
+                    sm.AutoScheduleWeek(limit, true);
+                }
+            }
+            else
+            {
+                var dialogResult = MessageBox.Show(sm.AutoScheduleAlert(false,limit), "Auto Schedule Alert!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (dialogResult == DialogResult.Yes && limit > 0)
+                {
+                    Cursor.Current = Cursors.WaitCursor;
+                    sm.AutoScheduleWeek(limit, false);
+                }
+            }
+            Cursor.Current = Cursors.Arrow;
+            nMaxPerShift.Value = 1;
+            checkBCondition.Checked = false;
+            PopulateSchedule();
+        }
 
-        //    if (checkBCondition.Checked) { shiftCondition = true; limit = 1; } else {
-        //        if(int.TryParse(tbAutoScheduleLimit.Text, out int value)){ limit = value; }}
+        private void checkBCondition_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckAutoScheduleOption();
+        }
 
-        //    if (limit > 0 && limit <= sm.ReturnAllEmps().Count)
-        //    {
-        //        Cursor.Current = Cursors.WaitCursor;
-
-        //        sm.AutoScheduleWeek(limit, shiftCondition);
-        //        Cursor.Current = Cursors.Arrow;
-        //        tbAutoScheduleLimit.Text = "";
-        //        checkBCondition.Checked = false;
-        //        PopulateSchedule();
-        //    }
-        //    else { MessageBox.Show("Invalid Input!"); }
-        //}
-
-        //private void checkBCondition_CheckedChanged(object sender, EventArgs e)
-        //{
-        //    if (checkBCondition.Checked)
-        //    {
-        //        tbAutoScheduleLimit.Enabled = false;
-        //        label21.ForeColor = Color.DarkGray;
-        //        tbAutoScheduleLimit.Text = "";
-        //    }
-        //    else
-        //    {
-        //        tbAutoScheduleLimit.Enabled = true;
-        //        label21.ForeColor = Color.White;
-        //        tbAutoScheduleLimit.Text = "";
-        //    }
-        //}
+        private void CheckAutoScheduleOption()
+        {
+            if (checkBCondition.Checked)
+            {
+                nMaxPerShift.Enabled = false;
+                label21.ForeColor = Color.DarkGray;
+                nMaxPerShift.Value = 1;
+            }
+            else
+            {
+                nMaxPerShift.Enabled = true;
+                label21.ForeColor = Color.White;
+                nMaxPerShift.Value = 1;
+            }
+        }
     }
 }
