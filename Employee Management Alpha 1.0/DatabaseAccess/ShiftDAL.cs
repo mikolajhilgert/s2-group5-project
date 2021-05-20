@@ -176,6 +176,53 @@ namespace Employee_Management_Alpha_1._0
                 conn.Close();
             }
         }
+
+        public void ClearWeek(int cWeek, int year)
+        {
+            string sql_delete = $@"DELETE FROM `shifts` WHERE  `Year` = {year} AND `cWeek` = {cWeek};";
+            try
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand(sql_delete, this.conn);
+                cmd.ExecuteNonQuery();
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public int ReturnEmpHourPotential()
+        {
+            int MaxHours = 0;
+
+            string sql = $@"SELECT e.WorkingHours,e.Status as EmpStatus
+                            FROM employee AS e
+                            HAVING e.Status = 'Active'";
+
+            MySqlCommand cmd = new MySqlCommand(sql, this.conn);
+            conn.Open();
+            try
+            {
+                MySqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    if (Convert.ToInt32(dr[0]) == 0)
+                    {
+                        MaxHours += 40;
+                    }
+                    else
+                    {
+                        MaxHours += Convert.ToInt32(dr[0]);
+                    }
+                }
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return MaxHours;
+        }
     }
 
 }

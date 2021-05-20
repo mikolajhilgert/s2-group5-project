@@ -23,6 +23,10 @@ namespace Employee_Management_Alpha_1._0
             this.cWeek = cWeek;
         }
 
+        public void ClearWeek()
+        {
+            db.ClearWeek(cWeek,year);
+        }
 
         public void AutoScheduleWeek(int inputLimit, bool onePerShift)
         {
@@ -55,22 +59,61 @@ namespace Employee_Management_Alpha_1._0
                         Random rnd = new Random();
                         for (int assigned = 1; assigned <= limit; assigned++)
                         {
-                            if (availableWithContract.Count != 0)
-                            {
-                                int selectedEmp = rnd.Next(0, availableWithContract.Count-1); // creates a number from available emps
-                                AssignEmployeeToShift(availableWithContract[selectedEmp].employeeID, tod, dow);
-                                availableWithContract.RemoveAt(selectedEmp);
-                            }
-                            else
-                            {   
-                                if(available.Count != 0)
+                            if (availableWithContract.Count > 0)
+                            { 
+                                List<Shift> zero = new List<Shift>();
+                                List<Shift> one = new List<Shift>();
+                                List<Shift> two = new List<Shift>();
+                                List<Shift> three = new List<Shift>();
+                                List<Shift> four = new List<Shift>();
+
+                                foreach (var person in availableWithContract)
                                 {
-                                    int selectedEmp = rnd.Next(0, available.Count-1); // creates a number from available emps
-                                    AssignEmployeeToShift(available[selectedEmp].employeeID, tod, dow);
-                                    available.RemoveAt(selectedEmp);
+                                    if (person.workedHours == 0) { zero.Add(person); }
+                                    else if (person.workedHours == 8) { one.Add(person); }
+                                    else if (person.workedHours == 16) { two.Add(person); }
+                                    else if (person.workedHours == 24) { three.Add(person); }
+                                    else if (person.workedHours == 32) { four.Add(person); }
+                                }
+
+                                if (zero.Count != 0)
+                                {
+                                    AssignEmployeeToShift(zero[0].employeeID, tod, dow);
+                                    zero[0].workedHours += 8;
+                                }
+                                else if (one.Count != 0)
+                                {
+                                    AssignEmployeeToShift(one[0].employeeID, tod, dow);
+                                    one[0].workedHours += 8;
+                                }
+                                else if (two.Count != 0)
+                                {
+                                    AssignEmployeeToShift(two[0].employeeID, tod, dow);
+                                    two[0].workedHours += 8;
+                                }
+                                else if (three.Count != 0)
+                                {
+                                    AssignEmployeeToShift(three[0].employeeID, tod, dow);
+                                    three[0].workedHours += 8;
+                                }
+                                else if (four.Count != 0)
+                                {
+                                    AssignEmployeeToShift(four[0].employeeID, tod, dow);
+                                    four[0].workedHours += 8;
                                 }
                             }
+                            else if (available.Count != 0)
+                            {
+                                int selectedEmp = rnd.Next(0, available.Count); // creates a number from available emps
+                                AssignEmployeeToShift(available[selectedEmp].employeeID, tod, dow);
+                            }
+                            if(limit>1 && availableWithContract.Count < limit&& available.Count != 0)
+                            {
+                                int selectedEmp = rnd.Next(0, available.Count); // creates a number from available emps
+                                AssignEmployeeToShift(available[selectedEmp].employeeID, tod, dow);
+                            }
                         }
+
                     }
                 }
             }
@@ -133,7 +176,7 @@ namespace Employee_Management_Alpha_1._0
                     {
                         if (hours.employeeID == person.employeeID)
                         {
-                            if (hours.contractHours - hours.workedHours > 0 || hours.contractHours == 0 && hours.workedHours < 40) { isAvailable.Add(hours); }
+                            if (hours.contractHours - hours.workedHours > 0 || (hours.contractHours == 0 && hours.workedHours < 40)) { isAvailable.Add(hours); }
                         }
                     }
                 }
@@ -268,69 +311,23 @@ namespace Employee_Management_Alpha_1._0
                     shiftTimeToDb = "evening";
                     break;
             }
-
             db.UnAssignEmployeeToShift(cWeek,year,shiftTimeToDb,employeeID,tod,dow);
-
         }
 
         public string AutoScheduleAlert(bool isOnePer, int perShift)
         {
-            int canAccountFor = 0;
+            int canAccountFor = db.ReturnEmpHourPotential() / 8;
             int wantedShifts = perShift * 21;
-            foreach (var item in db.ReturnAllEmps())
-            {
-                if(item.contractHours == 0 || item.contractHours == 40) 
-                {
-                    canAccountFor += 5;
-                }
-                else
-                {
-                    canAccountFor += 4;
-                }
-            }
+
             if (isOnePer)
             {
                 return $"This option will assign atleast one employee per shift. Then continue to assign employees untill all contract hours are met.\n\nThis process is quite taxing and therefore may take a while, especially with many employees!\n\nContinue?";
             }
-            else if(canAccountFor - wantedShifts >= 0)
+            else if (canAccountFor - wantedShifts >= 0)
             {
                 return $"This option will assign {perShift} employee/s to each shift.\n\nThis process is quite taxing and therefore may take a while, especially with many employees!\n\nContinue?";
             }
-            return $"You dont have enough active employess to accomodate for {perShift} employees per shift. This will leave you with understaffed / empty shifts. ({wantedShifts-canAccountFor} missing shifts)\n\nContinue anyway?";
+            return $"You dont have enough active employess to accomodate for {perShift} employees per shift. This will leave you with understaffed / empty shifts. (~{wantedShifts - canAccountFor} missing shifts)\n\nContinue anyway?";
         }
-
-        //public bool HasShiftsRemaining(int empID)
-        //{
-        //    int count = 0;
-        //    int contract = 0;
-        //    string sql = $@"SELECT count(morning) FROM `shifts` WHERE `EmpID` = '{empID}' AND `morning` = '1' AND `cWeek` = {cWeek} UNION ALL SELECT count(afternoon) FROM `shifts` WHERE `EmpID` = '{empID}' AND `afternoon` = '1' AND `cWeek` = {cWeek} UNION ALL SELECT count(evening) FROM `shifts` WHERE `EmpID` = '{empID}' AND `evening` = '1' AND `cWeek` = {cWeek};";
-        //    string sql2 = $@"SELECT e.ContractType WHERE `EmpID` = '{empID}';";
-
-        //    MySqlCommand cmd = new MySqlCommand(sql, this.conn);
-
-        //    conn.Open();
-        //    MySqlDataReader dr = cmd.ExecuteReader();
-
-        //    while (dr.Read())
-        //    {
-        //        count = count + Convert.ToInt32(dr[0]);
-        //    }
-        //    conn.Close();
-
-
-        //    MySqlCommand cmd2 = new MySqlCommand(sql2, this.conn);
-        //    conn.Open();
-        //    MySqlDataReader dr2 = cmd2.ExecuteReader();
-        //    while (dr2.Read())
-        //    {
-        //        contract = Convert.ToInt32(dr[0]);
-        //    }
-        //    conn.Close();
-        //    if (contract - (8 * count) > 0)
-        //    {
-        //        return true;
-        //    }
-        //    return false;
-        //}
     }
 }

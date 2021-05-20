@@ -107,7 +107,7 @@ namespace Employee_Management_Alpha_1._0
         }
         private void ViewFreeEmp()
         {
-            List<Shift> items = sm.ReturnAvailableEmployees(this.tod, this.dow);
+            List<Shift> items = sm. ReturnAvailableEmployees(this.tod, this.dow);
             if (items != null)
             {
                 for (int i = 0; i < items.Count; i++)
