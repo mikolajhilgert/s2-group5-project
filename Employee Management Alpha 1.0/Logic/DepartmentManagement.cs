@@ -30,178 +30,31 @@ namespace Employee_Management_Alpha_1._0
         }
         public static void UpdateDepartment(int id, string name, string headOfDepartment, string address, int phone, string email, string language)
         {
+            DepartmentDAL.UpdateDepartment(id, name, headOfDepartment, address, phone, email, language);
         }
         public static void DeleteDepartment(int id)
         {
-            string sql_connection = "server=studmysql01.fhict.local;database=dbi456096;uid=dbi456096;password=logixtic;";
-            string sql_insert = $@"DELETE FROM department WHERE ID = @ID;";
-
-            try
-            {
-                using (MySqlConnection conn = new MySqlConnection(sql_connection))
-                {
-                    MySqlCommand cmd = new MySqlCommand(sql_insert, conn);
-                    conn.Open();
-
-                    cmd.Parameters.AddWithValue("@ID", id); 
-                    cmd.ExecuteNonQuery();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            DepartmentDAL.DeleteDepartment(id);
         }
         public static void AssignEmployee(Employee e, Department d)
         {
-            string sql_connection = "server=studmysql01.fhict.local;database=dbi456096;uid=dbi456096;password=logixtic;";
-            string sql_insert = $@"INSERT INTO depemp (Dep, EmpID) 
-                                VALUES (@DepID, @EmpID);";
-
-            try
-            {
-                using (MySqlConnection conn = new MySqlConnection(sql_connection))
-                {
-                    MySqlCommand cmd = new MySqlCommand(sql_insert, conn);
-                    conn.Open();
-
-                    cmd.Parameters.AddWithValue("@DepID", d.Id);
-                    cmd.Parameters.AddWithValue("@EmpID", e.Id);
-                    cmd.ExecuteNonQuery();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            DepartmentDAL.AssignEmployee(e, d);
         }
         public static void UnassignEmployee(Employee e)
         {
-            string sql_connection = "server=studmysql01.fhict.local;database=dbi456096;uid=dbi456096;password=logixtic;";
-            string sql_insert = $@"DELETE FROM depemp WHERE EmpID = @EmpID;"; 
-
-            try
-            {
-                using (MySqlConnection conn = new MySqlConnection(sql_connection))
-                {
-                    MySqlCommand cmd = new MySqlCommand(sql_insert, conn);
-                    conn.Open();
-
-                    cmd.Parameters.AddWithValue("@EmpID", e.Id);
-                    cmd.ExecuteNonQuery();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            DepartmentDAL.UnassignEmployee(e);
         }
         public static List<Employee> GetAllAvailableEmployeesForDepartment(Department d)
         {
-            EmployeeManagement employee_Management = new EmployeeManagement();
-            List<Employee> employees = employee_Management.GetAllActiveEmployees();
-            List<int> IDsOfEmployees = new List<int>();
-
-            string sql_connection = "server=studmysql01.fhict.local;database=dbi456096;uid=dbi456096;password=logixtic;";
-            string sql_select = $@"SELECT EmpID FROM depemp WHERE Dep = @ID;";
-            try
-            {
-                using (MySqlConnection conn = new MySqlConnection(sql_connection))
-                {
-                    MySqlCommand cmd = new MySqlCommand(sql_select, conn);
-                    conn.Open();
-                    cmd.Parameters.AddWithValue("@ID", d.Id);
-                    MySqlDataReader dr = cmd.ExecuteReader();
-
-                    while (dr.Read())
-                    {
-                        IDsOfEmployees.Add(Convert.ToInt32(dr["EmpID"]));
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-            for (int i = 0; i < employees.Count(); i++)
-            {//check to see if indexes roll back with 1 when u remove item and adjust by i-- when removed
-                if (IDsOfEmployees.Contains(employees[i].Id))
-                {
-                    employees.Remove(employees[i]);
-                    i--;
-                }
-            }
-
-            return employees;
+            return DepartmentDAL.GetAllAvailableEmployeesForDepartment(d);
         }
         public static List<Employee> GetAllAssignedEmployeesForDepartment(Department d)
         {
-            EmployeeManagement employee_Management = new EmployeeManagement();
-            List<Employee> employees = employee_Management.GetAllActiveEmployees();
-            List<int> IDsOfEmployees = new List<int>();
-
-            string sql_connection = "server=studmysql01.fhict.local;database=dbi456096;uid=dbi456096;password=logixtic;";
-            string sql_select = $@"SELECT EmpID FROM depemp WHERE Dep = @ID;";
-            try
-            {
-                using (MySqlConnection conn = new MySqlConnection(sql_connection))
-                {
-                    MySqlCommand cmd = new MySqlCommand(sql_select, conn);
-                    conn.Open();
-                    cmd.Parameters.AddWithValue("@ID", d.Id);
-                    MySqlDataReader dr = cmd.ExecuteReader();
-
-                    while (dr.Read())
-                    {
-                        IDsOfEmployees.Add(Convert.ToInt32(dr["EmpID"]));
-                    }
-
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-            for (int i = 0; i < employees.Count(); i++)
-            {//check to see if indexes roll back with 1 when u remove item and adjust by i-- when removed
-                if (!IDsOfEmployees.Contains(employees[i].Id))
-                {
-                    employees.Remove(employees[i]);
-                    i--;
-                }
-            }
-
-            return employees;
+            return DepartmentDAL.GetAllAssignedEmployeesForDepartment(d);
         }
         public static void ChangeStatus(Department d)
         {
-            string sql_connection = "server=studmysql01.fhict.local;database=dbi456096;uid=dbi456096;password=logixtic;";
-            string sql_insert = $@"UPDATE department SET Status = @Status WHERE ID = @ID;";
-
-            int changedStatus;
-            if (d.Status == 0)
-                changedStatus = 1;
-            else
-                changedStatus = 0;
-
-            try
-            {
-                using (MySqlConnection conn = new MySqlConnection(sql_connection))
-                {
-                    MySqlCommand cmd = new MySqlCommand(sql_insert, conn);
-                    conn.Open();
-
-                    cmd.Parameters.AddWithValue("@ID", d.Id);
-                    cmd.Parameters.AddWithValue("@Status", changedStatus);
-                    cmd.ExecuteNonQuery();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            DepartmentDAL.ChangeStatus(d);
         }
     }
 }
