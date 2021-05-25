@@ -32,6 +32,7 @@ namespace Employee_Management_Alpha_1._0
             this.gbGeneralScheduler = new System.Windows.Forms.GroupBox();
             this.btnClearWeek = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cb0Hour = new System.Windows.Forms.CheckBox();
             this.label21 = new System.Windows.Forms.Label();
             this.nMaxPerShift = new System.Windows.Forms.NumericUpDown();
             this.label25 = new System.Windows.Forms.Label();
@@ -104,7 +105,6 @@ namespace Employee_Management_Alpha_1._0
             this.lblDateMon = new System.Windows.Forms.Label();
             this.pnlMornMonday = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.cb0Hour = new System.Windows.Forms.CheckBox();
             this.gbGeneralScheduler.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nMaxPerShift)).BeginInit();
@@ -193,6 +193,19 @@ namespace Employee_Management_Alpha_1._0
             this.panel1.Size = new System.Drawing.Size(371, 79);
             this.panel1.TabIndex = 15;
             // 
+            // cb0Hour
+            // 
+            this.cb0Hour.AutoSize = true;
+            this.cb0Hour.Checked = true;
+            this.cb0Hour.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cb0Hour.ForeColor = System.Drawing.Color.YellowGreen;
+            this.cb0Hour.Location = new System.Drawing.Point(33, 21);
+            this.cb0Hour.Name = "cb0Hour";
+            this.cb0Hour.Size = new System.Drawing.Size(151, 17);
+            this.cb0Hour.TabIndex = 29;
+            this.cb0Hour.Text = "Use zero hour employees?";
+            this.cb0Hour.UseVisualStyleBackColor = true;
+            // 
             // label21
             // 
             this.label21.AutoSize = true;
@@ -211,7 +224,7 @@ namespace Employee_Management_Alpha_1._0
             this.nMaxPerShift.Size = new System.Drawing.Size(32, 20);
             this.nMaxPerShift.TabIndex = 27;
             this.nMaxPerShift.Value = new decimal(new int[] {
-            1,
+            2,
             0,
             0,
             0});
@@ -229,8 +242,6 @@ namespace Employee_Management_Alpha_1._0
             // checkBCondition
             // 
             this.checkBCondition.AutoSize = true;
-            this.checkBCondition.Checked = true;
-            this.checkBCondition.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBCondition.ForeColor = System.Drawing.Color.White;
             this.checkBCondition.Location = new System.Drawing.Point(33, 38);
             this.checkBCondition.Name = "checkBCondition";
@@ -1080,19 +1091,6 @@ namespace Employee_Management_Alpha_1._0
             this.label7.Size = new System.Drawing.Size(25, 13);
             this.label7.TabIndex = 0;
             this.label7.Text = "???";
-            // 
-            // cb0Hour
-            // 
-            this.cb0Hour.AutoSize = true;
-            this.cb0Hour.Checked = true;
-            this.cb0Hour.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb0Hour.ForeColor = System.Drawing.Color.YellowGreen;
-            this.cb0Hour.Location = new System.Drawing.Point(33, 21);
-            this.cb0Hour.Name = "cb0Hour";
-            this.cb0Hour.Size = new System.Drawing.Size(151, 17);
-            this.cb0Hour.TabIndex = 29;
-            this.cb0Hour.Text = "Use zero hour employees?";
-            this.cb0Hour.UseVisualStyleBackColor = true;
             // 
             // ViewShedule
             // 
