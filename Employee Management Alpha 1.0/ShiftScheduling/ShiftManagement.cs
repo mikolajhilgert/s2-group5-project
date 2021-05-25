@@ -54,13 +54,13 @@ namespace Employee_Management_Alpha_1._0
                 List<Shift> available = new List<Shift>();
                 foreach (Shift shift in ReturnAvailableEmployees(tod, dow))
                 {
-                    if (shift.contractHours == 0 && use0HContract == true)
+                    if (shift.contractHours == 0 && use0HContract)
                     {
                         available.Add(shift);
                     }
                     else
                     {
-                        availableWithContract.Add(shift);
+                        if(shift.contractHours != 0) { availableWithContract.Add(shift); }
                     }
                 }
 
@@ -360,13 +360,34 @@ namespace Employee_Management_Alpha_1._0
             int canAccountFor = db.ReturnEmpHourPotential(use0HourContract) / 8;
             int wantedShifts = perShift * 21;
 
+            List<Shift> All = db.ReturnAllEmps();
+
+            string noEmpDays = "";
+            string[] days = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" };
+
+            for (int dow = 1; dow <= 7; dow++)
+            {
+                int total = All.Count;
+                int counter = 0;
+                foreach (Shift person in All)
+                {
+                    if (person.bannedDay1 == dow || person.bannedDay2 == dow)
+                    {
+                        if (counter == total)
+                        {
+                            noEmpDays += $"No employee can work on {days[dow - 1]}!\n";
+                        }
+                    }
+                }
+            }
+
             if (isOnePer)
             {
-                return $"This option will assign atleast one employee per shift. Then continue to assign employees untill all contract hours are met.\n\nThis process is quite taxing and therefore may take a while, especially with many employees!\n\nContinue?";
+                return $"This option will assign atleast one employee per shift. Then continue to assign employees untill all contract hours are met.\n{noEmpDays}\nThis process is quite taxing and therefore may take a while, especially with many employees! (No longer than 60seconds)\n\nContinue?";
             }
             else if (canAccountFor - wantedShifts >= 0)
             {
-                return $"This option will assign {perShift} employee/s to each shift.\n\nThis process is quite taxing and therefore may take a while, especially with many employees!\n\nContinue?";
+                return $"This option will assign {perShift} employee/s to each shift.\n{noEmpDays}\nThis process is quite taxing and therefore may take a while, especially with many employees!\n\nContinue?";
             }
             return $"You dont have enough active employess to accomodate for {perShift} employees per shift. This will leave you with understaffed / empty shifts. (~{wantedShifts - canAccountFor} missing shifts)\n\nContinue anyway?";
         }
