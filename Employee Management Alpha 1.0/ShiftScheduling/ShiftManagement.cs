@@ -61,45 +61,45 @@ namespace Employee_Management_Alpha_1._0
                         {
                             if (availableWithContract.Count > 0)
                             { 
-                                List<Shift> zero = new List<Shift>();
-                                List<Shift> one = new List<Shift>();
-                                List<Shift> two = new List<Shift>();
-                                List<Shift> three = new List<Shift>();
-                                List<Shift> four = new List<Shift>();
+                                Queue<Shift> zero = new Queue<Shift>();
+                                Queue<Shift> one = new Queue<Shift>();
+                                Queue<Shift> two = new Queue<Shift>();
+                                Queue<Shift> three = new Queue<Shift>();
+                                Queue<Shift> four = new Queue<Shift>();
 
                                 foreach (var person in availableWithContract)
                                 {
-                                    if (person.workedHours == 0) { zero.Add(person); }
-                                    else if (person.workedHours == 8) { one.Add(person); }
-                                    else if (person.workedHours == 16) { two.Add(person); }
-                                    else if (person.workedHours == 24) { three.Add(person); }
-                                    else if (person.workedHours == 32) { four.Add(person); }
+                                    if (person.workedHours == 0) { zero.Enqueue(person); }
+                                    else if (person.workedHours == 8) { one.Enqueue(person); }
+                                    else if (person.workedHours == 16) { two.Enqueue(person); }
+                                    else if (person.workedHours == 24) { three.Enqueue(person); }
+                                    else if (person.workedHours == 32 && person.contractHours > 32) { four.Enqueue(person); }
                                 }
 
                                 if (zero.Count != 0)
                                 {
-                                    AssignEmployeeToShift(zero[0].employeeID, tod, dow);
-                                    zero[0].workedHours += 8;
+                                    AssignEmployeeToShift(zero.Peek().employeeID, tod, dow);
+                                    zero.Dequeue().workedHours += 8;
                                 }
                                 else if (one.Count != 0)
                                 {
-                                    AssignEmployeeToShift(one[0].employeeID, tod, dow);
-                                    one[0].workedHours += 8;
+                                    AssignEmployeeToShift(one.Peek().employeeID, tod, dow);
+                                    one.Dequeue().workedHours += 8;
                                 }
                                 else if (two.Count != 0)
                                 {
-                                    AssignEmployeeToShift(two[0].employeeID, tod, dow);
-                                    two[0].workedHours += 8;
+                                    AssignEmployeeToShift(two.Peek().employeeID, tod, dow);
+                                    two.Dequeue().workedHours += 8;
                                 }
                                 else if (three.Count != 0)
                                 {
-                                    AssignEmployeeToShift(three[0].employeeID, tod, dow);
-                                    three[0].workedHours += 8;
+                                    AssignEmployeeToShift(three.Peek().employeeID, tod, dow);
+                                    three.Dequeue().workedHours += 8;
                                 }
                                 else if (four.Count != 0)
                                 {
-                                    AssignEmployeeToShift(four[0].employeeID, tod, dow);
-                                    four[0].workedHours += 8;
+                                    AssignEmployeeToShift(four.Peek().employeeID, tod, dow);
+                                    four.Dequeue().workedHours += 8;
                                 }
                             }
                             else if (available.Count != 0)
