@@ -30,6 +30,12 @@ namespace Employee_Management_Alpha_1._0
         private void InitializeComponent()
         {
             this.gbGeneralScheduler = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label21 = new System.Windows.Forms.Label();
+            this.nMaxPerShift = new System.Windows.Forms.NumericUpDown();
+            this.label25 = new System.Windows.Forms.Label();
+            this.checkBCondition = new System.Windows.Forms.CheckBox();
+            this.btnAutoSchedule = new System.Windows.Forms.Button();
             this.buttonCurrentWeek = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -97,13 +103,10 @@ namespace Employee_Management_Alpha_1._0
             this.lblDateMon = new System.Windows.Forms.Label();
             this.pnlMornMonday = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnAutoSchedule = new System.Windows.Forms.Button();
-            this.checkBCondition = new System.Windows.Forms.CheckBox();
-            this.nMaxPerShift = new System.Windows.Forms.NumericUpDown();
-            this.label21 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label25 = new System.Windows.Forms.Label();
+            this.btnClearWeek = new System.Windows.Forms.Button();
             this.gbGeneralScheduler.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nMaxPerShift)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -136,13 +139,12 @@ namespace Employee_Management_Alpha_1._0
             this.pnlEvenMonday.SuspendLayout();
             this.pnlAftMonday.SuspendLayout();
             this.pnlMornMonday.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nMaxPerShift)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbGeneralScheduler
             // 
             this.gbGeneralScheduler.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(83)))));
+            this.gbGeneralScheduler.Controls.Add(this.btnClearWeek);
             this.gbGeneralScheduler.Controls.Add(this.panel1);
             this.gbGeneralScheduler.Controls.Add(this.buttonCurrentWeek);
             this.gbGeneralScheduler.Controls.Add(this.label5);
@@ -163,6 +165,77 @@ namespace Employee_Management_Alpha_1._0
             this.gbGeneralScheduler.TabIndex = 4;
             this.gbGeneralScheduler.TabStop = false;
             this.gbGeneralScheduler.Text = "Scheduler";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.panel1.Controls.Add(this.label21);
+            this.panel1.Controls.Add(this.nMaxPerShift);
+            this.panel1.Controls.Add(this.label25);
+            this.panel1.Controls.Add(this.checkBCondition);
+            this.panel1.Controls.Add(this.btnAutoSchedule);
+            this.panel1.Location = new System.Drawing.Point(948, 10);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(371, 79);
+            this.panel1.TabIndex = 15;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.ForeColor = System.Drawing.Color.White;
+            this.label21.Location = new System.Drawing.Point(44, 54);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(135, 13);
+            this.label21.TabIndex = 28;
+            this.label21.Text = "Target Employees Per Shift";
+            // 
+            // nMaxPerShift
+            // 
+            this.nMaxPerShift.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nMaxPerShift.Location = new System.Drawing.Point(10, 51);
+            this.nMaxPerShift.Name = "nMaxPerShift";
+            this.nMaxPerShift.Size = new System.Drawing.Size(32, 20);
+            this.nMaxPerShift.TabIndex = 27;
+            this.nMaxPerShift.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.ForeColor = System.Drawing.Color.White;
+            this.label25.Location = new System.Drawing.Point(7, 5);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(216, 13);
+            this.label25.TabIndex = 9;
+            this.label25.Text = "Autoscheduler: (Best results on empty week)";
+            // 
+            // checkBCondition
+            // 
+            this.checkBCondition.AutoSize = true;
+            this.checkBCondition.Checked = true;
+            this.checkBCondition.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBCondition.ForeColor = System.Drawing.Color.White;
+            this.checkBCondition.Location = new System.Drawing.Point(29, 32);
+            this.checkBCondition.Name = "checkBCondition";
+            this.checkBCondition.Size = new System.Drawing.Size(119, 17);
+            this.checkBCondition.TabIndex = 26;
+            this.checkBCondition.Text = "Atleast one per shift";
+            this.checkBCondition.UseVisualStyleBackColor = true;
+            this.checkBCondition.CheckedChanged += new System.EventHandler(this.checkBCondition_CheckedChanged);
+            // 
+            // btnAutoSchedule
+            // 
+            this.btnAutoSchedule.Location = new System.Drawing.Point(202, 26);
+            this.btnAutoSchedule.Name = "btnAutoSchedule";
+            this.btnAutoSchedule.Size = new System.Drawing.Size(160, 45);
+            this.btnAutoSchedule.TabIndex = 24;
+            this.btnAutoSchedule.Text = "Auto-Schedule Week";
+            this.btnAutoSchedule.UseVisualStyleBackColor = true;
+            this.btnAutoSchedule.Click += new System.EventHandler(this.btnAutoSchedule_Click);
             // 
             // buttonCurrentWeek
             // 
@@ -995,76 +1068,16 @@ namespace Employee_Management_Alpha_1._0
             this.label7.TabIndex = 0;
             this.label7.Text = "???";
             // 
-            // btnAutoSchedule
+            // btnClearWeek
             // 
-            this.btnAutoSchedule.Location = new System.Drawing.Point(202, 26);
-            this.btnAutoSchedule.Name = "btnAutoSchedule";
-            this.btnAutoSchedule.Size = new System.Drawing.Size(160, 45);
-            this.btnAutoSchedule.TabIndex = 24;
-            this.btnAutoSchedule.Text = "Auto-Schedule Week";
-            this.btnAutoSchedule.UseVisualStyleBackColor = true;
-            this.btnAutoSchedule.Click += new System.EventHandler(this.btnAutoSchedule_Click);
-            // 
-            // checkBCondition
-            // 
-            this.checkBCondition.AutoSize = true;
-            this.checkBCondition.Checked = true;
-            this.checkBCondition.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBCondition.ForeColor = System.Drawing.Color.White;
-            this.checkBCondition.Location = new System.Drawing.Point(29, 32);
-            this.checkBCondition.Name = "checkBCondition";
-            this.checkBCondition.Size = new System.Drawing.Size(119, 17);
-            this.checkBCondition.TabIndex = 26;
-            this.checkBCondition.Text = "Atleast one per shift";
-            this.checkBCondition.UseVisualStyleBackColor = true;
-            this.checkBCondition.CheckedChanged += new System.EventHandler(this.checkBCondition_CheckedChanged);
-            // 
-            // nMaxPerShift
-            // 
-            this.nMaxPerShift.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nMaxPerShift.Location = new System.Drawing.Point(10, 51);
-            this.nMaxPerShift.Name = "nMaxPerShift";
-            this.nMaxPerShift.Size = new System.Drawing.Size(32, 20);
-            this.nMaxPerShift.TabIndex = 27;
-            this.nMaxPerShift.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(44, 54);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(135, 13);
-            this.label21.TabIndex = 28;
-            this.label21.Text = "Target Employees Per Shift";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.panel1.Controls.Add(this.label21);
-            this.panel1.Controls.Add(this.nMaxPerShift);
-            this.panel1.Controls.Add(this.label25);
-            this.panel1.Controls.Add(this.checkBCondition);
-            this.panel1.Controls.Add(this.btnAutoSchedule);
-            this.panel1.Location = new System.Drawing.Point(948, 10);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(371, 79);
-            this.panel1.TabIndex = 15;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.ForeColor = System.Drawing.Color.White;
-            this.label25.Location = new System.Drawing.Point(7, 5);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(216, 13);
-            this.label25.TabIndex = 9;
-            this.label25.Text = "Autoscheduler: (Best results on empty week)";
+            this.btnClearWeek.ForeColor = System.Drawing.Color.Red;
+            this.btnClearWeek.Location = new System.Drawing.Point(465, 55);
+            this.btnClearWeek.Name = "btnClearWeek";
+            this.btnClearWeek.Size = new System.Drawing.Size(135, 23);
+            this.btnClearWeek.TabIndex = 24;
+            this.btnClearWeek.Text = "Clear Week";
+            this.btnClearWeek.UseVisualStyleBackColor = true;
+            this.btnClearWeek.Click += new System.EventHandler(this.btnClearWeek_Click);
             // 
             // ViewShedule
             // 
@@ -1077,6 +1090,9 @@ namespace Employee_Management_Alpha_1._0
             this.Text = "ShiftManager";
             this.gbGeneralScheduler.ResumeLayout(false);
             this.gbGeneralScheduler.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nMaxPerShift)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -1138,9 +1154,6 @@ namespace Employee_Management_Alpha_1._0
             this.pnlAftMonday.PerformLayout();
             this.pnlMornMonday.ResumeLayout(false);
             this.pnlMornMonday.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nMaxPerShift)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1220,5 +1233,6 @@ namespace Employee_Management_Alpha_1._0
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Button btnClearWeek;
     }
 }

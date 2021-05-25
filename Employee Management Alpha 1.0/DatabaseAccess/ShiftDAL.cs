@@ -144,12 +144,21 @@ namespace Employee_Management_Alpha_1._0
 
             if (duplicateID == -1)
             {
-                sql_insert = $@"INSERT INTO `shifts` (EmpID, DofW, morning, afternoon, evening, Year, cWeek)
-                            VALUES ('{employeeID}', '{dow}', {shiftTimeToDb}, {year}, {cWeek});";
+                sql_insert = $@"
+                            BEGIN;
+                            INSERT INTO `shifts` (EmpID, DofW, morning, afternoon, evening, Year, cWeek)
+                            VALUES ('{employeeID}', '{dow}', {shiftTimeToDb}, {year}, {cWeek});
+                            INSERT INTO `shiftattendance` (shiftID,empID,morning,afternoon,evening)
+                            VALUES (LAST_INSERT_ID(),'{employeeID}',{shiftTimeToDb});
+                            COMMIT;";
             }
             else
             {
-                sql_insert = $@"UPDATE `shifts` SET {toEdit} = '1' WHERE ShiftID = {duplicateID}";
+                sql_insert = $@"BEGIN;
+                            UPDATE `shifts` SET {toEdit} = '1' WHERE ShiftID = {duplicateID};
+                            INSERT INTO `shiftattendance` (shiftID,empID,morning,afternoon,evening)
+                            VALUES ('{duplicateID}','{employeeID}',{shiftTimeToDb});
+                            COMMIT;";
             }
             try
             {
@@ -164,6 +173,7 @@ namespace Employee_Management_Alpha_1._0
         }
         public void UnAssignEmployeeToShift(int cWeek, int year,string shiftTimeToDb, int employeeID, int tod, int dow)
         {
+            DeleteAttendenceInstance( cWeek,  year,  employeeID, shiftTimeToDb,  dow);
             string sql_update = $@"UPDATE `shifts` SET {shiftTimeToDb} = '0' WHERE `DofW` = '{dow}' AND `EmpID` = '{employeeID}' AND `{shiftTimeToDb}` = '1' AND `Year` = {year} AND `cWeek` = {cWeek};";
             try
             {
@@ -176,6 +186,95 @@ namespace Employee_Management_Alpha_1._0
                 conn.Close();
             }
         }
+
+        public void ClearWeek(int cWeek, int year)
+        {
+            DeleteAttendenceInstance(cWeek, year);
+            string sql_delete = $@"DELETE FROM `shifts` WHERE  `Year` = {year} AND `cWeek` = {cWeek};";
+            try
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand(sql_delete, this.conn);
+                cmd.ExecuteNonQuery();
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public int ReturnEmpHourPotential()
+        {
+            int MaxHours = 0;
+
+            string sql = $@"SELECT e.WorkingHours,e.Status as EmpStatus
+                            FROM employee AS e
+                            HAVING e.Status = 'Active'";
+
+            MySqlCommand cmd = new MySqlCommand(sql, this.conn);
+            conn.Open();
+            try
+            {
+                MySqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    if (Convert.ToInt32(dr[0]) == 0)
+                    {
+                        MaxHours += 40;
+                    }
+                    else
+                    {
+                        MaxHours += Convert.ToInt32(dr[0]);
+                    }
+                }
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return MaxHours;
+        }
+        private void DeleteAttendenceInstance(int cWeek, int year, int employeeID, string shiftTimeToDb, int dow)
+        {
+            string sql_delete = $@"DELETE FROM shiftattendance
+                                    WHERE shiftID IN
+                                    (
+                                        SELECT ShiftID  
+                                        FROM shifts 
+                                        WHERE `DofW` = '{dow}' AND `EmpID` = '{employeeID}' AND `Year` = {year} AND `cWeek` = {cWeek} AND `{shiftTimeToDb}` = '1'
+                                    )";
+            try
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand(sql_delete, this.conn);
+                cmd.ExecuteNonQuery();
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+        private void DeleteAttendenceInstance(int cWeek, int year)
+        {
+            string sql_delete = $@"DELETE FROM shiftattendance
+                                    WHERE shiftID IN
+                                    (
+                                        SELECT ShiftID  
+                                        FROM shifts 
+                                        WHERE `Year` = {year} AND `cWeek` = {cWeek}
+                                    )";
+            try
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand(sql_delete, this.conn);
+                cmd.ExecuteNonQuery();
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
     }
+
 
 }

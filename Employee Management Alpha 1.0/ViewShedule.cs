@@ -433,5 +433,11 @@ namespace Employee_Management_Alpha_1._0
                 nMaxPerShift.Value = 1;
             }
         }
+
+        private void btnClearWeek_Click(object sender, EventArgs e)
+        {
+            sm.ClearWeek();
+            PopulateSchedule();
+        }
     }
 }
