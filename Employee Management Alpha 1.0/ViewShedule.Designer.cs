@@ -30,6 +30,7 @@ namespace Employee_Management_Alpha_1._0
         private void InitializeComponent()
         {
             this.gbGeneralScheduler = new System.Windows.Forms.GroupBox();
+            this.btnClearWeek = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label21 = new System.Windows.Forms.Label();
             this.nMaxPerShift = new System.Windows.Forms.NumericUpDown();
@@ -103,7 +104,7 @@ namespace Employee_Management_Alpha_1._0
             this.lblDateMon = new System.Windows.Forms.Label();
             this.pnlMornMonday = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnClearWeek = new System.Windows.Forms.Button();
+            this.cb0Hour = new System.Windows.Forms.CheckBox();
             this.gbGeneralScheduler.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nMaxPerShift)).BeginInit();
@@ -166,9 +167,21 @@ namespace Employee_Management_Alpha_1._0
             this.gbGeneralScheduler.TabStop = false;
             this.gbGeneralScheduler.Text = "Scheduler";
             // 
+            // btnClearWeek
+            // 
+            this.btnClearWeek.ForeColor = System.Drawing.Color.Red;
+            this.btnClearWeek.Location = new System.Drawing.Point(465, 55);
+            this.btnClearWeek.Name = "btnClearWeek";
+            this.btnClearWeek.Size = new System.Drawing.Size(76, 23);
+            this.btnClearWeek.TabIndex = 24;
+            this.btnClearWeek.Text = "Clear Week";
+            this.btnClearWeek.UseVisualStyleBackColor = true;
+            this.btnClearWeek.Click += new System.EventHandler(this.btnClearWeek_Click);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.panel1.Controls.Add(this.cb0Hour);
             this.panel1.Controls.Add(this.label21);
             this.panel1.Controls.Add(this.nMaxPerShift);
             this.panel1.Controls.Add(this.label25);
@@ -184,7 +197,7 @@ namespace Employee_Management_Alpha_1._0
             // 
             this.label21.AutoSize = true;
             this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(44, 54);
+            this.label21.Location = new System.Drawing.Point(48, 58);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(135, 13);
             this.label21.TabIndex = 28;
@@ -193,7 +206,7 @@ namespace Employee_Management_Alpha_1._0
             // nMaxPerShift
             // 
             this.nMaxPerShift.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nMaxPerShift.Location = new System.Drawing.Point(10, 51);
+            this.nMaxPerShift.Location = new System.Drawing.Point(14, 55);
             this.nMaxPerShift.Name = "nMaxPerShift";
             this.nMaxPerShift.Size = new System.Drawing.Size(32, 20);
             this.nMaxPerShift.TabIndex = 27;
@@ -219,7 +232,7 @@ namespace Employee_Management_Alpha_1._0
             this.checkBCondition.Checked = true;
             this.checkBCondition.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBCondition.ForeColor = System.Drawing.Color.White;
-            this.checkBCondition.Location = new System.Drawing.Point(29, 32);
+            this.checkBCondition.Location = new System.Drawing.Point(33, 38);
             this.checkBCondition.Name = "checkBCondition";
             this.checkBCondition.Size = new System.Drawing.Size(119, 17);
             this.checkBCondition.TabIndex = 26;
@@ -1068,16 +1081,18 @@ namespace Employee_Management_Alpha_1._0
             this.label7.TabIndex = 0;
             this.label7.Text = "???";
             // 
-            // btnClearWeek
+            // cb0Hour
             // 
-            this.btnClearWeek.ForeColor = System.Drawing.Color.Red;
-            this.btnClearWeek.Location = new System.Drawing.Point(465, 55);
-            this.btnClearWeek.Name = "btnClearWeek";
-            this.btnClearWeek.Size = new System.Drawing.Size(135, 23);
-            this.btnClearWeek.TabIndex = 24;
-            this.btnClearWeek.Text = "Clear Week";
-            this.btnClearWeek.UseVisualStyleBackColor = true;
-            this.btnClearWeek.Click += new System.EventHandler(this.btnClearWeek_Click);
+            this.cb0Hour.AutoSize = true;
+            this.cb0Hour.Checked = true;
+            this.cb0Hour.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cb0Hour.ForeColor = System.Drawing.Color.YellowGreen;
+            this.cb0Hour.Location = new System.Drawing.Point(33, 21);
+            this.cb0Hour.Name = "cb0Hour";
+            this.cb0Hour.Size = new System.Drawing.Size(151, 17);
+            this.cb0Hour.TabIndex = 29;
+            this.cb0Hour.Text = "Use zero hour employees?";
+            this.cb0Hour.UseVisualStyleBackColor = true;
             // 
             // ViewShedule
             // 
@@ -1234,5 +1249,6 @@ namespace Employee_Management_Alpha_1._0
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Button btnClearWeek;
+        private System.Windows.Forms.CheckBox cb0Hour;
     }
 }

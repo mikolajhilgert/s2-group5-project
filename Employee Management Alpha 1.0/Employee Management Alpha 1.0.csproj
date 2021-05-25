@@ -143,6 +143,12 @@
     <Compile Include="RemoveEmployee.Designer.cs">
       <DependentUpon>RemoveEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="ShiftAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShiftAttendance.Designer.cs">
+      <DependentUpon>ShiftAttendance.cs</DependentUpon>
+    </Compile>
     <Compile Include="StockRequestsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ShiftAssignment.resx">
       <DependentUpon>ShiftAssignment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShiftAttendance.resx">
+      <DependentUpon>ShiftAttendance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StockRequestsForm.resx">
       <DependentUpon>StockRequestsForm.cs</DependentUpon>

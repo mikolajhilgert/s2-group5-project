@@ -10,7 +10,7 @@ namespace Employee_Management_Alpha_1._0
 
     public class ShiftDAL
     {
-        protected MySqlConnection conn = new MySqlConnection("server=studmysql01.fhict.local;database=dbi456096;uid=dbi456096;password=logixtic;");//sql connector
+        protected MySqlConnection conn = new MySqlConnection("server=studmysql01.fhict.local;database=dbi456096;uid=dbi456096;password=logixtic;default command timeout=0");//sql connector
 
         public List<Shift> ReturnAllEmps()
         {
@@ -25,19 +25,11 @@ namespace Employee_Management_Alpha_1._0
             try
             {
                 MySqlDataReader dr = cmd.ExecuteReader();
-                while (dr.Read())
+                while (dr.Read() && (dr != null))
                 {
                     items.Add(new Shift(Convert.ToInt32(dr["ID"]), Convert.ToString(dr["Name"]), Convert.ToString(dr["BannedDays"])));
                 }
-                conn.Close();
-                if (items.Count() < 1)
-                {
-                    return null;
-                }
-                else
-                {
-                    return items;
-                }
+                return items;
             }
             finally
             {
@@ -60,20 +52,40 @@ namespace Employee_Management_Alpha_1._0
             {
                 conn.Open();
                 MySqlDataReader dr = cmd.ExecuteReader();
-                while (dr.Read())
+                while (dr.Read() && (dr != null))
                 {
                     items.Add(new Shift(Convert.ToInt32(dr["ShiftID"]), Convert.ToInt32(dr["DofW"]), Convert.ToInt32(dr["EmpID"]), Convert.ToString(dr["Name"]), Convert.ToBoolean(dr["morning"]), Convert.ToBoolean(dr["afternoon"]), Convert.ToBoolean(dr["evening"]), Convert.ToInt32(dr["Year"]), Convert.ToInt32(dr["cWeek"])));
                 }
+                return items;
+            }
+            finally
+            {
                 conn.Close();
+            }
+        }
 
-                if (items.Count() < 1)
+        public List<Shift> ReturnDayAttendence(int cWeek, int year, int dow)
+        {
+            List<Shift> items = new List<Shift>();
+
+            string sql = $@"select sa.shiftID,sa.morning,sa.afternoon,sa.evening,sa.status,sa.EmpID,CONCAT(emp.FirstName, ' ' , emp.LastName) AS Name
+            from shiftattendance as sa
+            INNER JOIN (select ID,FirstName,LastName from employee as e)emp
+            ON emp.ID = sa.EmpID
+            inner JOIN (select ShiftID from shifts as s where s.Year = '{year}' AND s.cWeek = '{cWeek}' AND s.DofW = '{dow}')shift
+            ON shift.ShiftID = sa.shiftID
+            ORDER BY sa.morning DESC,sa.afternoon DESC,sa.evening DESC; ";
+
+            MySqlCommand cmd = new MySqlCommand(sql, this.conn);
+            try
+            {
+                conn.Open();
+                MySqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
                 {
-                    return null;
+                    items.Add(new Shift(Convert.ToInt32(dr["EmpID"]), Convert.ToString(dr["Name"]), Convert.ToBoolean(dr["morning"]), Convert.ToBoolean(dr["afternoon"]), Convert.ToBoolean(dr["evening"]), Convert.ToBoolean(dr["status"])));
                 }
-                else
-                {
-                    return items;
-                }
+                return items;
             }
             finally
             {
@@ -97,22 +109,13 @@ namespace Employee_Management_Alpha_1._0
                 conn.Open();
                 MySqlDataReader dr = cmd.ExecuteReader();
 
-                while (dr.Read())
+                while (dr.Read() && (dr != null))
                 {
                     temp = new Shift(Convert.ToInt32(dr[0]), Convert.ToString(dr[1]), Convert.ToInt32(dr[2]), Convert.ToInt32(dr[3]) * 8);
                     //MessageBox.Show($"{temp.contractHours}   {temp.workedHours}");
                     employees.Add(temp);
                 }
-                if (employees.Count() > 0)
-                {
-                    conn.Close();
-                    return employees;
-                }
-                else
-                {
-                    conn.Close();
-                    return null;
-                }
+                return employees;
             }
             finally
             {
@@ -132,7 +135,7 @@ namespace Employee_Management_Alpha_1._0
                 MySqlCommand cmd = new MySqlCommand(sql_check, this.conn);
                 conn.Open();
                 MySqlDataReader dr = cmd.ExecuteReader();
-                while (dr.Read())
+                while (dr.Read() && (dr != null))
                 {
                     duplicateID = Convert.ToInt32(dr["ShiftID"]);
                 }
@@ -203,7 +206,7 @@ namespace Employee_Management_Alpha_1._0
             }
         }
 
-        public int ReturnEmpHourPotential()
+        public int ReturnEmpHourPotential(bool use0HContract)
         {
             int MaxHours = 0;
 
@@ -218,7 +221,7 @@ namespace Employee_Management_Alpha_1._0
                 MySqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    if (Convert.ToInt32(dr[0]) == 0)
+                    if (Convert.ToInt32(dr[0]) == 0 && use0HContract)
                     {
                         MaxHours += 40;
                     }
@@ -227,12 +230,12 @@ namespace Employee_Management_Alpha_1._0
                         MaxHours += Convert.ToInt32(dr[0]);
                     }
                 }
+                return MaxHours;
             }
             finally
             {
                 conn.Close();
             }
-            return MaxHours;
         }
         private void DeleteAttendenceInstance(int cWeek, int year, int employeeID, string shiftTimeToDb, int dow)
         {

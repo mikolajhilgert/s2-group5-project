@@ -28,94 +28,100 @@ namespace Employee_Management_Alpha_1._0
             db.ClearWeek(cWeek,year);
         }
 
-        public void AutoScheduleWeek(int inputLimit, bool onePerShift)
+        public void AutoScheduleWeek(int inputLimit, bool onePerShift, bool use0HContract)
         {
             int limit = inputLimit;
-            int runAgain = 0;
+            int runAgain = 1;
             if (onePerShift)
             {
-                limit = 1; runAgain = 1;
+                double temp = Math.Ceiling((db.ReturnEmpHourPotential(use0HContract) / 8) / (double)21);
+                limit = 1; runAgain = Convert.ToInt32(temp);
             }
-            for (int i = 0; i <= runAgain; i++)
+            for (int i = 1; i <= runAgain; i++)
             {
                 for (int dow = 1; dow <= 7; dow++)
                 {
-                    for (int tod = 1; tod <= 3; tod++)
+                    AutoScheduleDay(dow,limit,use0HContract);
+                }
+            }
+        }
+
+        private void AutoScheduleDay(int dow, int limit, bool use0HContract)
+        {
+            for (int tod = 1; tod <= 3; tod++)
+            {
+                List<Shift> availableWithContract = new List<Shift>();
+                List<Shift> available = new List<Shift>();
+                foreach (Shift shift in ReturnAvailableEmployees(tod, dow))
+                {
+                    if (shift.contractHours == 0 && use0HContract == true)
                     {
-                        List<Shift> availableWithContract = new List<Shift>();
-                        List<Shift> available = new List<Shift>();
-                        foreach (Shift shift in ReturnAvailableEmployees(tod, dow))
-                        {
-                            if(shift.contractHours == 0)
-                            {
-                                available.Add(shift);
-                            }
-                            else
-                            {
-                                availableWithContract.Add(shift);
-                            }
-                        }
-                        
-                        Random rnd = new Random();
-                        for (int assigned = 1; assigned <= limit; assigned++)
-                        {
-                            if (availableWithContract.Count > 0)
-                            { 
-                                Queue<Shift> zero = new Queue<Shift>();
-                                Queue<Shift> one = new Queue<Shift>();
-                                Queue<Shift> two = new Queue<Shift>();
-                                Queue<Shift> three = new Queue<Shift>();
-                                Queue<Shift> four = new Queue<Shift>();
-
-                                foreach (var person in availableWithContract)
-                                {
-                                    if (person.workedHours == 0) { zero.Enqueue(person); }
-                                    else if (person.workedHours == 8) { one.Enqueue(person); }
-                                    else if (person.workedHours == 16) { two.Enqueue(person); }
-                                    else if (person.workedHours == 24) { three.Enqueue(person); }
-                                    else if (person.workedHours == 32 && person.contractHours > 32) { four.Enqueue(person); }
-                                }
-
-                                if (zero.Count != 0)
-                                {
-                                    AssignEmployeeToShift(zero.Peek().employeeID, tod, dow);
-                                    zero.Dequeue().workedHours += 8;
-                                }
-                                else if (one.Count != 0)
-                                {
-                                    AssignEmployeeToShift(one.Peek().employeeID, tod, dow);
-                                    one.Dequeue().workedHours += 8;
-                                }
-                                else if (two.Count != 0)
-                                {
-                                    AssignEmployeeToShift(two.Peek().employeeID, tod, dow);
-                                    two.Dequeue().workedHours += 8;
-                                }
-                                else if (three.Count != 0)
-                                {
-                                    AssignEmployeeToShift(three.Peek().employeeID, tod, dow);
-                                    three.Dequeue().workedHours += 8;
-                                }
-                                else if (four.Count != 0)
-                                {
-                                    AssignEmployeeToShift(four.Peek().employeeID, tod, dow);
-                                    four.Dequeue().workedHours += 8;
-                                }
-                            }
-                            else if (available.Count != 0)
-                            {
-                                int selectedEmp = rnd.Next(0, available.Count); // creates a number from available emps
-                                AssignEmployeeToShift(available[selectedEmp].employeeID, tod, dow);
-                            }
-                            if(limit>1 && availableWithContract.Count < limit&& available.Count != 0)
-                            {
-                                int selectedEmp = rnd.Next(0, available.Count); // creates a number from available emps
-                                AssignEmployeeToShift(available[selectedEmp].employeeID, tod, dow);
-                            }
-                        }
-
+                        available.Add(shift);
+                    }
+                    else
+                    {
+                        availableWithContract.Add(shift);
                     }
                 }
+
+                Random rnd = new Random();
+                for (int assigned = 1; assigned <= limit; assigned++)
+                {
+                    if (availableWithContract.Count > 0)
+                    {
+                        Queue<Shift> zero = new Queue<Shift>();
+                        Queue<Shift> one = new Queue<Shift>();
+                        Queue<Shift> two = new Queue<Shift>();
+                        Queue<Shift> three = new Queue<Shift>();
+                        Queue<Shift> four = new Queue<Shift>();
+
+                        foreach (var person in availableWithContract)
+                        {
+                            if (person.workedHours == 0) { zero.Enqueue(person); }
+                            else if (person.workedHours == 8) { one.Enqueue(person); }
+                            else if (person.workedHours == 16) { two.Enqueue(person); }
+                            else if (person.workedHours == 24) { three.Enqueue(person); }
+                            else if (person.workedHours == 32 && person.contractHours > 32) { four.Enqueue(person); }
+                        }
+
+                        if (zero.Count != 0)
+                        {
+                            AssignEmployeeToShift(zero.Peek().employeeID, tod, dow);
+                            zero.Dequeue().workedHours += 8;
+                        }
+                        else if (one.Count != 0)
+                        {
+                            AssignEmployeeToShift(one.Peek().employeeID, tod, dow);
+                            one.Dequeue().workedHours += 8;
+                        }
+                        else if (two.Count != 0)
+                        {
+                            AssignEmployeeToShift(two.Peek().employeeID, tod, dow);
+                            two.Dequeue().workedHours += 8;
+                        }
+                        else if (three.Count != 0)
+                        {
+                            AssignEmployeeToShift(three.Peek().employeeID, tod, dow);
+                            three.Dequeue().workedHours += 8;
+                        }
+                        else if (four.Count != 0)
+                        {
+                            AssignEmployeeToShift(four.Peek().employeeID, tod, dow);
+                            four.Dequeue().workedHours += 8;
+                        }
+                    }
+                    else if (available.Count != 0)
+                    {
+                        int selectedEmp = rnd.Next(0, available.Count); // creates a number from available emps
+                        AssignEmployeeToShift(available[selectedEmp].employeeID, tod, dow);
+                    }
+                    if (limit > 1 && availableWithContract.Count < limit && available.Count != 0)
+                    {
+                        int selectedEmp = rnd.Next(0, available.Count); // creates a number from available emps
+                        AssignEmployeeToShift(available[selectedEmp].employeeID, tod, dow);
+                    }
+                }
+
             }
         }
 
@@ -142,7 +148,7 @@ namespace Employee_Management_Alpha_1._0
                                 wasScheduled = true;
                             }
 
-                            if (scheduledPerson.DoW == dow && scheduledPerson.cWeek == cWeek && wasScheduled == false)
+                            if (scheduledPerson.DoW == dow && scheduledPerson.cWeek == cWeek && wasScheduled == false && HoursScheduled.Count > 0)
                             {
                                 foreach (Shift hours in HoursScheduled)
                                 {
@@ -154,16 +160,17 @@ namespace Employee_Management_Alpha_1._0
                                             {
                                                 isAvailable.Add(hours);
                                             }
-                                            if ((tod == 2) && (scheduledPerson.afternoon == false) && (scheduledPerson.morning == false))
+                                            else if ((tod == 2) && (scheduledPerson.afternoon == false) && (scheduledPerson.morning == false))
                                             {
                                                 isAvailable.Add(hours);
                                             }
-                                            if ((tod == 3) && (scheduledPerson.evening == false) && (scheduledPerson.afternoon == false))
+                                            else if ((tod == 3) && (scheduledPerson.evening == false) && (scheduledPerson.afternoon == false))
                                             {
                                                 isAvailable.Add(hours);
                                             }
                                             wasScheduled = true;
                                         }
+
                                     }
                                 }
                             }
@@ -231,6 +238,40 @@ namespace Employee_Management_Alpha_1._0
         public List<Shift> ReturnScheduledEmployees()
         {
             return db.ReturnScheduledEmployees(cWeek,year);
+        }
+
+        public List<Tuple<int, string>> ReturnDayAttendence(int cWeek, int year, int dow)
+        {
+            List<Tuple<int, string>> emps = new List<Tuple<int, string>>();
+            List<Shift> shifts = db.ReturnDayAttendence(cWeek, year, dow);
+            if (shifts != null)
+            {
+                foreach (var item in shifts)
+                {
+                    string time = "";
+                    if (item.morning)
+                    {
+                        time = "(Morning)";
+                    }else if (item.afternoon)
+                    {
+                        time = "(Afternoon)";
+                    }
+                    else if (item.evening)
+                    {
+                        time = "(Evening)";
+                    }
+
+                    if (item.status)
+                    {
+                        emps.Add(new Tuple<int, string>(1, $"{item.employeeID} {item.empName} {time}"));
+                    }
+                    else
+                    {
+                        emps.Add(new Tuple<int, string>(0, $"{item.employeeID} {item.empName} {time}"));
+                    }
+                }
+            }
+            return emps;
         }
 
         public List<Shift> ReturnEmployeesByShift(int tod, int dow)
@@ -314,9 +355,9 @@ namespace Employee_Management_Alpha_1._0
             db.UnAssignEmployeeToShift(cWeek,year,shiftTimeToDb,employeeID,tod,dow);
         }
 
-        public string AutoScheduleAlert(bool isOnePer, int perShift)
+        public string AutoScheduleAlert(bool isOnePer, int perShift, bool use0HourContract)
         {
-            int canAccountFor = db.ReturnEmpHourPotential() / 8;
+            int canAccountFor = db.ReturnEmpHourPotential(use0HourContract) / 8;
             int wantedShifts = perShift * 21;
 
             if (isOnePer)
@@ -329,5 +370,6 @@ namespace Employee_Management_Alpha_1._0
             }
             return $"You dont have enough active employess to accomodate for {perShift} employees per shift. This will leave you with understaffed / empty shifts. (~{wantedShifts - canAccountFor} missing shifts)\n\nContinue anyway?";
         }
+
     }
 }

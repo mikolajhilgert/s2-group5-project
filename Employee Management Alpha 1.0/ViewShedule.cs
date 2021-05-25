@@ -389,22 +389,27 @@ namespace Employee_Management_Alpha_1._0
         private void btnAutoSchedule_Click(object sender, EventArgs e)
         {
             int limit = (int)nMaxPerShift.Value;
+            bool use0hour = false;
+            if (cb0Hour.Checked)
+            {
+                use0hour = true;
+            }
             if (checkBCondition.Checked)
             {
-                var dialogResult  = MessageBox.Show(sm.AutoScheduleAlert(true,limit), "Auto Schedule Alert!", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                var dialogResult  = MessageBox.Show(sm.AutoScheduleAlert(true,limit, use0hour), "Auto Schedule Alert!", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (dialogResult == DialogResult.Yes && limit > 0)
                 {
                     Cursor.Current = Cursors.WaitCursor;
-                    sm.AutoScheduleWeek(limit, true);
+                    sm.AutoScheduleWeek(limit, true, use0hour);
                 }
             }
             else
             {
-                var dialogResult = MessageBox.Show(sm.AutoScheduleAlert(false,limit), "Auto Schedule Alert!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                var dialogResult = MessageBox.Show(sm.AutoScheduleAlert(false,limit, use0hour), "Auto Schedule Alert!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dialogResult == DialogResult.Yes && limit > 0)
                 {
                     Cursor.Current = Cursors.WaitCursor;
-                    sm.AutoScheduleWeek(limit, false);
+                    sm.AutoScheduleWeek(limit, false, use0hour);
                 }
             }
             Cursor.Current = Cursors.Arrow;
@@ -436,8 +441,12 @@ namespace Employee_Management_Alpha_1._0
 
         private void btnClearWeek_Click(object sender, EventArgs e)
         {
-            sm.ClearWeek();
-            PopulateSchedule();
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to clear this week? This action is irreversable", "ALERT", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                sm.ClearWeek();
+                PopulateSchedule();
+            }
         }
     }
 }
