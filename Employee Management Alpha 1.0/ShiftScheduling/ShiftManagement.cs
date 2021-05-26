@@ -109,6 +109,10 @@ namespace Employee_Management_Alpha_1._0
                             AssignEmployeeToShift(four.Peek().employeeID, tod, dow);
                             four.Dequeue().workedHours += 8;
                         }
+                        else
+                        {
+                            break;
+                        }
                     }
                     else if (available.Count != 0)
                     {
@@ -131,6 +135,7 @@ namespace Employee_Management_Alpha_1._0
             List<Shift> All = db.ReturnAllEmps();
             List<Shift> HoursScheduled = db.ReturnHoursScheduledInWeek(cWeek, year);
             List<Shift> isAvailable = new List<Shift>();
+
             foreach (Shift person in All)
             {
                 bool wasScheduled = false;

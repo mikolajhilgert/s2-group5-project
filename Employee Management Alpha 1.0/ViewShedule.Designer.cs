@@ -172,7 +172,7 @@ namespace Employee_Management_Alpha_1._0
             this.btnClearWeek.ForeColor = System.Drawing.Color.Red;
             this.btnClearWeek.Location = new System.Drawing.Point(465, 55);
             this.btnClearWeek.Name = "btnClearWeek";
-            this.btnClearWeek.Size = new System.Drawing.Size(76, 23);
+            this.btnClearWeek.Size = new System.Drawing.Size(105, 23);
             this.btnClearWeek.TabIndex = 24;
             this.btnClearWeek.Text = "Clear Week";
             this.btnClearWeek.UseVisualStyleBackColor = true;
@@ -199,7 +199,7 @@ namespace Employee_Management_Alpha_1._0
             this.cb0Hour.Checked = true;
             this.cb0Hour.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cb0Hour.ForeColor = System.Drawing.Color.YellowGreen;
-            this.cb0Hour.Location = new System.Drawing.Point(33, 21);
+            this.cb0Hour.Location = new System.Drawing.Point(32, 45);
             this.cb0Hour.Name = "cb0Hour";
             this.cb0Hour.Size = new System.Drawing.Size(151, 17);
             this.cb0Hour.TabIndex = 29;
@@ -210,7 +210,7 @@ namespace Employee_Management_Alpha_1._0
             // 
             this.label21.AutoSize = true;
             this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(48, 58);
+            this.label21.Location = new System.Drawing.Point(49, 26);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(135, 13);
             this.label21.TabIndex = 28;
@@ -219,7 +219,7 @@ namespace Employee_Management_Alpha_1._0
             // nMaxPerShift
             // 
             this.nMaxPerShift.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nMaxPerShift.Location = new System.Drawing.Point(14, 55);
+            this.nMaxPerShift.Location = new System.Drawing.Point(15, 23);
             this.nMaxPerShift.Name = "nMaxPerShift";
             this.nMaxPerShift.Size = new System.Drawing.Size(32, 20);
             this.nMaxPerShift.TabIndex = 27;
@@ -235,19 +235,19 @@ namespace Employee_Management_Alpha_1._0
             this.label25.ForeColor = System.Drawing.Color.White;
             this.label25.Location = new System.Drawing.Point(7, 5);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(216, 13);
+            this.label25.Size = new System.Drawing.Size(203, 13);
             this.label25.TabIndex = 9;
-            this.label25.Text = "Autoscheduler: (Best results on empty week)";
+            this.label25.Text = "Autoscheduler: (Only use on empty week)";
             // 
             // checkBCondition
             // 
             this.checkBCondition.AutoSize = true;
             this.checkBCondition.ForeColor = System.Drawing.Color.White;
-            this.checkBCondition.Location = new System.Drawing.Point(33, 38);
+            this.checkBCondition.Location = new System.Drawing.Point(32, 61);
             this.checkBCondition.Name = "checkBCondition";
-            this.checkBCondition.Size = new System.Drawing.Size(119, 17);
+            this.checkBCondition.Size = new System.Drawing.Size(137, 17);
             this.checkBCondition.TabIndex = 26;
-            this.checkBCondition.Text = "Atleast one per shift";
+            this.checkBCondition.Text = "Fulfil all contracts (slow)";
             this.checkBCondition.UseVisualStyleBackColor = true;
             this.checkBCondition.CheckedChanged += new System.EventHandler(this.checkBCondition_CheckedChanged);
             // 

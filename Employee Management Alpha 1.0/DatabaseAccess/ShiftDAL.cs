@@ -18,6 +18,7 @@ namespace Employee_Management_Alpha_1._0
 
             string sql = $@"SELECT e.ID,e.Status as EmpStatus, CONCAT(e.FirstName, ' ' , e.LastName) AS Name, BannedDays
                             FROM employee AS e
+                            WHERE e.Position != 'Admin'
                             HAVING e.Status = 'Active'";
 
             MySqlCommand cmd = new MySqlCommand(sql, this.conn);

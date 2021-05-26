@@ -24,7 +24,6 @@ namespace Employee_Management_Alpha_1._0
                 {
                     return startDate = Convert.ToDateTime(dr[0]);
                 }
-
             }
             finally
             {
@@ -133,14 +132,13 @@ namespace Employee_Management_Alpha_1._0
             {
                 conn.Close();
             }
-            
             return count;
         }
 
         public List<Employee> GetAllEmployees()
         {
             List<Employee> employees = new List<Employee>();
-            string sql = "SELECT * FROM employee where `ID` != '4';";
+            string sql = "SELECT * FROM employee `Position` != 'Admin';";
             MySqlCommand cmd = new MySqlCommand(sql, this.conn);
             try
             {
