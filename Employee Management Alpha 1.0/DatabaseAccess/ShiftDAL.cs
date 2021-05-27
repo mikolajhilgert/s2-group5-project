@@ -207,7 +207,7 @@ namespace Employee_Management_Alpha_1._0
             }
         }
 
-        public int ReturnEmpHourPotential(bool use0HContract)
+        public int ReturnEmpHourPotential()
         {
             int MaxHours = 0;
 
@@ -222,14 +222,15 @@ namespace Employee_Management_Alpha_1._0
                 MySqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    if (Convert.ToInt32(dr[0]) == 0 && use0HContract)
-                    {
-                        MaxHours += 40;
-                    }
-                    else
-                    {
-                        MaxHours += Convert.ToInt32(dr[0]);
-                    }
+                    MaxHours += Convert.ToInt32(dr[0]);
+                    //if (Convert.ToInt32(dr[0]) == 0)
+                    //{
+                    //    MaxHours += 40;
+                    //}
+                    //else
+                    //{
+                    //    MaxHours += Convert.ToInt32(dr[0]);
+                    //}
                 }
                 return MaxHours;
             }
@@ -272,6 +273,28 @@ namespace Employee_Management_Alpha_1._0
                 conn.Open();
                 MySqlCommand cmd = new MySqlCommand(sql_delete, this.conn);
                 cmd.ExecuteNonQuery();
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public int ShiftScheduledCount(int dow, string dayToDB, int year, int cWeek)
+        {
+            int count = 0;
+            string sql = $@"SELECT count(*) FROM `shifts` WHERE DofW = {dow} AND {dayToDB} = 1 AND Year = '{year}' AND cWeek = '{cWeek}' ";
+
+            MySqlCommand cmd = new MySqlCommand(sql, this.conn);
+            conn.Open();
+            try
+            {
+                MySqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    count = Convert.ToInt32(dr[0]);
+                }
+                return count;
             }
             finally
             {

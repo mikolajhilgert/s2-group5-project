@@ -41,7 +41,7 @@
             // 
             this.lbViewEmployees.FormattingEnabled = true;
             this.lbViewEmployees.Location = new System.Drawing.Point(312, 36);
-            this.lbViewEmployees.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lbViewEmployees.Margin = new System.Windows.Forms.Padding(2);
             this.lbViewEmployees.Name = "lbViewEmployees";
             this.lbViewEmployees.Size = new System.Drawing.Size(286, 342);
             this.lbViewEmployees.TabIndex = 4;
@@ -61,8 +61,9 @@
             // tbID
             // 
             this.tbID.Location = new System.Drawing.Point(70, 54);
-            this.tbID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbID.Margin = new System.Windows.Forms.Padding(2);
             this.tbID.Name = "tbID";
+            this.tbID.ReadOnly = true;
             this.tbID.Size = new System.Drawing.Size(135, 20);
             this.tbID.TabIndex = 37;
             // 
@@ -74,7 +75,7 @@
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.btnUpdate.ForeColor = System.Drawing.Color.Silver;
             this.btnUpdate.Location = new System.Drawing.Point(70, 333);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(134, 44);
             this.btnUpdate.TabIndex = 36;
@@ -84,12 +85,13 @@
             // 
             // cbxSelectStatus
             // 
+            this.cbxSelectStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxSelectStatus.FormattingEnabled = true;
             this.cbxSelectStatus.Items.AddRange(new object[] {
             "Active",
             "Inactive"});
             this.cbxSelectStatus.Location = new System.Drawing.Point(70, 105);
-            this.cbxSelectStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxSelectStatus.Margin = new System.Windows.Forms.Padding(2);
             this.cbxSelectStatus.Name = "cbxSelectStatus";
             this.cbxSelectStatus.Size = new System.Drawing.Size(135, 21);
             this.cbxSelectStatus.TabIndex = 39;
@@ -131,7 +133,7 @@
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.lbViewEmployees);
             this.Controls.Add(this.btnClose);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "EmployeeChangeStatus";
             this.Text = "EmployeeStatusChange";
             this.Load += new System.EventHandler(this.EmployeeChangeStatus_Load);
