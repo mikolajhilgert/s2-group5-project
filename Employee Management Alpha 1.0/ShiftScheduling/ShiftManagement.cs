@@ -41,6 +41,7 @@ namespace Employee_Management_Alpha_1._0
             {
                 for (int dow = 1; dow <= 7; dow++)
                 {
+                    System.GC.Collect();
                     AutoScheduleDay(dow,limit);
                 }
             }
@@ -123,8 +124,8 @@ namespace Employee_Management_Alpha_1._0
         public List<Shift> ReturnAvailableEmployees(int tod, int dow)
         {
             List<Shift> Scheduled = this.ReturnScheduledEmployees();
-            List<Shift> All = db.ReturnAllEmps();
-            List<Shift> HoursScheduled = db.ReturnHoursScheduledInWeek(cWeek, year);
+            List<Shift> All = db.ReturnHoursScheduledInWeek(cWeek, year);
+            //List<Shift> HoursScheduled = db.ReturnHoursScheduledInWeek(cWeek, year);
             List<Shift> isAvailable = new List<Shift>();
 
             foreach (Shift person in All)
@@ -133,55 +134,42 @@ namespace Employee_Management_Alpha_1._0
 
                 if (person.bannedDay1 == dow || person.bannedDay2 == dow) { wasScheduled = true; }
 
-                if (Scheduled != null && wasScheduled == false)
+                if (person.contractHours - person.workedHours > 0 || person.contractHours == 0 && person.workedHours < 40)
                 {
-                    foreach (Shift scheduledPerson in Scheduled)
+                    if (Scheduled != null && wasScheduled == false)
                     {
-                        if (person.employeeID == scheduledPerson.employeeID)
+                        foreach (Shift scheduledPerson in Scheduled)
                         {
-                            if ((tod == 1 && CheckPreviousEvening(scheduledPerson.employeeID, dow, cWeek)) || (tod == 3 && CheckNextMorning(scheduledPerson.employeeID, dow, cWeek)))
+                            if (person.employeeID == scheduledPerson.employeeID)
                             {
-                                wasScheduled = true;
-                            }
-
-                            if (scheduledPerson.DoW == dow && scheduledPerson.cWeek == cWeek && wasScheduled == false && HoursScheduled.Count > 0)
-                            {
-                                foreach (Shift hours in HoursScheduled)
+                                if ((tod == 1 && CheckPreviousEvening(scheduledPerson.employeeID, dow, cWeek)) || (tod == 3 && CheckNextMorning(scheduledPerson.employeeID, dow, cWeek)))
                                 {
-                                    if (hours.employeeID == scheduledPerson.employeeID)
+                                    wasScheduled = true;
+                                }
+                                if (scheduledPerson.DoW == dow && scheduledPerson.cWeek == cWeek && wasScheduled == false)
+                                {
+                                    if ((tod == 1) && (scheduledPerson.morning == false) && (scheduledPerson.afternoon == false))
                                     {
-                                        if (hours.contractHours - hours.workedHours > 0 || hours.contractHours == 0 && hours.workedHours < 40)
-                                        {
-                                            if ((tod == 1) && (scheduledPerson.morning == false) && (scheduledPerson.afternoon == false))
-                                            {
-                                                isAvailable.Add(hours);
-                                            }
-                                            else if ((tod == 2) && (scheduledPerson.afternoon == false) && (scheduledPerson.morning == false))
-                                            {
-                                                isAvailable.Add(hours);
-                                            }
-                                            else if ((tod == 3) && (scheduledPerson.evening == false) && (scheduledPerson.afternoon == false))
-                                            {
-                                                isAvailable.Add(hours);
-                                            }
-                                            wasScheduled = true;
-                                        }
-
+                                        isAvailable.Add(person);
                                     }
+                                    else if ((tod == 2) && (scheduledPerson.afternoon == false) && (scheduledPerson.morning == false))
+                                    {
+                                        isAvailable.Add(person);
+                                    }
+                                    else if ((tod == 3) && (scheduledPerson.evening == false) && (scheduledPerson.afternoon == false))
+                                    {
+                                        isAvailable.Add(person);
+                                    }
+                                    wasScheduled = true;
                                 }
                             }
                         }
                     }
                 }
+
                 if (wasScheduled == false)
                 {
-                    foreach (Shift hours in HoursScheduled)
-                    {
-                        if (hours.employeeID == person.employeeID)
-                        {
-                            if (hours.contractHours - hours.workedHours > 0 || (hours.contractHours == 0 && hours.workedHours < 40)) { isAvailable.Add(hours); }
-                        }
-                    }
+                    if (person.contractHours - person.workedHours > 0 || (person.contractHours == 0 && person.workedHours < 40)) { isAvailable.Add(person); }
                 }
             }
             return isAvailable;

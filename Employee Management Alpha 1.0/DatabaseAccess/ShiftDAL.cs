@@ -36,8 +36,34 @@ namespace Employee_Management_Alpha_1._0
             {
                 conn.Close();
             }
-
         }
+
+        public List<Shift> ReturnAllEmpsWithHours()
+        {
+            List<Shift> items = new List<Shift>();
+
+            string sql = $@"SELECT e.ID,e.Status as EmpStatus, CONCAT(e.FirstName, ' ' , e.LastName) AS Name, BannedDays
+                            FROM employee AS e
+                            WHERE e.Position != 'Admin'
+                            HAVING e.Status = 'Active'";
+
+            MySqlCommand cmd = new MySqlCommand(sql, this.conn);
+            conn.Open();
+            try
+            {
+                MySqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read() && (dr != null))
+                {
+                    items.Add(new Shift(Convert.ToInt32(dr["ID"]), Convert.ToString(dr["Name"]), Convert.ToString(dr["BannedDays"])));
+                }
+                return items;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
         public List<Shift> ReturnScheduledEmployees(int cWeek, int year)
         {
             List<Shift> items = new List<Shift>();
@@ -98,10 +124,11 @@ namespace Employee_Management_Alpha_1._0
         {
             List<Shift> employees = new List<Shift>();
             Shift temp;
-            string sql = $@"SELECT e.ID,CONCAT(e.FirstName, ' ' , e.LastName) AS Name,e.WorkingHours,COALESCE(SUM(c.morning), 0) + COALESCE(SUM(c.afternoon), 0) + COALESCE(SUM(c.evening), 0) AS shiftsTotal
+            string sql = $@"SELECT e.ID,CONCAT(e.FirstName, ' ' , e.LastName) AS Name,e.WorkingHours,COALESCE(SUM(c.morning), 0) + COALESCE(SUM(c.afternoon), 0) + COALESCE(SUM(c.evening), 0) AS shiftsTotal, e.Position
                             FROM employee as e
                             left JOIN (select * from shifts as s where s.Year = '{year}' AND s.cWeek = '{cWeek}')c
                             ON e.ID = c.EmpID
+                            WHERE e.Position != 'Admin'
                             GROUP BY e.ID;";
 
             MySqlCommand cmd = new MySqlCommand(sql, this.conn);
