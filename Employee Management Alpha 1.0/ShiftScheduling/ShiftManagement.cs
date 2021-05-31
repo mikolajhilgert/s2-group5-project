@@ -110,6 +110,11 @@ namespace Employee_Management_Alpha_1._0
                             AssignEmployeeToShift(four.Peek().employeeID, tod, dow);
                             four.Dequeue().workedHours += 8;
                         }
+                        else
+                        {
+                            int selectedEmp = rnd.Next(0, available.Count); // creates a number from available emps
+                            AssignEmployeeToShift(available[selectedEmp].employeeID, tod, dow);
+                        }
                     }
                     else if (available.Count != 0 && ScheduledPeople(tod,dow) < limit+1)
                     {
@@ -146,13 +151,13 @@ namespace Employee_Management_Alpha_1._0
                                 {
                                     wasScheduled = true;
                                 }
-                                if (scheduledPerson.DoW == dow && scheduledPerson.cWeek == cWeek && wasScheduled == false)
+                                else if (scheduledPerson.DoW == dow && scheduledPerson.cWeek == cWeek && wasScheduled == false)
                                 {
                                     if ((tod == 1) && (scheduledPerson.morning == false) && (scheduledPerson.afternoon == false))
                                     {
                                         isAvailable.Add(person);
                                     }
-                                    else if ((tod == 2) && (scheduledPerson.afternoon == false) && (scheduledPerson.morning == false))
+                                    else if ((tod == 2) && (scheduledPerson.afternoon == false) && (scheduledPerson.morning == false) && (scheduledPerson.evening == false))
                                     {
                                         isAvailable.Add(person);
                                     }
@@ -165,12 +170,13 @@ namespace Employee_Management_Alpha_1._0
                             }
                         }
                     }
+                    if (wasScheduled == false)
+                    {
+                        isAvailable.Add(person);
+                    }
                 }
 
-                if (wasScheduled == false)
-                {
-                    if (person.contractHours - person.workedHours > 0 || (person.contractHours == 0 && person.workedHours < 40)) { isAvailable.Add(person); }
-                }
+
             }
             return isAvailable;
         }
