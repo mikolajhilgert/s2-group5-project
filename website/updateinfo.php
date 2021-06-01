@@ -31,26 +31,28 @@ include_once ('Includes/dbh.inc.php');
                     $result = mysqli_stmt_get_result($stmt);//get the result from the query
                     while($row = mysqli_fetch_assoc($result))
                     {
-                        $user = new User();
-						$user->set_id($row['ID']);
-                        $user->set_firstname($row['FirstName']);
-                        $user->set_lastname($row['LastName']);
-                        $user->set_phone($row['PhoneNr']);
-						$user->set_address($row['Address']);
-						$user->set_email($row['Email']);
-						$user->set_pass($row['Password']);
-						$user->set_emergencyc($row['EmergencyC']);
-						$user->set_emergencynr($row['EmergencyNr']);
-						$user->set_hours($row['WorkingHours']);
-						$user->set_dob($row['DOB']);
-						$user->set_bsn($row['BSN']);
-						$user->set_position($row['Position']);
-						$user->set_certificates($row['Certifications']);
-						$user->set_languages($row['Languages']);
-						$user->set_sdate($row['StartDate']);
-						$user->set_edate($row['EndDate']);
-						//$user->set_department($row['Department']);
-						$user->set_salary($row['Salary']);
+                        $user = new User($row['ID'], $row['FirstName'], $row['LastName'], $row['PhoneNr'],$row['Address'],$row['Email'], $row['Password'], 
+                        $row['EmergencyC'], $row['EmergencyNr'], $row['WorkingHours'], 
+                        $row['DOB'], $row['BSN'], $row['Position'], $row['Certifications'], $row['Languages'], $row['StartDate'], $row['EndDate'], $row['Salary']);
+						// $user->set_id($row['ID']);
+                        // $user->set_firstname($row['FirstName']);
+                        // $user->set_lastname($row['LastName']);
+                        // $user->set_phone($row['PhoneNr']);
+						// $user->set_address($row['Address']);
+						// $user->set_email($row['Email']);
+						// $user->set_pass($row['Password']);
+						// $user->set_emergencyc($row['EmergencyC']);
+						// $user->set_emergencynr($row['EmergencyNr']);
+						// $user->set_hours($row['WorkingHours']);
+						// $user->set_dob($row['DOB']);
+						// $user->set_bsn($row['BSN']);
+						// $user->set_position($row['Position']);
+						// $user->set_certificates($row['Certifications']);
+						// $user->set_languages($row['Languages']);
+						// $user->set_sdate($row['StartDate']);
+						// $user->set_edate($row['EndDate']);
+						// //$user->set_department($row['Department']);
+						// $user->set_salary($row['Salary']);
 
                         }                        
                     }
