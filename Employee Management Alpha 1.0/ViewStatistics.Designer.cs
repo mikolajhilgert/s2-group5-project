@@ -74,7 +74,7 @@ namespace Employee_Management_Alpha_1._0
             this.labelTotalHours.AutoSize = true;
             this.labelTotalHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTotalHours.ForeColor = System.Drawing.Color.White;
-            this.labelTotalHours.Location = new System.Drawing.Point(205, 131);
+            this.labelTotalHours.Location = new System.Drawing.Point(205, 128);
             this.labelTotalHours.Name = "labelTotalHours";
             this.labelTotalHours.Size = new System.Drawing.Size(384, 18);
             this.labelTotalHours.TabIndex = 1;
@@ -95,7 +95,7 @@ namespace Employee_Management_Alpha_1._0
             this.labelTotalDaysWorked.AutoSize = true;
             this.labelTotalDaysWorked.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTotalDaysWorked.ForeColor = System.Drawing.Color.White;
-            this.labelTotalDaysWorked.Location = new System.Drawing.Point(205, 176);
+            this.labelTotalDaysWorked.Location = new System.Drawing.Point(205, 172);
             this.labelTotalDaysWorked.Name = "labelTotalDaysWorked";
             this.labelTotalDaysWorked.Size = new System.Drawing.Size(346, 18);
             this.labelTotalDaysWorked.TabIndex = 4;
@@ -106,7 +106,7 @@ namespace Employee_Management_Alpha_1._0
             this.labelTotalPayment.AutoSize = true;
             this.labelTotalPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTotalPayment.ForeColor = System.Drawing.Color.White;
-            this.labelTotalPayment.Location = new System.Drawing.Point(205, 218);
+            this.labelTotalPayment.Location = new System.Drawing.Point(205, 216);
             this.labelTotalPayment.Name = "labelTotalPayment";
             this.labelTotalPayment.Size = new System.Drawing.Size(238, 18);
             this.labelTotalPayment.TabIndex = 5;

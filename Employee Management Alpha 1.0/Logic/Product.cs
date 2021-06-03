@@ -13,30 +13,25 @@ namespace Employee_Management_Alpha_1._0
         private int quantityStore;
         private int quantityDepo;
         private decimal pricePerUnit;
-        private ProductCategory category;
+        private Department department;
 
         public int Id
         {
             get { return id;}
             private set { id = value; }
         }
+        public string Name { get { return this.name; } }
+        public decimal PricePerUnit { get { return this.pricePerUnit; } }
+        public Department Department { get { return this.department; } }
 
-        public Product(string name, int quantityStore, int quantityDepo, decimal PricePerUnit, ProductCategory category)
-        {
-            this.name = name;
-            this.quantityStore = quantityStore;
-            this.quantityDepo = quantityDepo;
-            this.pricePerUnit = PricePerUnit;
-            this.category = category;
-        }
-        public Product(int id,string name, int quantityShop, int quantityDepo, decimal PricePerUnit, ProductCategory category)
+        public Product(int id,string name, int quantityShop, int quantityDepo, decimal PricePerUnit, Department department)
         {
             this.id = id;
             this.name = name;
             this.quantityStore = quantityShop;
             this.quantityDepo = quantityDepo;
             this.pricePerUnit = PricePerUnit;
-            this.category = category;
+            this.department = department;
         }
         public int GetStoreQuantity()
         {
@@ -82,21 +77,21 @@ namespace Employee_Management_Alpha_1._0
 
         public string[] GetBasicInfoArray()
         {
-            string[] details = { id.ToString(), name, pricePerUnit.ToString("0.00"), category.ToString() };
+            string[] details = { id.ToString(), name, pricePerUnit.ToString("0.00"), department.Name };
 
             return details;
         }
 
         public string[] GetStoreInfoArray()
         {
-            string[] details = { id.ToString(),name, pricePerUnit.ToString("0.00"),quantityStore.ToString(),category.ToString(),"Make Request" };
+            string[] details = { id.ToString(),name, pricePerUnit.ToString("0.00"),quantityStore.ToString(), department.Name, "Make Request" };
 
             return details;
         }
 
         public string[] GetDepoInfoArray()
         {
-            string[] details = { id.ToString(), name, pricePerUnit.ToString("0.00"), quantityDepo.ToString(), category.ToString(), "Make Request" };
+            string[] details = { id.ToString(), name, pricePerUnit.ToString("0.00"), quantityDepo.ToString(), department.Name, "Make Request" };
 
             return details;
         }
@@ -109,7 +104,7 @@ namespace Employee_Management_Alpha_1._0
         }
         public string[] GetRestockInfoArray()
         {
-            string[] details = {"", category.ToString(), id.ToString(), name, "" , quantityDepo.ToString() };
+            string[] details = {"", department.Name, id.ToString(), name, "" , quantityDepo.ToString() };
 
             return details;
         }

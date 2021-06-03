@@ -12,17 +12,25 @@ namespace Employee_Management_Alpha_1._0
 {
     static class DepartmentManagement
     {
+        private static List<Department> departments = DepartmentDAL.GetAllDepartments();
         public static void CreateDepartment(string name, string headOfDepartment, string address, int phone, string email, string language)
         {
             DepartmentDAL.CreateDepartment(name,headOfDepartment,address,phone,email,language);
         }
         public static Department GetDepartmentByID(int id)
         {
-            return DepartmentDAL.GetDepartmentByID(id);
+            //return DepartmentDAL.GetDepartmentByID(id);
+            foreach (Department department in departments)
+            {
+                if (department.Id == id)
+                    return department;
+            }
+            return null;
         }
         public static List<Department> GetAllDepartments()
         {
-            return DepartmentDAL.GetAllDepartments();
+            departments = DepartmentDAL.GetAllDepartments();
+            return departments;
         }
         public static List<Department> GetAllActiveDepartments()
         {

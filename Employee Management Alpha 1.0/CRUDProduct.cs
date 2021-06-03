@@ -23,9 +23,9 @@ namespace Employee_Management_Alpha_1._0
 
         private void btnAddStockItem_Click(object sender, EventArgs e)
         {
-            if (tbName.Text != "" && tbPricePerUnit.Text != "" && cbCategory.Text != "")
+            if (tbName.Text != "" && tbPricePerUnit.Text != "" && cbCategory.SelectedIndex > -1)
             {
-                productManager.AddProduct(tbName.Text, Convert.ToDecimal(tbPricePerUnit.Text), cbCategory.Text);
+                productManager.AddProduct(tbName.Text, Convert.ToDecimal(tbPricePerUnit.Text), (Department)cbCategory.SelectedItem);
                 tbName.Text = tbPricePerUnit.Text = "";
                 cbCategory.SelectedIndex = -1;
                 RefreshProducts();
@@ -49,10 +49,11 @@ namespace Employee_Management_Alpha_1._0
         private void RefreshCategories()
         {
             cbCategory.Items.Clear();
-            foreach (ProductCategory category in (ProductCategory[])Enum.GetValues(typeof(ProductCategory)))
-            {
-                cbCategory.Items.Add(category.ToString());
-            }
+            //foreach (ProductCategory category in (ProductCategory[])Enum.GetValues(typeof(ProductCategory)))
+            //{
+            //    cbCategory.Items.Add(category.ToString());
+            //}
+            cbCategory.Items.AddRange(DepartmentManagement.GetAllDepartments().ToArray());
         }
 
         private void dgProducts_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -61,17 +62,23 @@ namespace Employee_Management_Alpha_1._0
             int index = dgProducts.SelectedRows[0].Index;
             int id = Convert.ToInt32(dgProducts.Rows[index].Cells[0].Value);
             labelID.Text = id.ToString();
-            tbName.Text = dgProducts.Rows[index].Cells[1].Value.ToString();
-            tbPricePerUnit.Text = dgProducts.Rows[index].Cells[2].Value.ToString();
-            cbCategory.Text = dgProducts.Rows[index].Cells[3].Value.ToString();
+            Product product = productManager.GetProductByID(id);
+            tbName.Text = product.Name;
+            tbPricePerUnit.Text = product.PricePerUnit.ToString();
+            cbCategory.SelectedItem = product.Department;
+            MessageBox.Show(product.Department.ToString());
+            //tbName.Text = dgProducts.Rows[index].Cells[1].Value.ToString();
+            //tbPricePerUnit.Text = dgProducts.Rows[index].Cells[2].Value.ToString();
+            //cbCategory.Text = dgProducts.Rows[index].Cells[3].Value.ToString();
         }
 
         private void btnEditStockItem_Click(object sender, EventArgs e)
         {
-            if (tbName.Text != "" && tbPricePerUnit.Text != "" && cbCategory.Text != "")
+            if (tbName.Text != "" && tbPricePerUnit.Text != "" && cbCategory.SelectedIndex > -1)
             {
-                productManager.EditProduct(Convert.ToInt32(labelID.Text), tbName.Text, Convert.ToDecimal(tbPricePerUnit.Text), cbCategory.Text);
-                tbName.Text = tbPricePerUnit.Text = cbCategory.Text = "";
+                productManager.EditProduct(Convert.ToInt32(labelID.Text), tbName.Text, Convert.ToDecimal(tbPricePerUnit.Text), (Department)cbCategory.SelectedItem);
+                tbName.Text = tbPricePerUnit.Text = "";
+                cbCategory.SelectedIndex = -1;
                 RefreshProducts();
             }
             else
@@ -92,10 +99,11 @@ namespace Employee_Management_Alpha_1._0
         {
             if (MessageBox.Show("Are you sure you want to delete this product?.", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                if (tbName.Text != "" && tbPricePerUnit.Text != "" && cbCategory.Text != "")
+                if (tbName.Text != "" && tbPricePerUnit.Text != "" && cbCategory.SelectedIndex > -1)
                 {
                     productManager.DeleteProduct(Convert.ToInt32(labelID.Text));
-                    tbName.Text = tbPricePerUnit.Text = cbCategory.Text = "";
+                    tbName.Text = tbPricePerUnit.Text = "";
+                    cbCategory.SelectedIndex = -1;
                     RefreshProducts();
                     InAddMode();
                 }

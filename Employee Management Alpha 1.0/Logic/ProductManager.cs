@@ -17,18 +17,18 @@ namespace Employee_Management_Alpha_1._0
             return this.products;
         }
 
-        public void AddProduct(string name, decimal pricepreunit, string categ)
+        public void AddProduct(string name, decimal pricepreunit, Department department)
         {
-            Enum.TryParse(categ, out ProductCategory category);
+            //Enum.TryParse(categ, out ProductCategory category);
 
-            Product temp = new Product(name, 0, 0, pricepreunit, category);
+            //Product temp = new Product(name, 0, 0, pricepreunit, category);
 
-            db.AddProduct(name, pricepreunit, categ);
+            db.AddProduct(name, pricepreunit, department);
         }
 
-        public void EditProduct(int id,string name, decimal pricepreunit, string categ)
+        public void EditProduct(int id,string name, decimal pricepreunit, Department department)
         {
-            db.EditProduct(id,name, pricepreunit, categ);
+            db.EditProduct(id,name, pricepreunit, department);
         }
 
         public void DeleteProduct(int id)

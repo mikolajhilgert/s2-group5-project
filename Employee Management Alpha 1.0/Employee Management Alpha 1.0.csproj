@@ -122,7 +122,6 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Logic\Product.cs" />
-    <Compile Include="Logic\ProductCategory.cs" />
     <Compile Include="Logic\DepoManager.cs" />
     <Compile Include="Logic\ProductManager.cs" />
     <Compile Include="Logic\RequestStatus.cs" />

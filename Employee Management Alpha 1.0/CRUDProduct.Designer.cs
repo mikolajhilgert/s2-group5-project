@@ -156,7 +156,7 @@ namespace Employee_Management_Alpha_1._0
             0,
             0});
             this.tbPricePerUnit.Name = "tbPricePerUnit";
-            this.tbPricePerUnit.Size = new System.Drawing.Size(120, 20);
+            this.tbPricePerUnit.Size = new System.Drawing.Size(151, 20);
             this.tbPricePerUnit.TabIndex = 55;
             // 
             // cbCategory
@@ -165,7 +165,7 @@ namespace Employee_Management_Alpha_1._0
             this.cbCategory.FormattingEnabled = true;
             this.cbCategory.Location = new System.Drawing.Point(94, 85);
             this.cbCategory.Name = "cbCategory";
-            this.cbCategory.Size = new System.Drawing.Size(121, 21);
+            this.cbCategory.Size = new System.Drawing.Size(151, 21);
             this.cbCategory.TabIndex = 38;
             // 
             // tbName
@@ -183,9 +183,9 @@ namespace Employee_Management_Alpha_1._0
             this.lblCategory.ForeColor = System.Drawing.Color.Black;
             this.lblCategory.Location = new System.Drawing.Point(6, 85);
             this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(55, 15);
+            this.lblCategory.Size = new System.Drawing.Size(72, 15);
             this.lblCategory.TabIndex = 37;
-            this.lblCategory.Text = "Category";
+            this.lblCategory.Text = "Department";
             // 
             // lblPricePerUnit
             // 
