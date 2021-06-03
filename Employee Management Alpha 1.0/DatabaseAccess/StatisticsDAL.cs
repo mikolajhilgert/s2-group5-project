@@ -24,7 +24,6 @@ namespace Employee_Management_Alpha_1._0
                 {
                     return startDate = Convert.ToDateTime(dr[0]);
                 }
-
             }
             finally
             {
@@ -133,14 +132,13 @@ namespace Employee_Management_Alpha_1._0
             {
                 conn.Close();
             }
-            
             return count;
         }
 
         public List<Employee> GetAllEmployees()
         {
             List<Employee> employees = new List<Employee>();
-            string sql = "SELECT * FROM employee where `ID` != '4';";
+            string sql = "SELECT * FROM employee `Position` != 'Admin';";
             MySqlCommand cmd = new MySqlCommand(sql, this.conn);
             try
             {
@@ -166,6 +164,36 @@ namespace Employee_Management_Alpha_1._0
                 conn.Close();
             }
 
+        }
+        public int GetEmpShiftStats(int empID)
+        {
+            int count = 0;
+            string sql = $@"SELECT count(morning) FROM `shifts` WHERE `EmpID` = '{empID}' AND `morning` = '1' UNION ALL SELECT count(afternoon) FROM `shifts` WHERE `EmpID` = '{empID}' AND `afternoon` = '1' UNION ALL SELECT count(evening) FROM `shifts` WHERE `EmpID` = '{empID}' AND `evening` = '1';";
+
+            MySqlCommand cmd = new MySqlCommand(sql, this.conn);
+            conn.Open();
+            MySqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                count = count + Convert.ToInt32(dr[0]);
+            }
+            conn.Close();
+            return count;
+        }
+        public int GetEmpSalary(int empID)
+        {
+            int salary = 0;
+            string sql = $@"SELECT Salary FROM `employee` WHERE `ID` = '{empID}';";
+
+            MySqlCommand cmd = new MySqlCommand(sql, this.conn);
+            conn.Open();
+            MySqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                salary = Convert.ToInt32(dr[0]);
+            }
+            conn.Close();
+            return salary;
         }
     }
 

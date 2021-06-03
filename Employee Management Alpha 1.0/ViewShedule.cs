@@ -391,7 +391,7 @@ namespace Employee_Management_Alpha_1._0
             int limit = (int)nMaxPerShift.Value;
             if (checkBCondition.Checked)
             {
-                var dialogResult  = MessageBox.Show(sm.AutoScheduleAlert(true,limit), "Auto Schedule Alert!", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                var dialogResult  = MessageBox.Show(sm.AutoScheduleAlert(true,limit), "Auto Schedule Alert!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dialogResult == DialogResult.Yes && limit > 0)
                 {
                     Cursor.Current = Cursors.WaitCursor;
@@ -400,7 +400,7 @@ namespace Employee_Management_Alpha_1._0
             }
             else
             {
-                var dialogResult = MessageBox.Show(sm.AutoScheduleAlert(false,limit), "Auto Schedule Alert!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                var dialogResult = MessageBox.Show(sm.AutoScheduleAlert(false,limit), "Auto Schedule Alert!", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (dialogResult == DialogResult.Yes && limit > 0)
                 {
                     Cursor.Current = Cursors.WaitCursor;
@@ -408,7 +408,7 @@ namespace Employee_Management_Alpha_1._0
                 }
             }
             Cursor.Current = Cursors.Arrow;
-            nMaxPerShift.Value = 1;
+            nMaxPerShift.Value = 2;
             checkBCondition.Checked = false;
             PopulateSchedule();
         }
@@ -424,20 +424,24 @@ namespace Employee_Management_Alpha_1._0
             {
                 nMaxPerShift.Enabled = false;
                 label21.ForeColor = Color.DarkGray;
-                nMaxPerShift.Value = 1;
+                nMaxPerShift.Value = 2;
             }
             else
             {
                 nMaxPerShift.Enabled = true;
                 label21.ForeColor = Color.White;
-                nMaxPerShift.Value = 1;
+                nMaxPerShift.Value = 2;
             }
         }
 
         private void btnClearWeek_Click(object sender, EventArgs e)
         {
-            sm.ClearWeek();
-            PopulateSchedule();
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to clear this week? This action is irreversable", "ALERT", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                sm.ClearWeek();
+                PopulateSchedule();
+            }
         }
     }
 }

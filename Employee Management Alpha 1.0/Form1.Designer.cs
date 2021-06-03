@@ -58,6 +58,7 @@
             this.btnStockMan = new System.Windows.Forms.Button();
             this.btnEmpMan = new System.Windows.Forms.Button();
             this.pbLogoText = new System.Windows.Forms.PictureBox();
+            this.btnShiftDayViewer = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelStatisticsSubmenu.SuspendLayout();
             this.panelDepSubmenu.SuspendLayout();
@@ -95,7 +96,7 @@
             this.panelStatisticsSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(83)))));
             this.panelStatisticsSubmenu.Controls.Add(this.btnViewStats);
             this.panelStatisticsSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelStatisticsSubmenu.Location = new System.Drawing.Point(0, 690);
+            this.panelStatisticsSubmenu.Location = new System.Drawing.Point(0, 722);
             this.panelStatisticsSubmenu.Margin = new System.Windows.Forms.Padding(2);
             this.panelStatisticsSubmenu.Name = "panelStatisticsSubmenu";
             this.panelStatisticsSubmenu.Size = new System.Drawing.Size(171, 33);
@@ -127,7 +128,7 @@
             this.panelDepSubmenu.Controls.Add(this.btnAssignEmpToDep);
             this.panelDepSubmenu.Controls.Add(this.btnAddDep);
             this.panelDepSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelDepSubmenu.Location = new System.Drawing.Point(0, 555);
+            this.panelDepSubmenu.Location = new System.Drawing.Point(0, 587);
             this.panelDepSubmenu.Margin = new System.Windows.Forms.Padding(2);
             this.panelDepSubmenu.Name = "panelDepSubmenu";
             this.panelDepSubmenu.Size = new System.Drawing.Size(171, 98);
@@ -197,7 +198,7 @@
             this.panelStockSubmenu.Controls.Add(this.btnStoreStockInfo);
             this.panelStockSubmenu.Controls.Add(this.btnAddEditRemStock);
             this.panelStockSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelStockSubmenu.Location = new System.Drawing.Point(0, 321);
+            this.panelStockSubmenu.Location = new System.Drawing.Point(0, 353);
             this.panelStockSubmenu.Margin = new System.Windows.Forms.Padding(2);
             this.panelStockSubmenu.Name = "panelStockSubmenu";
             this.panelStockSubmenu.Size = new System.Drawing.Size(171, 197);
@@ -297,6 +298,7 @@
             // panelEmpSubmenu
             // 
             this.panelEmpSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(83)))));
+            this.panelEmpSubmenu.Controls.Add(this.btnShiftDayViewer);
             this.panelEmpSubmenu.Controls.Add(this.btnShitManager);
             this.panelEmpSubmenu.Controls.Add(this.btnEmpStatus);
             this.panelEmpSubmenu.Controls.Add(this.btnEmpInfo);
@@ -306,7 +308,7 @@
             this.panelEmpSubmenu.Location = new System.Drawing.Point(0, 118);
             this.panelEmpSubmenu.Margin = new System.Windows.Forms.Padding(2);
             this.panelEmpSubmenu.Name = "panelEmpSubmenu";
-            this.panelEmpSubmenu.Size = new System.Drawing.Size(171, 166);
+            this.panelEmpSubmenu.Size = new System.Drawing.Size(171, 198);
             this.panelEmpSubmenu.TabIndex = 2;
             this.panelEmpSubmenu.Visible = false;
             // 
@@ -453,7 +455,7 @@
             this.btnCloseApp.ForeColor = System.Drawing.Color.Silver;
             this.btnCloseApp.Image = global::Employee_Management_Alpha_1._0.Properties.Resources.icons8_exit_48;
             this.btnCloseApp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCloseApp.Location = new System.Drawing.Point(0, 723);
+            this.btnCloseApp.Location = new System.Drawing.Point(0, 755);
             this.btnCloseApp.Margin = new System.Windows.Forms.Padding(2);
             this.btnCloseApp.Name = "btnCloseApp";
             this.btnCloseApp.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
@@ -474,7 +476,7 @@
             this.btnStats.ForeColor = System.Drawing.Color.Silver;
             this.btnStats.Image = global::Employee_Management_Alpha_1._0.Properties.Resources.icons8_pie_chart_report_50;
             this.btnStats.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStats.Location = new System.Drawing.Point(0, 653);
+            this.btnStats.Location = new System.Drawing.Point(0, 685);
             this.btnStats.Margin = new System.Windows.Forms.Padding(2);
             this.btnStats.Name = "btnStats";
             this.btnStats.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
@@ -495,7 +497,7 @@
             this.btnDepMan.ForeColor = System.Drawing.Color.Silver;
             this.btnDepMan.Image = global::Employee_Management_Alpha_1._0.Properties.Resources.icons8_unit_50;
             this.btnDepMan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDepMan.Location = new System.Drawing.Point(0, 518);
+            this.btnDepMan.Location = new System.Drawing.Point(0, 550);
             this.btnDepMan.Margin = new System.Windows.Forms.Padding(2);
             this.btnDepMan.Name = "btnDepMan";
             this.btnDepMan.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
@@ -517,7 +519,7 @@
             this.btnStockMan.ForeColor = System.Drawing.Color.Silver;
             this.btnStockMan.Image = global::Employee_Management_Alpha_1._0.Properties.Resources.icons8_new_product_50;
             this.btnStockMan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStockMan.Location = new System.Drawing.Point(0, 284);
+            this.btnStockMan.Location = new System.Drawing.Point(0, 316);
             this.btnStockMan.Margin = new System.Windows.Forms.Padding(2);
             this.btnStockMan.Name = "btnStockMan";
             this.btnStockMan.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
@@ -560,6 +562,24 @@
             this.pbLogoText.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLogoText.TabIndex = 1;
             this.pbLogoText.TabStop = false;
+            // 
+            // btnShiftDayViewer
+            // 
+            this.btnShiftDayViewer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnShiftDayViewer.FlatAppearance.BorderSize = 0;
+            this.btnShiftDayViewer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShiftDayViewer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnShiftDayViewer.ForeColor = System.Drawing.Color.Silver;
+            this.btnShiftDayViewer.Location = new System.Drawing.Point(0, 160);
+            this.btnShiftDayViewer.Margin = new System.Windows.Forms.Padding(2);
+            this.btnShiftDayViewer.Name = "btnShiftDayViewer";
+            this.btnShiftDayViewer.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
+            this.btnShiftDayViewer.Size = new System.Drawing.Size(171, 32);
+            this.btnShiftDayViewer.TabIndex = 6;
+            this.btnShiftDayViewer.Text = "Shift Attendance";
+            this.btnShiftDayViewer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnShiftDayViewer.UseVisualStyleBackColor = true;
+            this.btnShiftDayViewer.Click += new System.EventHandler(this.btnShiftDayViewer_Click);
             // 
             // Form1
             // 
@@ -620,6 +640,7 @@
         private System.Windows.Forms.Button btnBuyStock;
         private System.Windows.Forms.Button btnStockRequests;
         private System.Windows.Forms.Button btnDepoRequests;
+        private System.Windows.Forms.Button btnShiftDayViewer;
     }
 }
 

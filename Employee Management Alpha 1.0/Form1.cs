@@ -240,7 +240,11 @@ namespace Employee_Management_Alpha_1._0
             Size = new Size(1540, 710); //change window size
             hideSubmenus();
         }
-
+        private void btnShiftDayViewer_Click(object sender, EventArgs e)
+        {
+            openChildForm(new ShiftAttendance()); //create new form object
+            hideSubmenus();
+        }
         private void BtnBuyStock_Click(object sender, EventArgs e)
         {
             
@@ -273,5 +277,7 @@ namespace Employee_Management_Alpha_1._0
         {
 
         }
+
+
     }
 }

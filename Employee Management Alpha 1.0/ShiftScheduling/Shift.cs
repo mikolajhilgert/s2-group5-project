@@ -21,6 +21,7 @@ namespace Employee_Management_Alpha_1._0
         public int workedHours { get; set; }
         public int bannedDay1 { get; set; }
         public int bannedDay2 { get; set; }
+        public bool status { get; set; }
 
 
         public Shift(int shiftID, int DoW, int employeeID, string empName, bool morning, bool afternoon, bool evening, int year, int cWeek)
@@ -50,6 +51,16 @@ namespace Employee_Management_Alpha_1._0
             this.empName = empName;
             this.contractHours = contractH;
             this.workedHours = workedH;
+        }
+
+        public Shift(int employeeID, string empName, bool morning, bool afternoon, bool evening, bool status)
+        {
+            this.employeeID = employeeID;
+            this.empName = empName;
+            this.morning = morning;
+            this.afternoon = afternoon;
+            this.evening = evening;
+            this.status = status;
         }
     }
 }
