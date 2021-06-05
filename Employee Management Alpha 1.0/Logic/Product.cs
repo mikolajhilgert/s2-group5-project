@@ -33,6 +33,7 @@ namespace Employee_Management_Alpha_1._0
             this.pricePerUnit = PricePerUnit;
             this.department = department;
         }
+        public Product() { }
         public int GetStoreQuantity()
         {
             return quantityStore;
@@ -107,6 +108,10 @@ namespace Employee_Management_Alpha_1._0
             string[] details = {"", department.Name, id.ToString(), name, "" , quantityDepo.ToString() };
 
             return details;
+        }
+        public override string ToString()
+        {
+            return $"{this.id} {this.name} ({this.department.Name})";
         }
     }
 }

@@ -138,7 +138,7 @@ namespace Employee_Management_Alpha_1._0
         public List<Employee> GetAllEmployees()
         {
             List<Employee> employees = new List<Employee>();
-            string sql = "SELECT * FROM employee `Position` != 'Admin';";
+            string sql = "SELECT * FROM employee WHERE `Position` != 'Admin';";
             MySqlCommand cmd = new MySqlCommand(sql, this.conn);
             try
             {
@@ -195,6 +195,8 @@ namespace Employee_Management_Alpha_1._0
             conn.Close();
             return salary;
         }
+
+
     }
 
 }

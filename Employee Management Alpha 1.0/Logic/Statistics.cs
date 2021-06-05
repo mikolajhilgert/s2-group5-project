@@ -8,7 +8,6 @@ namespace Employee_Management_Alpha_1._0
 {
     public class Statistics
     {
-        protected MySqlConnection conn = new MySqlConnection("server=studmysql01.fhict.local;database=dbi456096;uid=dbi456096;password=logixtic;");//sql connector
         protected StatisticsDAL db = new StatisticsDAL();
 
         public int GetEmpShiftStats(int empID)

@@ -65,9 +65,9 @@ namespace Employee_Management_Alpha_1._0
         }
 
         //constructors
-        public Employee(string first_name, string last_name, DateTime date_of_birth, string bsn, string postion, int workinghours, string phoneNr, string address, string email, string password, string emergencyC, string emergencyR, string emergencyNr, string certifications, string languages, DateTime startDate, DateTime endDate, int salary)
+        public Employee(int id,string first_name, string last_name, DateTime date_of_birth, string bsn, string postion, int workinghours, string phoneNr, string address, string email, string password, string emergencyC, string emergencyR, string emergencyNr, string certifications, string languages, DateTime startDate, DateTime endDate, int salary)
         {
-            
+            this.id = id;
             this.first_name = first_name;
             this.last_name = last_name;
             this.date_of_birth = date_of_birth;
@@ -128,7 +128,7 @@ namespace Employee_Management_Alpha_1._0
         //methods
         public string GetEmployeeInfo()
         {
-            return $"{this.id} {this.first_name} {this.last_name}  {this.status}";
+            return $"{this.id} {this.first_name} {this.last_name} ({this.status})";
         }
 
         public string GetEmployeeFullName()

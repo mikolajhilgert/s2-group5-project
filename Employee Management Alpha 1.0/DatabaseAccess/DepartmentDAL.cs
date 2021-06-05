@@ -269,7 +269,7 @@ namespace Employee_Management_Alpha_1._0
         public static List<Employee> GetAllAssignedEmployeesForDepartment(Department d)
         {
             EmployeeManagement employee_Management = new EmployeeManagement();
-            List<Employee> employees = employee_Management.GetAllActiveEmployees();
+            List<Employee> employees = new List<Employee>();
             List<int> IDsOfEmployees = new List<int>();
 
             string sql_connection = "server=studmysql01.fhict.local;database=dbi456096;uid=dbi456096;password=logixtic;";
@@ -295,13 +295,11 @@ namespace Employee_Management_Alpha_1._0
                 MessageBox.Show(ex.Message);
             }
 
-            for (int i = 0; i < employees.Count(); i++)
-            {//check to see if indexes roll back with 1 when u remove item and adjust by i-- when removed
-                if (!IDsOfEmployees.Contains(employees[i].Id))
-                {
-                    employees.Remove(employees[i]);
-                    i--;
-                }
+            foreach (int id in IDsOfEmployees)
+            {
+                Employee employee = employee_Management.GetEmployeeByID(id);
+                if(employee != null)
+                    employees.Add(employee);
             }
 
             return employees;
@@ -333,6 +331,35 @@ namespace Employee_Management_Alpha_1._0
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        public static List<Product> GetProductsForDepartment(Department d)
+        {
+            List<Product> products = new List<Product>();
+            string sql_connection = "server=studmysql01.fhict.local;database=dbi456096;uid=dbi456096;password=logixtic;";
+            string sql_select = $@"SELECT * FROM product WHERE DepartmentID = @departmentID;";
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(sql_connection))
+                {
+                    MySqlCommand cmd = new MySqlCommand(sql_select, conn);
+                    conn.Open();
+                    cmd.Parameters.AddWithValue("@departmentID", d.Id);
+                    MySqlDataReader dr = cmd.ExecuteReader();
+
+                    while (dr.Read())
+                    {
+                        products.Add(new Product(Convert.ToInt32(dr[0]), dr[1].ToString(), Convert.ToInt32(dr[2]), Convert.ToInt32(dr[3]), Convert.ToDecimal(dr[4]), DepartmentManagement.GetDepartmentByID(Convert.ToInt32(dr[5]))));
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return products;
         }
     }
 }

@@ -136,7 +136,7 @@ namespace Employee_Management_Alpha_1._0
                 UpdateTextboxes(department);
             }
             else
-                MessageBox.Show("Invalid employee selected");
+                MessageBox.Show("Invalid department selected");
         }
 
         private void btnClose_Click(object sender, EventArgs e)

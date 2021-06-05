@@ -571,3 +571,4 @@ C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employe
 C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.UpdateDepartment.resources
 C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.ViewStore.resources
 C:\Users\mikol\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.ShiftAttendance.resources
+C:\Users\mykym\source\repos\s2-group5-project\Employee Management Alpha 1.0\obj\Debug\Employee_Management_Alpha_1._0.ShiftAttendance.resources

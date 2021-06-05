@@ -41,6 +41,11 @@ namespace Employee_Management_Alpha_1._0
             db.SellProduct(id, amount);
         }
 
+        public int GetAmountOfSales(Product p)
+        {
+            return db.GetAmountOfSales(p);
+        }
+
         public Product GetProductByID(int id)
         {
             RefreshProducts();

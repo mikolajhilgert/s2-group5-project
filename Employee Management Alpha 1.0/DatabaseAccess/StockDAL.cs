@@ -140,6 +140,27 @@ namespace Employee_Management_Alpha_1._0
             }
 
         }
+        public int GetAmountOfSales(Product p)
+        {
+            int amountOfSales = 0;
+            try
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand($"SELECT SUM(Quantity) FROM `sales` WHERE ProductID = @ID;", conn);
+                cmd.Parameters.AddWithValue("@ID", p.Id);
+                MySqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    amountOfSales = Convert.ToInt32(dr[0]);
+                }
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return amountOfSales;
+        }
 
         public void AddStockRequest(int productID, int quantity)
         {

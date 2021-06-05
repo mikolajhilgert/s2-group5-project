@@ -60,6 +60,23 @@ namespace Employee_Management_Alpha_1._0
         {
             return DepartmentDAL.GetAllAssignedEmployeesForDepartment(d);
         }
+        public static List<Product> GetProductsForDepartment(Department d)
+        {
+            return DepartmentDAL.GetProductsForDepartment(d);
+        }
+        public static decimal GetProfitForDepartment(Department d)
+        {
+            ProductManager productManager = new ProductManager();
+            decimal totalProfit = 0;
+            foreach (Product product in GetProductsForDepartment(d))
+            {
+                int sales = productManager.GetAmountOfSales(product);
+                decimal price = product.PricePerUnit;
+
+                totalProfit += sales * price;
+            }
+            return totalProfit;
+        }
         public static void ChangeStatus(Department d)
         {
             DepartmentDAL.ChangeStatus(d);
