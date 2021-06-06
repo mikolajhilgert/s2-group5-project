@@ -95,7 +95,7 @@ namespace Employee_Management_Alpha_1._0
         {
             List<Shift> items = new List<Shift>();
 
-            string sql = $@"select sa.shiftID,sa.morning,sa.afternoon,sa.evening,sa.status,sa.EmpID,CONCAT(emp.FirstName, ' ' , emp.LastName) AS Name
+            string sql = $@"select sa.shiftID,sa.morning,sa.afternoon,sa.evening,sa.attendancestatus,sa.EmpID,CONCAT(emp.FirstName, ' ' , emp.LastName) AS Name
             from shiftattendance as sa
             INNER JOIN (select ID,FirstName,LastName from employee as e)emp
             ON emp.ID = sa.EmpID
@@ -110,7 +110,7 @@ namespace Employee_Management_Alpha_1._0
                 MySqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    items.Add(new Shift(Convert.ToInt32(dr["EmpID"]), Convert.ToString(dr["Name"]), Convert.ToBoolean(dr["morning"]), Convert.ToBoolean(dr["afternoon"]), Convert.ToBoolean(dr["evening"]), Convert.ToBoolean(dr["status"])));
+                    items.Add(new Shift(Convert.ToInt32(dr["EmpID"]), Convert.ToString(dr["Name"]), Convert.ToBoolean(dr["morning"]), Convert.ToBoolean(dr["afternoon"]), Convert.ToBoolean(dr["evening"]), Convert.ToBoolean(dr["attendancestatus"])));
                 }
                 return items;
             }
@@ -151,7 +151,7 @@ namespace Employee_Management_Alpha_1._0
             }
 
         }
-        public void AssignEmployeeToShift(string shiftTimeToDb,string toEdit,int cWeek, int year,int employeeID, int dow)
+        public void AssignEmployeeToShift(string shiftTimeToDb, string toEdit, int cWeek, int year, int employeeID, int dow)
         {
             string sql_insert;
             string sql_check;
@@ -202,9 +202,9 @@ namespace Employee_Management_Alpha_1._0
                 conn.Close();
             }
         }
-        public void UnAssignEmployeeToShift(int cWeek, int year,string shiftTimeToDb, int employeeID, int tod, int dow)
+        public void UnAssignEmployeeToShift(int cWeek, int year, string shiftTimeToDb, int employeeID, int tod, int dow)
         {
-            DeleteAttendenceInstance( cWeek,  year,  employeeID, shiftTimeToDb,  dow);
+            DeleteAttendenceInstance(cWeek, year, employeeID, shiftTimeToDb, dow);
             string sql_update = $@"UPDATE `shifts` SET {shiftTimeToDb} = '0' WHERE `DofW` = '{dow}' AND `EmpID` = '{employeeID}' AND `{shiftTimeToDb}` = '1' AND `Year` = {year} AND `cWeek` = {cWeek};";
             try
             {
