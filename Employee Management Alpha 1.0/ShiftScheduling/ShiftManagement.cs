@@ -137,6 +137,8 @@ namespace Employee_Management_Alpha_1._0
             {
                 bool wasScheduled = false;
 
+                //MessageBox.Show($"{person.bannedDay1} {person.bannedDay2}");
+
                 if (person.bannedDay1 == dow || person.bannedDay2 == dow) { wasScheduled = true; }
 
                 if (person.contractHours - person.workedHours > 0 || person.contractHours == 0 && person.workedHours < 40)

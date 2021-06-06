@@ -124,7 +124,7 @@ namespace Employee_Management_Alpha_1._0
         {
             List<Shift> employees = new List<Shift>();
             Shift temp;
-            string sql = $@"SELECT e.ID,CONCAT(e.FirstName, ' ' , e.LastName) AS Name,e.WorkingHours,COALESCE(SUM(c.morning), 0) + COALESCE(SUM(c.afternoon), 0) + COALESCE(SUM(c.evening), 0) AS shiftsTotal, e.Position
+            string sql = $@"SELECT e.ID,CONCAT(e.FirstName, ' ' , e.LastName) AS Name,e.WorkingHours,COALESCE(SUM(c.morning), 0) + COALESCE(SUM(c.afternoon), 0) + COALESCE(SUM(c.evening), 0) AS shiftsTotal, e.Position, e.BannedDays
                             FROM employee as e
                             left JOIN (select * from shifts as s where s.Year = '{year}' AND s.cWeek = '{cWeek}')c
                             ON e.ID = c.EmpID
@@ -139,7 +139,7 @@ namespace Employee_Management_Alpha_1._0
 
                 while (dr.Read() && (dr != null))
                 {
-                    temp = new Shift(Convert.ToInt32(dr[0]), Convert.ToString(dr[1]), Convert.ToInt32(dr[2]), Convert.ToInt32(dr[3]) * 8);
+                    temp = new Shift(Convert.ToInt32(dr[0]), Convert.ToString(dr[1]), Convert.ToInt32(dr[2]), Convert.ToInt32(dr[3]) * 8, Convert.ToString(dr["BannedDays"]));
                     //MessageBox.Show($"{temp.contractHours}   {temp.workedHours}");
                     employees.Add(temp);
                 }

@@ -1,7 +1,8 @@
-<?php include_once ('../Includes/dbh.inc.php'); 
+<?php include_once ('../Includes/functions.php'); 
 include '../usersession.php';
 if(isset($_POST["formSubmit"]))
 {
+  $final = [0,0];
   $id = $_SESSION['userid'];
 
   if(isset($_POST['formDay']))
@@ -13,11 +14,8 @@ if(isset($_POST["formSubmit"]))
     }else{
       $final = $aDay;
     }
-  }else{
-    $final = [0,0];
   }
-  $sql = "UPDATE employee SET BannedDays = '$final[0],$final[1]' WHERE ID = $id;";
-  $conn->query($sql);
+  SetBannedDays($id,$final);
   header("Location: ../shifts.php");
 }
 

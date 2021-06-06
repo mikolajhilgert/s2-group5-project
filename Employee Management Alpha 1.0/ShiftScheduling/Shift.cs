@@ -45,12 +45,15 @@ namespace Employee_Management_Alpha_1._0
             this.bannedDay2 = Convert.ToInt32(values[1]);
         }
 
-        public Shift(int employeeID, string empName, int contractH, int workedH)
+        public Shift(int employeeID, string empName, int contractH, int workedH, string bannedDays)
         {
             this.employeeID = employeeID;
             this.empName = empName;
             this.contractHours = contractH;
             this.workedHours = workedH;
+            string[] values = bannedDays.Split(',');
+            this.bannedDay1 = Convert.ToInt32(values[0]);
+            this.bannedDay2 = Convert.ToInt32(values[1]);
         }
 
         public Shift(int employeeID, string empName, bool morning, bool afternoon, bool evening, bool status)

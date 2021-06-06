@@ -17,7 +17,8 @@ namespace Employee_Management_Alpha_1._0
         public ShiftAttendance()
         {
             InitializeComponent();
-            PopulateDay(CurrentYear(),CurrentCalWeek(),CurrentDay());
+            PopulateDay(CurrentYear(),CurrentCalWeek(),CurrentDay()+1);
+            //MessageBox.Show($"{CurrentYear()} {CurrentCalWeek()} {CurrentDay()}");
             cbYear.Text = CurrentYear().ToString();
             cbCWeek.Text = CurrentCalWeek().ToString();
             cbDay.SelectedIndex = CurrentDay();
@@ -48,7 +49,7 @@ namespace Employee_Management_Alpha_1._0
         {
             if(cbYear.Text!= ""&& cbDay.Text != "" && cbCWeek.Text!= "")
             {
-                PopulateDay(Convert.ToInt32(cbYear.Text), Convert.ToInt32(cbCWeek.Text), cbDay.SelectedIndex);
+                PopulateDay(Convert.ToInt32(cbYear.Text), Convert.ToInt32(cbCWeek.Text), cbDay.SelectedIndex+1);
             }
         }
 
@@ -57,7 +58,7 @@ namespace Employee_Management_Alpha_1._0
             cbYear.Text = CurrentYear().ToString();
             cbCWeek.Text = CurrentCalWeek().ToString();
             cbDay.SelectedIndex = CurrentDay();
-            PopulateDay(Convert.ToInt32(cbYear.Text), Convert.ToInt32(cbCWeek.Text), cbDay.SelectedIndex );
+            PopulateDay(Convert.ToInt32(cbYear.Text), Convert.ToInt32(cbCWeek.Text), cbDay.SelectedIndex+1 );
         }
 
         private int CurrentYear()

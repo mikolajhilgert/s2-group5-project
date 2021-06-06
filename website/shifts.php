@@ -1,6 +1,5 @@
 <?php include 'usersession.php';
-require_once('Classes/User.php');
-include_once ('Includes/dbh.inc.php');
+include('Includes/functions.php');
 
 $weekNumber = date("W");
 $year = date("Y");
@@ -25,26 +24,13 @@ if(isset($_GET['weekN'])){ $weekNumber = $_GET['weekN'];}?>
 </script>
 
 <?php
+    $rows = GetShiftDate($weekNumber,$id,$year);
 
-    $stmt = mysqli_prepare($conn, "SELECT DofW,morning,afternoon,evening FROM shifts where cWeek = ? and EmpID = ? and Year= ?");
-    mysqli_stmt_bind_param($stmt, "iii", $weekNumber,$id,$year);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    $rows = mysqli_fetch_all($result);
-
-
-    $stmt1 = mysqli_prepare($conn,"SELECT BannedDays FROM employee WHERE ID = ?");
-    mysqli_stmt_bind_param($stmt1, "i", $id);
-    $stmt1->execute();
-    $row1 = $stmt1->get_result()->fetch_row();
-    $input = $row1[0] ?? false;
-    $bannedDays = explode(',', $input);
-
-    // var_dump($rows);
+    $bannedDays = GetBannedDays($id);
+ 
     $dayOfWeek = ['Monday', 'Tuesday','Wednesday' ,'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
-
-    function CheckKindOfShift($day,$rows){
+    function CheckKindOfShiftSchedule($day,$rows){
         foreach($rows as $r){
             if($day == $r[0]){
                 if ($r[1] == 1 and $r[3] == 1) {
@@ -61,29 +47,7 @@ if(isset($_GET['weekN'])){ $weekNumber = $_GET['weekN'];}?>
         }
         return "-";
     }
-
-    function GetDateBounds($week_number,$year){
-        for($day=1; $day<=7; $day++)
-        {
-            if($day==1 || $day==7){
-                echo date('d/m/Y', strtotime($year."W".$week_number.$day))."\n";
-                if($day==1){
-                    echo " - ";
-                }
-            }
-        }
-    }
-
-    function isBanned($i,$bannedDays){
-        if($bannedDays[0]==$i){
-            return "checked";
-        }else if($bannedDays[1]==$i){
-            return "checked";
-        }
-        return "";
-    }
 ?>
-
 
 <head>
     <title>Employee dashboard</title>
@@ -108,7 +72,7 @@ if(isset($_GET['weekN'])){ $weekNumber = $_GET['weekN'];}?>
                 <?php for($day=1; $day<=7; $day++){?>
                     <tr class="schedule">
                         <td class="schedule"> <?php echo $dayOfWeek[$day-1]?> </td>
-                        <td class="schedule"> <?php echo CheckKindOfShift($day,$rows); ?> </td>
+                        <td class="schedule"> <?php echo CheckKindOfShiftSchedule($day,$rows); ?> </td>
                     </tr>
                     <?php }?>
                 </table>
@@ -163,9 +127,6 @@ if(isset($_GET['weekN'])){ $weekNumber = $_GET['weekN'];}?>
             </div>
         </div>
     </div>
-
-
 </body>
 <footer><?php include 'footer.php'; ?></footer>
-
 </html>

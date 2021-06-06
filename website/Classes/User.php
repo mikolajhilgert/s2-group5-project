@@ -23,24 +23,24 @@ class User {
   
   public function __construct($id, $firstname, $lastname, $phone, $address, $email, 
   $password, $emergencyc, $emergencynr, $hours, $dob, $bsn, $position, $certificates, $languages, $sdate, $endate, $salary) {
-    $this->$id = $id;
-    $this->$firstname = $firstname;
+    $this->id = $id;
+    $this->firstname = $firstname;
     $this->lastname = $lastname;
-    $this->$phone = $phone;
-    $this->$address = $address;
-    $this->$email = $email;
-    $this->$password = $password;
-    $this->$emergencyc = $emergencyc;
-    $this->$emergencynr = $emergencynr;
-    $this->$hours = $hours;
-    $this->$dob = $dob;
-    $this->$bsn = $bsn;
-    $this->$position = $position;
-    $this->$certificates = $certificates; 
-    $this->$languages = $languages;
-    $this->$sdate = $sdate;
-    $this->$endate = $endate;
-    $this->$salary = $salary;
+    $this->phone = $phone;
+    $this->address = $address;
+    $this->email = $email;
+    $this->password = $password;
+    $this->emergencyc = $emergencyc;
+    $this->emergencynr = $emergencynr;
+    $this->hours = $hours;
+    $this->dob = $dob;
+    $this->bsn = $bsn;
+    $this->position = $position;
+    $this->certificates = $certificates; 
+    $this->languages = $languages;
+    $this->sdate = $sdate;
+    $this->endate = $endate;
+    $this->salary = $salary;
 
 }
 
