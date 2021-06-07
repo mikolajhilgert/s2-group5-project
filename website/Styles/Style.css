@@ -180,9 +180,6 @@ input[type=submit] {
   cursor: pointer;
 }
 
-input[type=submit1] {
- 
-}
 #monke{
 	width: 50%;
     margin: 0 auto;
@@ -205,9 +202,8 @@ input[type=submit1] {
 
 }
 
-#btnupdate{
-	
-	
+.logo-login{
+  width: 100%;
 }
 
 #logoutbtn{
