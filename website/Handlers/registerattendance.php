@@ -13,11 +13,11 @@ if(isset($_POST['submit'])){
         if(CheckIfOnTheShift(GetTodayShift($id)[0], $id)==0){
         if(RegisterAttendace(GetTodayShift($id)[0], $id)){
             echo "registered";
-            header("Location: ../index.php?success");
+            header("Location: ../attendance.php?outcome=success");
         } else {
             echo "error attendance";
         }
-    } else { header("Location: ../index.php?fail");}
+    } else { header("Location: ../attendance.php?outcome=fail");}
 
 
     } else {

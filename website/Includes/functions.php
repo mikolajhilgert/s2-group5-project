@@ -88,9 +88,17 @@ function CheckTodayShift($id){
 
 function RegisterAttendace($shiftID, $empID){
     $con = DBc::connect();
-    $query = $con->prepare("UPDATE shiftattendance SET attendancestatus = 1 WHERE shiftattendance.shiftid = $shiftID AND shiftattendance.empID = $empID");
+    if(CheckIfTwoShifts($shiftID)== false){
+        $query = $con->prepare("UPDATE shiftattendance SET attendancestatus = 1 WHERE shiftattendance.shiftid = $shiftID AND shiftattendance.empID = $empID");
+        $query->execute();
+    } else if((int)date("H")<16){
+        $query = $con->prepare("UPDATE shiftattendance SET attendancestatus = 1 WHERE shiftattendance.shiftid = $shiftID AND shiftattendance.empID = $empID AND shiftattendance.morning = 1");
+        $query->execute();
+    } else {
+        $query = $con->prepare("UPDATE shiftattendance SET attendancestatus = 1 WHERE shiftattendance.shiftid = $shiftID AND shiftattendance.empID = $empID AND shiftattendance.evening = 1");
+        $query->execute();
+    }
 
-    $query->execute();
     $result = $query->rowCount();
 
 
@@ -100,6 +108,29 @@ function RegisterAttendace($shiftID, $empID){
         return false;
     }
     
+}
+
+function CheckOut($shiftID, $empID){
+    $con = DBc::connect();
+    if(CheckIfTwoShifts($shiftID)== false && (int)date("H")>0){
+        $query = $con->prepare("UPDATE shiftattendance SET attendancestatus = 2 WHERE shiftattendance.shiftid = $shiftID AND shiftattendance.empID = $empID");
+        $query->execute();
+    } else if((int)date("H")>16){
+        $query = $con->prepare("UPDATE shiftattendance SET attendancestatus = 2 WHERE shiftattendance.shiftid = $shiftID AND shiftattendance.empID = $empID AND shiftattendance.morning = 1");
+        $query->execute();
+    } else if((int)date("H")>8){
+        $query = $con->prepare("UPDATE shiftattendance SET attendancestatus = 2 WHERE shiftattendance.shiftid = $shiftID AND shiftattendance.empID = $empID AND shiftattendance.evening = 1");
+        $query->execute();
+    }
+
+    $result = $query->rowCount();
+
+
+    if ($result > 0){
+        return true;
+    } else {
+        return false;
+    }
 }
 
 function CheckIfOnTheShift($shiftID, $empID){
@@ -192,5 +223,17 @@ function UpdateUserDetails($id,$email,$password,$address,$phone,$emergencynr,$em
 
     $cmd->execute();
 }
+function CheckIfTwoShifts($shiftID){
+    $con = DBc::connect();
+    $query = $con->prepare("SELECT morning, evening FROM shifts WHERE ShiftID = $shiftID AND morning = 1 and evening = 1");
+    $query->execute();
+
+    $row = $query->fetch();
 
 
+    if ($query->rowCount()>0){
+        return $row;
+    } else {
+        return false;
+    }
+}

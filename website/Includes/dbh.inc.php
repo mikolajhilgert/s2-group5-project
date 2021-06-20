@@ -1,5 +1,8 @@
 <?php
+
 class DBc{
+
+
   public static function connect(){
     $host = "studmysql01.fhict.local";
     $username = "dbi456096";
