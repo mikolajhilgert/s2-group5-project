@@ -43,6 +43,7 @@
             this.tbEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lbDepartments = new System.Windows.Forms.ListBox();
+            this.btnDemo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tbHead
@@ -196,12 +197,24 @@
             this.lbDepartments.Size = new System.Drawing.Size(218, 342);
             this.lbDepartments.TabIndex = 52;
             // 
+            // btnDemo
+            // 
+            this.btnDemo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnDemo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDemo.Location = new System.Drawing.Point(11, 92);
+            this.btnDemo.Name = "btnDemo";
+            this.btnDemo.Size = new System.Drawing.Size(23, 20);
+            this.btnDemo.TabIndex = 55;
+            this.btnDemo.UseVisualStyleBackColor = false;
+            this.btnDemo.Click += new System.EventHandler(this.btnDemo_Click);
+            // 
             // AddDepartment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(83)))));
             this.ClientSize = new System.Drawing.Size(616, 396);
+            this.Controls.Add(this.btnDemo);
             this.Controls.Add(this.lbDepartments);
             this.Controls.Add(this.tbLanguage);
             this.Controls.Add(this.lblLanguage);
@@ -241,5 +254,6 @@
         private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.ListBox lbDepartments;
+        private System.Windows.Forms.Button btnDemo;
     }
 }

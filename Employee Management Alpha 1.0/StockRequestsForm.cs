@@ -17,6 +17,7 @@ namespace Employee_Management_Alpha_1._0
         {
             InitializeComponent();
             RefreshRequests();
+            dgRequests.ClearSelection();
 
             if(Form1.loggedUser != "Stock worker")
             {

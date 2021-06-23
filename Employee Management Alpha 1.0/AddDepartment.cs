@@ -60,5 +60,15 @@ namespace Employee_Management_Alpha_1._0
             UpdateListbox();
             ClearTextboxes();
         }
+
+        private void btnDemo_Click(object sender, EventArgs e)
+        {
+            tbName.Text = "Paintings";
+            tbHead.Text = "Kevin";
+            tbAddress.Text = "Boschdijk 2";
+            tbPhone.Text = "123456789";
+            tbEmail.Text = "paintings@mb.nl";
+            tbLanguage.Text = "French, Italian";
+        }
     }
 }

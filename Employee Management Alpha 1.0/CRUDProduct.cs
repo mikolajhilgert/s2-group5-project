@@ -66,7 +66,6 @@ namespace Employee_Management_Alpha_1._0
             tbName.Text = product.Name;
             tbPricePerUnit.Text = product.PricePerUnit.ToString();
             cbCategory.SelectedItem = product.Department;
-            MessageBox.Show(product.Department.ToString());
             //tbName.Text = dgProducts.Rows[index].Cells[1].Value.ToString();
             //tbPricePerUnit.Text = dgProducts.Rows[index].Cells[2].Value.ToString();
             //cbCategory.Text = dgProducts.Rows[index].Cells[3].Value.ToString();

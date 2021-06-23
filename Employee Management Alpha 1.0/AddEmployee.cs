@@ -92,5 +92,27 @@ namespace Employee_Management_Alpha_1._0
             else
                 tbPassword.PasswordChar = '*';
         }
+
+        private void btnDemo_Click(object sender, EventArgs e)
+        {
+            tbFirstName.Text = "Bob";
+            tbLastName.Text = "Dylan";
+            dtpEmployee.Value = DateTime.Today;
+            tbBSN.Text = "123456789";
+            tbPhone.Text = "123456789";
+            tbEmail.Text = "bob@mb.nl";
+            tbContactR.Text = "Sister";
+            tbEmergencyNr.Text = "123456789";
+            tbSalary.Text = "800";
+            tbEmergencyN.Text = "Tiffany";
+            tbPosition.SelectedIndex = 2;
+            cbWorkingH.SelectedIndex = 1;
+            tbLanguage.Text = "English";
+            tbCertifications.Text = "None";
+            dateTimeStart.Value = DateTime.Today;
+            dateTimeEnd.Value = DateTime.Today.AddDays(1);
+            tbAddress.Text = "Kruisstraat 13";
+            tbPassword.Text = "123456789";
+        }
     }
 }

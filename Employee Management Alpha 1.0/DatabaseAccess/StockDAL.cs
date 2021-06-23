@@ -152,7 +152,13 @@ namespace Employee_Management_Alpha_1._0
 
                 while (dr.Read())
                 {
-                    amountOfSales = Convert.ToInt32(dr[0]);
+                    try
+                    {
+                        amountOfSales = Convert.ToInt32(dr[0]);
+                    }
+                    catch (Exception)
+                    {
+                    }
                 }
             }
             finally

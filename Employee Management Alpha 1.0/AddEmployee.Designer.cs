@@ -69,6 +69,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnPassVisible = new System.Windows.Forms.Button();
+            this.btnDemo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblFirstName
@@ -85,7 +86,7 @@
             // tbFirstName
             // 
             this.tbFirstName.Location = new System.Drawing.Point(65, 41);
-            this.tbFirstName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbFirstName.Margin = new System.Windows.Forms.Padding(2);
             this.tbFirstName.Name = "tbFirstName";
             this.tbFirstName.Size = new System.Drawing.Size(135, 20);
             this.tbFirstName.TabIndex = 3;
@@ -93,7 +94,7 @@
             // tbLastName
             // 
             this.tbLastName.Location = new System.Drawing.Point(65, 79);
-            this.tbLastName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbLastName.Margin = new System.Windows.Forms.Padding(2);
             this.tbLastName.Name = "tbLastName";
             this.tbLastName.Size = new System.Drawing.Size(135, 20);
             this.tbLastName.TabIndex = 5;
@@ -123,7 +124,7 @@
             // tbBSN
             // 
             this.tbBSN.Location = new System.Drawing.Point(65, 154);
-            this.tbBSN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbBSN.Margin = new System.Windows.Forms.Padding(2);
             this.tbBSN.Name = "tbBSN";
             this.tbBSN.Size = new System.Drawing.Size(135, 20);
             this.tbBSN.TabIndex = 9;
@@ -142,7 +143,7 @@
             // tbPhone
             // 
             this.tbPhone.Location = new System.Drawing.Point(65, 190);
-            this.tbPhone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbPhone.Margin = new System.Windows.Forms.Padding(2);
             this.tbPhone.Name = "tbPhone";
             this.tbPhone.Size = new System.Drawing.Size(135, 20);
             this.tbPhone.TabIndex = 11;
@@ -183,7 +184,7 @@
             // tbEmergencyNr
             // 
             this.tbEmergencyNr.Location = new System.Drawing.Point(65, 303);
-            this.tbEmergencyNr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbEmergencyNr.Margin = new System.Windows.Forms.Padding(2);
             this.tbEmergencyNr.Name = "tbEmergencyNr";
             this.tbEmergencyNr.Size = new System.Drawing.Size(135, 20);
             this.tbEmergencyNr.TabIndex = 17;
@@ -207,7 +208,7 @@
             this.btnAddEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.btnAddEmployee.ForeColor = System.Drawing.Color.Silver;
             this.btnAddEmployee.Location = new System.Drawing.Point(218, 367);
-            this.btnAddEmployee.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddEmployee.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddEmployee.Name = "btnAddEmployee";
             this.btnAddEmployee.Size = new System.Drawing.Size(134, 44);
             this.btnAddEmployee.TabIndex = 18;
@@ -220,7 +221,7 @@
             this.dtpEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpEmployee.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpEmployee.Location = new System.Drawing.Point(65, 115);
-            this.dtpEmployee.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpEmployee.Margin = new System.Windows.Forms.Padding(2);
             this.dtpEmployee.Name = "dtpEmployee";
             this.dtpEmployee.Size = new System.Drawing.Size(135, 19);
             this.dtpEmployee.TabIndex = 20;
@@ -229,7 +230,7 @@
             // tbContactR
             // 
             this.tbContactR.Location = new System.Drawing.Point(65, 266);
-            this.tbContactR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbContactR.Margin = new System.Windows.Forms.Padding(2);
             this.tbContactR.Name = "tbContactR";
             this.tbContactR.Size = new System.Drawing.Size(135, 20);
             this.tbContactR.TabIndex = 22;
@@ -237,7 +238,7 @@
             // tbLanguage
             // 
             this.tbLanguage.Location = new System.Drawing.Point(218, 154);
-            this.tbLanguage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbLanguage.Margin = new System.Windows.Forms.Padding(2);
             this.tbLanguage.Name = "tbLanguage";
             this.tbLanguage.Size = new System.Drawing.Size(135, 20);
             this.tbLanguage.TabIndex = 25;
@@ -289,7 +290,7 @@
             // tbCertifications
             // 
             this.tbCertifications.Location = new System.Drawing.Point(218, 190);
-            this.tbCertifications.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbCertifications.Margin = new System.Windows.Forms.Padding(2);
             this.tbCertifications.Name = "tbCertifications";
             this.tbCertifications.Size = new System.Drawing.Size(135, 20);
             this.tbCertifications.TabIndex = 30;
@@ -308,7 +309,7 @@
             // tbEmail
             // 
             this.tbEmail.Location = new System.Drawing.Point(65, 229);
-            this.tbEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(2);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(135, 20);
             this.tbEmail.TabIndex = 32;
@@ -327,7 +328,7 @@
             // tbEmergencyN
             // 
             this.tbEmergencyN.Location = new System.Drawing.Point(218, 41);
-            this.tbEmergencyN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbEmergencyN.Margin = new System.Windows.Forms.Padding(2);
             this.tbEmergencyN.Name = "tbEmergencyN";
             this.tbEmergencyN.Size = new System.Drawing.Size(135, 20);
             this.tbEmergencyN.TabIndex = 35;
@@ -346,7 +347,7 @@
             // tbAddress
             // 
             this.tbAddress.Location = new System.Drawing.Point(218, 303);
-            this.tbAddress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbAddress.Margin = new System.Windows.Forms.Padding(2);
             this.tbAddress.Name = "tbAddress";
             this.tbAddress.Size = new System.Drawing.Size(135, 20);
             this.tbAddress.TabIndex = 37;
@@ -366,7 +367,7 @@
             // 
             this.lbEmployees.FormattingEnabled = true;
             this.lbEmployees.Location = new System.Drawing.Point(437, 39);
-            this.lbEmployees.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lbEmployees.Margin = new System.Windows.Forms.Padding(2);
             this.lbEmployees.Name = "lbEmployees";
             this.lbEmployees.Size = new System.Drawing.Size(170, 355);
             this.lbEmployees.TabIndex = 21;
@@ -381,7 +382,7 @@
             "Stock worker",
             "Cashier"});
             this.tbPosition.Location = new System.Drawing.Point(218, 79);
-            this.tbPosition.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbPosition.Margin = new System.Windows.Forms.Padding(2);
             this.tbPosition.Name = "tbPosition";
             this.tbPosition.Size = new System.Drawing.Size(135, 21);
             this.tbPosition.TabIndex = 38;
@@ -400,7 +401,7 @@
             // tbSalary
             // 
             this.tbSalary.Location = new System.Drawing.Point(65, 340);
-            this.tbSalary.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbSalary.Margin = new System.Windows.Forms.Padding(2);
             this.tbSalary.Name = "tbSalary";
             this.tbSalary.Size = new System.Drawing.Size(135, 20);
             this.tbSalary.TabIndex = 40;
@@ -448,7 +449,7 @@
             // tbPassword
             // 
             this.tbPassword.Location = new System.Drawing.Point(219, 340);
-            this.tbPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbPassword.Margin = new System.Windows.Forms.Padding(2);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PasswordChar = '*';
             this.tbPassword.Size = new System.Drawing.Size(135, 20);
@@ -471,7 +472,7 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Image = global::Employee_Management_Alpha_1._0.Properties.Resources.icons8_back_24;
             this.btnClose.Location = new System.Drawing.Point(9, 10);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(32, 27);
             this.btnClose.TabIndex = 1;
@@ -484,12 +485,23 @@
             this.btnPassVisible.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPassVisible.Image = global::Employee_Management_Alpha_1._0.Properties.Resources.eye;
             this.btnPassVisible.Location = new System.Drawing.Point(358, 336);
-            this.btnPassVisible.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPassVisible.Margin = new System.Windows.Forms.Padding(2);
             this.btnPassVisible.Name = "btnPassVisible";
             this.btnPassVisible.Size = new System.Drawing.Size(32, 27);
             this.btnPassVisible.TabIndex = 45;
             this.btnPassVisible.UseVisualStyleBackColor = true;
             this.btnPassVisible.Click += new System.EventHandler(this.btnPassVisible_Click_1);
+            // 
+            // btnDemo
+            // 
+            this.btnDemo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnDemo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDemo.Location = new System.Drawing.Point(17, 78);
+            this.btnDemo.Name = "btnDemo";
+            this.btnDemo.Size = new System.Drawing.Size(23, 20);
+            this.btnDemo.TabIndex = 46;
+            this.btnDemo.UseVisualStyleBackColor = false;
+            this.btnDemo.Click += new System.EventHandler(this.btnDemo_Click);
             // 
             // AddEmployee
             // 
@@ -497,6 +509,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(83)))));
             this.ClientSize = new System.Drawing.Size(628, 421);
+            this.Controls.Add(this.btnDemo);
             this.Controls.Add(this.btnPassVisible);
             this.Controls.Add(this.tbPassword);
             this.Controls.Add(this.label13);
@@ -538,7 +551,7 @@
             this.Controls.Add(this.tbFirstName);
             this.Controls.Add(this.lblFirstName);
             this.Controls.Add(this.btnClose);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddEmployee";
             this.Text = "EmpManagementScreen";
             this.Load += new System.EventHandler(this.AddEmployee_Load);
@@ -590,5 +603,6 @@
         private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button btnPassVisible;
+        private System.Windows.Forms.Button btnDemo;
     }
 }
